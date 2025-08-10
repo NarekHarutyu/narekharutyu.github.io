@@ -1,0 +1,35 @@
+/* Base */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tag pill */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f3f4f6; /* gray-100 */
+  color: #374151; /* gray-700 */
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Active nav link */
+.nav-link.active {
+  color: #154fb4; /* brand-700 */
+  position: relative;
+}
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background-color: #154fb4; /* brand-700 */
+}
+
+/* Better focus outline for accessibility */
+:focus-visible {
+  outline: 3px solid #1f66e5; /* brand-600 */
+  outline-offset: 2px;
+} 

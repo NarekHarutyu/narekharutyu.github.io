@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Narek Harutyunyan — Robotics Researcher</title>
+    <meta name="description" content="Personal website of Narek Harutyunyan — Robotics Researcher focusing on Reinforcement Learning, Autonomous Systems, and Multi-Robot Systems." />
+    <meta name="author" content="Narek Harutyunyan" />
+
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Narek Harutyunyan — Robotics Researcher" />
+    <meta property="og:description" content="Robotics researcher specializing in reinforcement learning, locomotion stability, and multi-robot systems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Narek+Harutyunyan" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Narek Harutyunyan — Robotics Researcher" />
+    <meta name="twitter:description" content="Robotics researcher specializing in reinforcement learning, locomotion stability, and multi-robot systems." />
+
+    <!-- Favicon (simple SVG data URI) -->
+    <link
+      rel="icon"
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111"/><text x="50" y="58" font-size="48" text-anchor="middle" fill="%23fff" font-family="Arial, Helvetica, sans-serif">NH</text></svg>'
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              serif: ['Merriweather', 'ui-serif', 'Georgia', 'serif'],
+            },
+            colors: {
+              brand: {
+                50: '#f5f9ff',
+                100: '#eaf2ff',
+                200: '#cfe1ff',
+                300: '#a6c7ff',
+                400: '#6fa5ff',
+                500: '#3d83ff',
+                600: '#1f66e5',
+                700: '#154fb4',
+                800: '#123f8f',
+                900: '#112f69',
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="font-sans text-gray-800 bg-white">
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-gray-200">
+      <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#home" class="text-gray-900 font-semibold tracking-tight hover:text-brand-700">Narek Harutyunyan</a>
+          <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none" aria-label="Open main menu" aria-expanded="false">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+          <div id="nav-links" class="hidden md:flex md:items-center md:gap-6">
+            <a href="#home" class="nav-link text-sm text-gray-700 hover:text-brand-700">Home</a>
+            <a href="#education" class="nav-link text-sm text-gray-700 hover:text-brand-700">Education</a>
+            <a href="#skills" class="nav-link text-sm text-gray-700 hover:text-brand-700">Skills</a>
+            <a href="#research" class="nav-link text-sm text-gray-700 hover:text-brand-700">Research</a>
+            <a href="#teaching" class="nav-link text-sm text-gray-700 hover:text-brand-700">Teaching</a>
+            <a href="#publications" class="nav-link text-sm text-gray-700 hover:text-brand-700">Publications</a>
+            <a href="#contact" class="nav-link text-sm text-gray-700 hover:text-brand-700">Contact</a>
+          </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden pb-4">
+          <div class="flex flex-col gap-3">
+            <a href="#home" class="nav-link text-sm text-gray-700 hover:text-brand-700">Home</a>
+            <a href="#education" class="nav-link text-sm text-gray-700 hover:text-brand-700">Education</a>
+            <a href="#skills" class="nav-link text-sm text-gray-700 hover:text-brand-700">Skills</a>
+            <a href="#research" class="nav-link text-sm text-gray-700 hover:text-brand-700">Research</a>
+            <a href="#teaching" class="nav-link text-sm text-gray-700 hover:text-brand-700">Teaching</a>
+            <a href="#publications" class="nav-link text-sm text-gray-700 hover:text-brand-700">Publications</a>
+            <a href="#contact" class="nav-link text-sm text-gray-700 hover:text-brand-700">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="pt-24">
+      <!-- Hero / Home -->
+      <section id="home" class="scroll-mt-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-10 items-center">
+            <div class="md:col-span-3">
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900">Narek Harutyunyan</h1>
+              <p class="mt-3 text-lg sm:text-xl text-gray-600">Robotics Researcher | Reinforcement Learning | Autonomous Systems</p>
+              <p class="mt-6 text-gray-700 leading-relaxed max-w-2xl">
+                Narek Harutyunyan is a robotics researcher specializing in reinforcement learning, stability guarantees in locomotion, and multi-robot systems. Currently a Computer Engineering student at Brown University with a perfect GPA, Narek has contributed to projects at Caltech, Carnegie Mellon, and Brown University, and has published work at leading robotics conferences.
+              </p>
+              <div class="mt-8 flex flex-wrap items-center gap-4">
+                <a href="assets/Narek_Harutyunyan_CV.pdf" class="inline-flex items-center gap-2 rounded-md bg-brand-700 px-4 py-2 text-white hover:bg-brand-800 focus:outline-none" download>
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 16V4m0 12l-4-4m4 4l4-4M4 20h16"/></svg>
+                  <span>Download CV</span>
+                </a>
+                <div class="flex items-center gap-3">
+                  <a href="https://www.linkedin.com/in/narek-harutyunyan-428069233" target="_blank" rel="noopener" class="text-gray-600 hover:text-brand-700" aria-label="LinkedIn">
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8.34 19.34H5.67V9.33h2.67v10.01zM7 8.11c-.86 0-1.56-.7-1.56-1.56 0-.86.7-1.56 1.56-1.56.86 0 1.56.7 1.56 1.56 0 .86-.7 1.56-1.56 1.56zM19.33 19.34h-2.67v-5.39c0-1.28-.02-2.93-1.78-2.93-1.78 0-2.06 1.39-2.06 2.83v5.49H10.15V9.33h2.56v1.37h.04c.36-.68 1.24-1.4 2.56-1.4 2.74 0 3.25 1.81 3.25 4.16v5.88z"/></svg>
+                  </a>
+                  <a href="https://scholar.google.com/citations?user=fIzSTy4AAAAJ&hl=en" target="_blank" rel="noopener" class="text-gray-600 hover:text-brand-700" aria-label="Google Scholar">
+                    <img src="assets/googlescholar.svg" alt="Google Scholar" class="h-6 w-6"/>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-2">
+              <img src="assets/2024-RISS-Headshot-HARUTYUNYAN, Narek.jpg" alt="Profile photo of Narek Harutyunyan" class="w-full max-w-xs mx-auto rounded-xl shadow-md ring-1 ring-gray-200 object-cover" onerror="this.onerror=null;this.src='https://via.placeholder.com/320x400?text=Profile+Photo';" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="scroll-mt-24 py-16">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-gray-900">Education</h2>
+          <div class="mt-8 grid gap-6">
+            <div class="rounded-lg border border-gray-200 p-6">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p class="text-lg font-semibold text-gray-900">Brown University</p>
+                  <p class="text-gray-700">Bachelor of Science in Computer Engineering — Expected May 2026</p>
+                </div>
+                <div class="mt-2 sm:mt-0">
+                  <span class="inline-flex items-center rounded-md bg-gray-100 px-3 py-1 text-sm text-gray-700">GPA: 4.0</span>
+                </div>
+              </div>
+              <div class="mt-4">
+                <p class="text-sm font-medium text-gray-900">Relevant Courses</p>
+                <ul class="mt-2 flex flex-wrap gap-2 text-sm text-gray-700">
+                  <li class="rounded bg-gray-100 px-2 py-1">Deep Learning</li>
+                  <li class="rounded bg-gray-100 px-2 py-1">Computer Systems</li>
+                  <li class="rounded bg-gray-100 px-2 py-1">Artificial Intelligence</li>
+                  <li class="rounded bg-gray-100 px-2 py-1">Data Structures and Algorithms</li>
+                  <li class="rounded bg-gray-100 px-2 py-1">Coordinated Mobile Robotics (Graduate Level)</li>
+                  <li class="rounded bg-gray-100 px-2 py-1">Linear System Analysis</li>
+                  <li class="rounded bg-gray-100 px-2 py-1">Circuits and Signals</li>
+                  <li class="rounded bg-gray-100 px-2 py-1">Multivariable Calculus</li>
+                  <li class="rounded bg-gray-100 px-2 py-1">Linear Algebra</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="scroll-mt-24 py-16 bg-gray-50">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-gray-900">Skills</h2>
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="rounded-lg border border-gray-200 bg-white p-6">
+              <h3 class="font-semibold text-gray-900">Technical</h3>
+              <ul class="mt-3 flex flex-wrap gap-2 text-sm text-gray-700">
+                <li class="tag">Python</li>
+                <li class="tag">C</li>
+                <li class="tag">MATLAB</li>
+                <li class="tag">ROS</li>
+                <li class="tag">Gazebo</li>
+                <li class="tag">Isaac Sim</li>
+                <li class="tag">TensorFlow</li>
+                <li class="tag">PyTorch</li>
+                <li class="tag">Linux</li>
+                <li class="tag">Git</li>
+              </ul>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-white p-6">
+              <h3 class="font-semibold text-gray-900">Robotics Platforms</h3>
+              <ul class="mt-3 flex flex-wrap gap-2 text-sm text-gray-700">
+                <li class="tag">Crazyflie drones</li>
+                <li class="tag">Boston Dynamics Spot</li>
+                <li class="tag">iRobot Create3</li>
+                <li class="tag">Unitree quadrupeds</li>
+              </ul>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-white p-6">
+              <h3 class="font-semibold text-gray-900">Languages</h3>
+              <div class="mt-4 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-medium text-gray-700">Armenian</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Native</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-medium text-gray-700">Russian</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Fluent</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-medium text-gray-700">French</span>
+                  <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">Beginner</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research Experience -->
+      <section id="research" class="scroll-mt-24 py-16">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-gray-900">Research Experience</h2>
+          <div class="mt-8 space-y-8">
+            <!-- Caltech -->
+            <article class="rounded-lg border border-gray-200 p-6">
+              <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <div class="md:col-span-2">
+                  <img src="assets/research1.jpg" alt="Caltech ARCL Lab project" class="w-full h-48 object-cover rounded-md ring-1 ring-gray-200" onerror="this.onerror=null;this.src='https://via.placeholder.com/800x480?text=Research+Image';" />
+                </div>
+                <div class="md:col-span-3">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <h3 class="text-lg font-semibold text-gray-900">Caltech — ARCL Lab</h3>
+                    <span class="text-sm text-gray-600">May 2025 – Present</span>
+                  </div>
+                  <p class="text-sm text-gray-700 mt-1">Mentors: <span class="font-medium">[Add mentor names]</span></p>
+                  <ul class="mt-3 list-disc list-inside text-gray-700 space-y-1">
+                    <li>Developed RL policies with contraction theory layers for quadruped stabilization and locomotion on moving platforms in Isaac Sim.</li>
+                    <li>Deployed policies on Unitree Go1 for robust real-world performance.</li>
+                    <li>Validated stability and performance across dynamic terrains.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <!-- CMU -->
+            <article class="rounded-lg border border-gray-200 p-6">
+              <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <div class="md:col-span-2">
+                  <img src="assets/research2.jpg" alt="CMU AirLab project" class="w-full h-48 object-cover rounded-md ring-1 ring-gray-200" onerror="this.onerror=null;this.src='https://via.placeholder.com/800x480?text=Research+Image';" />
+                </div>
+                <div class="md:col-span-3">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <h3 class="text-lg font-semibold text-gray-900">Carnegie Mellon University — AirLab</h3>
+                    <span class="text-sm text-gray-600">May 2024 – July 2025</span>
+                  </div>
+                  <p class="text-sm text-gray-700 mt-1">Mentors: <span class="font-medium">[Add mentor names]</span></p>
+                  <ul class="mt-3 list-disc list-inside text-gray-700 space-y-1">
+                    <li>Built a generative RL exploration framework guided by human studies and environment context.</li>
+                    <li>Improved baseline performance by <span class="font-medium">18.8%</span> in challenging indoor exploration scenarios.</li>
+                    <li>Evaluated across multiple simulated and real-world environments.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <!-- Brown -->
+            <article class="rounded-lg border border-gray-200 p-6">
+              <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <div class="md:col-span-2">
+                  <img src="assets/research3.jpg" alt="Brown ACT Lab project" class="w-full h-48 object-cover rounded-md ring-1 ring-gray-200" onerror="this.onerror=null;this.src='https://via.placeholder.com/800x480?text=Research+Image';" />
+                </div>
+                <div class="md:col-span-3">
+                  <div class="flex flex-wrap items-center justify-between gap-2">
+                    <h3 class="text-lg font-semibold text-gray-900">Brown University — ACT Lab</h3>
+                    <span class="text-sm text-gray-600">May 2023 – May 2024</span>
+                  </div>
+                  <p class="text-sm text-gray-700 mt-1">Mentors: <span class="font-medium">[Add mentor names]</span></p>
+                  <ul class="mt-3 list-disc list-inside text-gray-700 space-y-1">
+                    <li>Analyzed quadcopter downwash using PIV and developed insights for multi-drone flight.</li>
+                    <li>Designed and built an aerial painting quadrotor platform.</li>
+                    <li>Implemented Crazyswarm-based control interfaces for swarm coordination.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Teaching Experience -->
+      <section id="teaching" class="scroll-mt-24 py-16 bg-gray-50">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-gray-900">Teaching Experience</h2>
+          <div class="mt-8 space-y-6">
+            <div class="rounded-lg border border-gray-200 bg-white p-6">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="text-lg font-semibold text-gray-900">Head TA — Creating Art with Teams of Robots</h3>
+                <span class="text-sm text-gray-600">Jan–Dec 2024</span>
+              </div>
+              <ul class="mt-3 list-disc list-inside text-gray-700 space-y-1">
+                <li>Mentored 27 students on robotics software and systems.</li>
+                <li>Guided projects with Crazyflie drones and ground robots.</li>
+              </ul>
+            </div>
+            <div class="rounded-lg border border-gray-200 bg-white p-6">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="text-lg font-semibold text-gray-900">TA — Introduction to Engineering</h3>
+                <span class="text-sm text-gray-600">Sept–Dec 2023</span>
+              </div>
+              <ul class="mt-3 list-disc list-inside text-gray-700 space-y-1">
+                <li>Coached 40+ students on semester projects.</li>
+                <li>Led workshops for 100+ students on MATLAB, CAD, rapid prototyping, and electronics.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications" class="scroll-mt-24 py-16">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="text-2xl font-bold text-gray-900">Publications</h2>
+          <div class="mt-8 space-y-6">
+            <div class="rounded-lg border border-gray-200 p-6">
+              <h3 class="font-semibold text-gray-900">MapExRL: Human-Inspired Indoor Exploration with Predicted Environment Context and Reinforcement Learning</h3>
+              <p class="mt-1 text-sm text-gray-700">Accepted to ICRA 2025 Workshop, under review for ICAR 2025</p>
+              <p class="mt-2 text-sm text-gray-700"><strong class="text-brand-700">Narek Harutyunyan</strong>∗, Brady Moon∗, Seungchan Kim, Cherie Ho, Adam Hung, Sebastian Scherer</p>
+              <div class="mt-3 flex items-center gap-4 text-sm">
+                <a href="https://mapexrl.github.io/" target="_blank" rel="noopener" class="text-brand-700 hover:text-brand-800 underline">Website</a>
+              </div>
+            </div>
+            
+            <div class="rounded-lg border border-gray-200 p-6">
+              <h3 class="font-semibold text-gray-900">MapEx: Indoor Structure Exploration with Probabilistic Information Gain from Global Map Predictions</h3>
+              <p class="mt-1 text-sm text-gray-700">IEEE International Conference on Robotics and Automation (ICRA) 2025</p>
+              <p class="mt-2 text-sm text-gray-700">Cherie Ho*, Seungchan Kim*, Brady Moon, Aditya Parandekar, <strong class="text-brand-700">Narek Harutyunyan</strong>, Chen Wang, Katia Sycara, Graeme Best, Sebastian Scherer</p>
+              <div class="mt-3 flex items-center gap-4 text-sm">
+                <a href="https://mapex-explorer.github.io/" target="_blank" rel="noopener" class="text-brand-700 hover:text-brand-800 underline">Website</a>
+              </div>
+            </div>
+            
+            <div class="rounded-lg border border-gray-200 p-6">
+              <h3 class="font-semibold text-gray-900">Downwash Dynamics: Impact of Quadrotor Separation on Forces, Moments, and Velocities for Dense Formation Flight</h3>
+              <p class="mt-1 text-sm text-gray-700">AIAA AVIATION FORUM AND ASCEND 2024</p>
+              <p class="mt-2 text-sm text-gray-700">Anoop Kiran, <strong class="text-brand-700">Narek Harutyunyan</strong>, Nora Ayanian, Kenneth Breuer</p>
+              <div class="mt-3 flex items-center gap-4 text-sm">
+                <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2514/6.2024-4145" target="_blank" rel="noopener" class="text-brand-700 hover:text-brand-800 underline">Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="scroll-mt-24 py-16 bg-gray-50">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          </div>
+          
+          <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-6">Contact Information</h3>
+                <div class="space-y-4">
+                  <div class="flex items-center space-x-3">
+                    <div class="flex-shrink-0 w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
+                      <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-gray-500">Email</p>
+                      <a href="mailto:narek_harutyunyan@brown.edu" class="text-brand-700 hover:text-brand-800 font-medium">narek_harutyunyan@brown.edu</a>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-center space-x-3">
+                    <div class="flex-shrink-0 w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
+                      <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8.34 19.34H5.67V9.33h2.67v10.01zM7 8.11c-.86 0-1.56-.7-1.56-1.56 0-.86.7-1.56 1.56-1.56.86 0 1.56.7 1.56 1.56 0 .86-.7 1.56-1.56 1.56zM19.33 19.34h-2.67v-5.39c0-1.28-.02-2.93-1.78-2.93-1.78 0-2.06 1.39-2.06 2.83v5.49H10.15V9.33h2.56v1.37h.04c.36-.68 1.24-1.4 2.56-1.4 2.74 0 3.25 1.81 3.25 4.16v5.88z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-gray-500">LinkedIn</p>
+                      <a href="https://www.linkedin.com/in/narek-harutyunyan-428069233" target="_blank" rel="noopener" class="text-brand-700 hover:text-brand-800 font-medium">Narek Harutyunyan</a>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-center space-x-3">
+                    <div class="flex-shrink-0 w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
+                      <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3l9 6-9 6-9-6 9-6zm0 8.197L18.74 9 12 4.803 5.26 9 12 11.197z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-gray-500">Google Scholar</p>
+                      <a href="https://scholar.google.com/citations?user=fIzSTy4AAAAJ&hl=en" target="_blank" rel="noopener" class="text-brand-700 hover:text-brand-800 font-medium">View Profile</a>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-center space-x-3">
+                    <div class="flex-shrink-0 w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center">
+                      <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                      </svg>
+                    </div>
+                    <div>
+                      <p class="text-sm font-medium text-gray-500">Phone</p>
+                      <span class="text-gray-900 font-medium">+1 (857) 404-2113</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flex flex-col justify-center">
+                <div class="text-center md:text-left">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-3">Let's Connect</h4>
+                  <p class="text-gray-600 mb-6">I'm particularly interested in:</p>
+                  <ul class="space-y-2 text-sm text-gray-600">
+                    <li class="flex items-center">
+                      <svg class="w-4 h-4 text-brand-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                      Research collaborations
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-4 h-4 text-brand-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                      PhD program discussions
+                    </li>
+                    <li class="flex items-center">
+                      <svg class="w-4 h-4 text-brand-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                      Robotics & AI topics
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-gray-200 py-8">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
+        <p>© <span id="year"></span> Narek Harutyunyan. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+  </body>
+</html> 
