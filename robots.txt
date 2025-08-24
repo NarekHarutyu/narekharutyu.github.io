@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://narekharutyu.github.io/sitemap.xml
+
+# Allow important files
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Allow: /*.pdf
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.svg
+
+# Disallow nothing - we want everything indexed
