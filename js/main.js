@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Active nav link based on scroll
-  const sectionIds = ['home', 'education', 'skills', 'research', 'teaching', 'publications', 'contact'];
+  const sectionIds = ['home', 'research', 'teaching', 'publications', 'contact'];
   const links = Array.from(document.querySelectorAll('.nav-link'));
   const linkById = Object.fromEntries(
     links.map((a) => [a.getAttribute('href').replace('#', ''), a])
@@ -48,64 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .filter(Boolean)
     .forEach((section) => observer.observe(section));
 
-  // Contact form handler (POST to local API)
-  const form = document.getElementById('contact-form');
-  const statusEl = document.getElementById('form-status');
-  if (statusEl) {
-    statusEl.setAttribute('role', 'status');
-    statusEl.setAttribute('aria-live', 'polite');
-  }
-  if (form && statusEl) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const name = (formData.get('name') || '').toString().trim();
-      const email = (formData.get('email') || '').toString().trim();
-      const message = (formData.get('message') || '').toString().trim();
-
-      if (!name || !email || !message) {
-        statusEl.textContent = 'Please fill out all fields.';
-        statusEl.classList.remove('text-green-600');
-        statusEl.classList.add('text-red-600');
-        return;
-      }
-
-      statusEl.textContent = 'Sending...';
-      statusEl.classList.remove('text-red-600');
-      statusEl.classList.add('text-gray-600');
-
-      try {
-        const res = await fetch('http://127.0.0.1:8788/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email, message }),
-        });
-        const data = await res.json().catch(() => ({ ok: false }));
-        if (!res.ok || !data.ok) throw new Error(data.error || 'Failed to send');
-
-        statusEl.classList.remove('text-red-600', 'text-gray-600');
-        statusEl.classList.add('text-green-600');
-        statusEl.innerHTML =
-          "Thanks for your message — I'll respond soon. " +
-          '<a id="send-another" class="underline text-brand-700 hover:text-brand-800 cursor-pointer">Send another message</a>';
-
-        const resetLink = document.getElementById('send-another');
-        if (resetLink) {
-          resetLink.addEventListener('click', (evt) => {
-            evt.preventDefault();
-            form.reset();
-            statusEl.textContent = '';
-            const nameInput = document.getElementById('name');
-            if (nameInput) nameInput.focus();
-          });
-        }
-      } catch (err) {
-        statusEl.textContent = 'There was a problem sending your message. Please try again later.';
-        statusEl.classList.remove('text-gray-600');
-        statusEl.classList.add('text-red-600');
-      }
-    });
-  }
+  
 
   // Current year in footer
   const yearEl = document.getElementById('year');
