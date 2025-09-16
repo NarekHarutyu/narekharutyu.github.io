@@ -9,21 +9,21 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #22d3ee, #16a34a);
+  background: linear-gradient(180deg, #f59e0b, #d97706);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #67e8f9, #4ade80);
+  background: linear-gradient(180deg, #fbbf24, #f59e0b);
 }
 
 /* Active nav link with glow effect */
 .nav-link.active {
-  color: #22d3ee !important;
+  color: #f59e0b !important;
   position: relative;
 }
 
@@ -34,30 +34,30 @@ html {
   right: 0;
   bottom: -6px;
   height: 2px;
-  background: linear-gradient(90deg, #22d3ee, #4ade80);
+  background: linear-gradient(90deg, #f59e0b, #d97706);
   border-radius: 1px;
-  box-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
 }
 
 /* Enhanced focus outline for accessibility */
 :focus-visible {
-  outline: 3px solid #22d3ee;
+  outline: 3px solid #f59e0b;
   outline-offset: 2px;
   border-radius: 4px;
 }
 
 /* Glow text effect */
 .glow-text {
-  text-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+  text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
 }
 
 /* Custom animations */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(34, 211, 238, 0.6);
+    box-shadow: 0 0 40px rgba(245, 158, 11, 0.6);
   }
 }
 
@@ -135,13 +135,13 @@ html {
 
 .glitch:hover::before {
   animation: glitch-1 0.3s ease-in-out;
-  color: #22d3ee;
+  color: #f59e0b;
   z-index: -1;
 }
 
 .glitch:hover::after {
   animation: glitch-2 0.3s ease-in-out;
-  color: #4ade80;
+  color: #d97706;
   z-index: -2;
 }
 
@@ -192,17 +192,17 @@ html {
 }
 
 /* Neon border effect */
-.neon-border {
+.professional-border {
   border: 1px solid transparent;
-  background: linear-gradient(90deg, #22d3ee, #4ade80) border-box;
+  background: linear-gradient(90deg, #f59e0b, #d97706) border-box;
   border-radius: 8px;
 }
 
 /* Grid pattern overlay */
-.cyber-grid {
+.professional-grid {
   background-image: 
-    linear-gradient(rgba(34, 211, 238, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 211, 238, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(245, 158, 11, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
   position: relative;
 }
@@ -210,11 +210,11 @@ html {
 /* Responsive design adjustments */
 @media (max-width: 768px) {
   .glow-text {
-    text-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
   }
   
   .nav-link.active::after {
-    box-shadow: 0 0 5px rgba(34, 211, 238, 0.3);
+    box-shadow: 0 0 5px rgba(245, 158, 11, 0.3);
   }
 }
 
@@ -234,12 +234,12 @@ a, button, .transition-element {
 
 /* Custom selection colors */
 ::selection {
-  background: rgba(34, 211, 238, 0.3);
+  background: rgba(245, 158, 11, 0.3);
   color: #ffffff;
 }
 
 ::-moz-selection {
-  background: rgba(34, 211, 238, 0.3);
+  background: rgba(245, 158, 11, 0.3);
   color: #ffffff;
 }
 
