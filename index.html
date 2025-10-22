@@ -309,6 +309,41 @@
             <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-gold-400 mx-auto rounded-full"></div>
           </div>
           <div class="space-y-12">
+            <!-- Brown -->
+            <article class="group bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30">
+              <div class="space-y-4">
+                  <div class="flex flex-wrap items-center justify-between gap-3">
+                    <h3 class="text-xl font-display font-bold text-accent-300">
+                      Brown University — <a href="http://act.cs.brown.edu/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-4 transition-colors duration-300">ACT Lab</a>
+                    </h3>
+                    <span class="px-3 py-1 text-sm font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30">May 2023 – Present</span>
+                  </div>
+                  <div class="space-y-2">
+                    <p class="text-gray-300">PI: <span class="font-medium"><a href="https://vivo.brown.edu/display/nayanian" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Nora Ayanian</a></span></p>
+                    <p class="text-gray-300">Mentors: <span class="font-medium">
+                      <a href="https://eric-ewing.github.io/ewinge1.github.io/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Eric Ewing</a>, Anoop Kiran
+                    </span></p>
+                  </div>
+                  <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-start gap-3">
+                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Design RL policies in IsaacLab for cooperative object transport with Crazyflie drone swarms.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Characterize quadcopter downwash using PIV and MATLAB for improved formation safety.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Build aerial painting quadrotor with custom 3D-printed components and Python control wrappers.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Develop synchronized LED lighting and real-time audio processing for drone choreography.</span>
+                    </li>
+                  </ul>
+              </div>
+            </article>
             <!-- Caltech -->
             <article class="group bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30">
               <div class="space-y-4">
@@ -316,7 +351,7 @@
                     <h3 class="text-xl font-display font-bold text-accent-300">
                       Caltech — <a href="https://aerospacerobotics.caltech.edu/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-4 transition-colors duration-300">ARCL Lab</a>
                     </h3>
-                    <span class="px-3 py-1 text-sm font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30">May 2025 – Present</span>
+                    <span class="px-3 py-1 text-sm font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30">May – September 2025</span>
                   </div>
                   <div class="space-y-2">
                     <p class="text-gray-300">PI: <span class="font-medium"><a href="https://www.eas.caltech.edu/people/sjchung" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Soon-Jo Chung</a></span></p>
@@ -325,15 +360,19 @@
                   <ul class="space-y-3 text-gray-300">
                     <li class="flex items-start gap-3">
                       <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Developed RL policies with contraction theory layers for quadruped stabilization and locomotion on moving platforms in Isaac Sim.</span>
+                      <span>Build IsaacLab simulation of Unitree Go1 on moving platform for ship-like dynamics training.</span>
                     </li>
                     <li class="flex items-start gap-3">
                       <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Deployed policies on Unitree Go1 for robust real-world performance.</span>
+                      <span>Develop certified RL algorithm with contraction theory achieving 100% deployment success.</span>
                     </li>
                     <li class="flex items-start gap-3">
                       <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Validated stability and performance across dynamic terrains.</span>
+                      <span>Create custom SDK and validate policies on Unitree Go1 under wind and motion platform tests.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
+                      <span>Deploy RL policies for locomotion and fault recovery on humanoid robot Booster T1.</span>
                     </li>
                   </ul>
               </div>
@@ -358,46 +397,15 @@
                   <ul class="space-y-3 text-gray-300">
                     <li class="flex items-start gap-3">
                       <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Built a generative RL exploration framework guided by human studies and environment context.</span>
+                      <span>Refactor MapEx framework into Gym, add IoU metric, and fix algorithmic issues.</span>
                     </li>
                     <li class="flex items-start gap-3">
                       <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Improved baseline performance by <span class="font-bold text-gold-400">18.8%</span> in challenging indoor exploration scenarios.</span>
+                      <span>Propose MapExRL: human-inspired RL exploration with frontier planning and uncertainty modeling.</span>
                     </li>
                     <li class="flex items-start gap-3">
                       <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Evaluated across multiple simulated and real-world environments.</span>
-                    </li>
-                  </ul>
-              </div>
-            </article>
-            <!-- Brown -->
-            <article class="group bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30">
-              <div class="space-y-4">
-                  <div class="flex flex-wrap items-center justify-between gap-3">
-                    <h3 class="text-xl font-display font-bold text-accent-300">
-                      Brown University — <a href="http://act.cs.brown.edu/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-4 transition-colors duration-300">ACT Lab</a>
-                    </h3>
-                    <span class="px-3 py-1 text-sm font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30">May 2023 – May 2024</span>
-                  </div>
-                  <div class="space-y-2">
-                    <p class="text-gray-300">PI: <span class="font-medium"><a href="https://vivo.brown.edu/display/nayanian" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Nora Ayanian</a></span></p>
-                    <p class="text-gray-300">Mentors: <span class="font-medium">
-                      <a href="https://eric-ewing.github.io/ewinge1.github.io/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Eric Ewing</a>, Anoop Kiran
-                    </span></p>
-                  </div>
-                  <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Analyzed quadcopter downwash using PIV and developed insights for multi-drone flight.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Designed and built an aerial painting quadrotor platform.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Implemented Crazyswarm-based control interfaces for swarm coordination.</span>
+                      <span>Achieve up to <span class="font-bold text-gold-400">18.8%</span> performance gains over state-of-the-art baselines on real-world indoor maps.</span>
                     </li>
                   </ul>
               </div>
@@ -535,6 +543,67 @@
                   Poster
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Honors and Awards -->
+      <section id="honors" class="scroll-mt-24 py-20 bg-gradient-to-b from-transparent to-dark-900/20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold bg-gradient-to-r from-accent-400 to-gold-400 bg-clip-text text-transparent mb-4">Honors & Awards</h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-gold-400 mx-auto rounded-full"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Tau Beta Pi -->
+            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="font-display font-bold text-lg text-accent-300">Tau Beta Pi Engineering Honor Society</h3>
+                <span class="px-3 py-1 text-xs font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30 flex-shrink-0">2025</span>
+              </div>
+              <p class="text-gray-400 text-sm">Inducted member recognizing academic excellence in engineering</p>
+              <p class="text-gray-500 text-sm mt-1">Providence, RI, USA</p>
+            </div>
+
+            <!-- SURF -->
+            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="font-display font-bold text-lg text-accent-300">Summer Undergraduate Research Fellowships (SURF)</h3>
+                <span class="px-3 py-1 text-xs font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30 flex-shrink-0">2025</span>
+              </div>
+              <p class="text-gray-400 text-sm">California Institute of Technology</p>
+              <p class="text-gray-500 text-sm mt-1">Pasadena, CA, USA</p>
+            </div>
+
+            <!-- RISS -->
+            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="font-display font-bold text-lg text-accent-300">Robotics Institute Summer Scholar (RISS)</h3>
+                <span class="px-3 py-1 text-xs font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30 flex-shrink-0">2024</span>
+              </div>
+              <p class="text-gray-400 text-sm">Carnegie Mellon University</p>
+              <p class="text-gray-500 text-sm mt-1">Pittsburgh, PA, USA</p>
+            </div>
+
+            <!-- UTRA -->
+            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="font-display font-bold text-lg text-accent-300">Undergraduate Teaching and Research Award (UTRA)</h3>
+                <span class="px-3 py-1 text-xs font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30 flex-shrink-0">2023, 2024</span>
+              </div>
+              <p class="text-gray-400 text-sm">Brown University</p>
+              <p class="text-gray-500 text-sm mt-1">Providence, RI, USA</p>
+            </div>
+
+            <!-- Huys Scholar -->
+            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30 md:col-span-2">
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <h3 class="font-display font-bold text-lg text-accent-300">Huys Scholar</h3>
+                <span class="px-3 py-1 text-xs font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30 flex-shrink-0">2023, 2024</span>
+              </div>
+              <p class="text-gray-400 text-sm">Huys Foundation STEM Scholarship</p>
+              <p class="text-gray-500 text-sm mt-1">Yerevan, Armenia</p>
             </div>
           </div>
         </div>
