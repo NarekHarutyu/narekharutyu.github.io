@@ -60,13 +60,14 @@ def compress_video(input_path, output_path):
     print(f"Original size: {get_file_size_mb(input_path):.2f} MB")
     
     # Build ffmpeg command for maximum compression
+    # Note: pad to even dimensions to avoid encoding errors
     cmd = [
         'ffmpeg',
         '-i', str(input_path),
         '-c:v', VIDEO_SETTINGS['codec'],
         '-preset', VIDEO_SETTINGS['preset'],
         '-crf', VIDEO_SETTINGS['crf'],
-        '-vf', f"scale='min({VIDEO_SETTINGS['max_width']},iw)':'min({VIDEO_SETTINGS['max_height']},ih)':force_original_aspect_ratio=decrease",
+        '-vf', f"scale='min({VIDEO_SETTINGS['max_width']},iw)':'min({VIDEO_SETTINGS['max_height']},ih)':force_original_aspect_ratio=decrease,pad=ceil(iw/2)*2:ceil(ih/2)*2",
         '-r', VIDEO_SETTINGS['fps'],
         '-c:a', VIDEO_SETTINGS['audio_codec'],
         '-b:a', VIDEO_SETTINGS['audio_bitrate'],
