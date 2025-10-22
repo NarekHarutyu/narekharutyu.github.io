@@ -47,4 +47,5 @@ logs/
 # Temporary files
 *.tmp
 *.temp
-outbox/ 
+outbox/ assets/robots/*.MOV
+assets/robots/*.mov
