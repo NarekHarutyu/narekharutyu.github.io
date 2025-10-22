@@ -1,677 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Robot Gallery - Narek Harutyunyan | Robotics Projects</title>
-    <meta name="description" content="Explore Narek Harutyunyan's robotics projects through videos and photos - featuring quadcopters, drones, quadruped robots, and cutting-edge autonomous systems." />
-    <meta name="author" content="Narek Harutyunyan" />
-
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111"/><text x="50" y="58" font-size="48" text-anchor="middle" fill="%23fff" font-family="Arial, Helvetica, sans-serif">NH</text></svg>'
-    />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-    <!-- Tailwind CSS (CDN) -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Gallery - Narek Harutyunyan</title>
+    <meta name="description" content="Explore Narek Harutyunyan's robot gallery featuring videos and photos of robotic systems and research projects.">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Tailwind Config -->
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-              display: ['Space Grotesk', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-              mono: ['Orbitron', 'ui-monospace', 'SFMono-Regular', 'monospace'],
-            },
-            colors: {
-              accent: {
-                50: '#fffbeb',
-                100: '#fef3c7',
-                200: '#fde68a',
-                300: '#fcd34d',
-                400: '#fbbf24',
-                500: '#f59e0b',
-                600: '#d97706',
-                700: '#b45309',
-                800: '#92400e',
-                900: '#78350f',
-              },
-              gold: {
-                50: '#fffdf7',
-                100: '#fffaeb',
-                200: '#fef3c7',
-                300: '#fde68a',
-                400: '#fcd34d',
-                500: '#f59e0b',
-                600: '#d97706',
-                700: '#b45309',
-                800: '#92400e',
-                900: '#78350f',
-              },
-              dark: {
-                50: '#f8fafc',
-                100: '#f1f5f9',
-                200: '#e2e8f0',
-                300: '#cbd5e1',
-                400: '#64748b',
-                500: '#475569',
-                600: '#334155',
-                700: '#1e293b',
-                800: '#0f172a',
-                900: '#020617',
-                950: '#000000',
-              },
-            },
-            backgroundImage: {
-              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-              'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-              'professional-grid': "url(\"data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%23f59e0b' fill-opacity='0.05'%3e%3cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e\")",
-            },
-            boxShadow: {
-              'glow': '0 0 20px rgba(245, 158, 11, 0.3)',
-              'glow-lg': '0 0 40px rgba(245, 158, 11, 0.4)',
-              'gold': '0 0 5px rgba(245, 158, 11, 0.5), 0 0 20px rgba(245, 158, 11, 0.3), 0 0 35px rgba(245, 158, 11, 0.1)',
-              'dark': '0 10px 25px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3)',
-            },
-            animation: {
-              'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'float': 'float 6s ease-in-out infinite',
-              'slide-up': 'slide-up 0.5s ease-out',
-              'fade-in': 'fade-in 0.6s ease-out',
-            },
-            keyframes: {
-              'pulse-glow': {
-                '0%, 100%': { boxShadow: '0 0 20px rgba(245, 158, 11, 0.3)' },
-                '50%': { boxShadow: '0 0 40px rgba(245, 158, 11, 0.6)' },
-              },
-              'float': {
-                '0%, 100%': { transform: 'translateY(0px)' },
-                '50%': { transform: 'translateY(-10px)' },
-              },
-              'slide-up': {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              'fade-in': {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
-              },
-            },
-          },
-        },
-      };
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark': {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        'accent': {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        'gold': {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        'display': ['Inter', 'system-ui', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'Consolas', 'monospace'],
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 20px rgba(14, 165, 233, 0.3)' },
+                            '100%': { boxShadow: '0 0 30px rgba(14, 165, 233, 0.6)' },
+                        }
+                    },
+                    boxShadow: {
+                        'dark': '0 10px 25px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1)',
+                        'glow': '0 0 20px rgba(14, 165, 233, 0.3)',
+                        'glow-lg': '0 0 30px rgba(14, 165, 233, 0.5)',
+                    }
+                }
+            }
+        }
     </script>
-
+    
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        .masonry-container {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 640px) {
+            .masonry-container {
+                column-count: 2;
+            }
+        }
+        @media (min-width: 1024px) {
+            .masonry-container {
+                column-count: 3;
+            }
+        }
+        .gallery-item {
+            break-inside: avoid;
+            page-break-inside: avoid;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            width: 100%;
+        }
+        .gallery-item video,
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEFY3QBFLL"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'G-MEFY3QBFLL');
+        gtag('config', 'G-MEFY3QBFLL');
     </script>
-    
-    <style>
-      /* Masonry Layout using CSS Columns */
-      .masonry-container {
-        column-count: 1;
-        column-gap: 1.5rem;
-      }
-      
-      @media (min-width: 640px) {
-        .masonry-container {
-          column-count: 2;
-        }
-      }
-      
-      @media (min-width: 1024px) {
-        .masonry-container {
-          column-count: 3;
-        }
-      }
-      
-      .gallery-item {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        margin-bottom: 1.5rem;
-        display: inline-block;
-        width: 100%;
-      }
-      
-      .gallery-item video,
-      .gallery-item img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-    </style>
-  </head>
-  <body class="font-sans text-gray-100 bg-black min-h-screen relative overflow-x-hidden">
-    <!-- Animated background particles -->
-    <div class="fixed inset-0 z-0 pointer-events-none">
-      <div class="absolute inset-0 bg-professional-grid opacity-20"></div>
-      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-500/5 rounded-full filter blur-3xl animate-float"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold-500/5 rounded-full filter blur-3xl animate-float" style="animation-delay: -3s;"></div>
-    </div>
-
-    <!-- Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md supports-[backdrop-filter]:bg-black/90 border-b border-dark-700/50 transition-all duration-300">
-      <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-          <a href="index.html" class="text-accent-400 font-display font-bold text-xl tracking-tight hover:text-accent-300 transition-colors duration-300 glow-text">
-            <span class="font-mono">NH</span>
-          </a>
-          <a href="index.html" class="inline-flex items-center gap-2 px-6 py-2 bg-dark-800/50 border border-dark-600/30 rounded-xl text-gray-300 hover:text-accent-400 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 font-medium">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-            </svg>
-            Back to Home
-          </a>
-        </div>
-      </nav>
+</head>
+<body class="bg-dark-900 text-gray-100 font-display min-h-screen">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-dark-900/95 backdrop-blur-md border-b border-dark-700/50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold text-accent-400 hover:text-accent-300 transition-colors duration-300">
+                    <span class="font-mono">NH</span>
+                </a>
+                <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-gray-300 hover:bg-dark-800 hover:text-accent-400 focus:outline-none transition-all duration-300" aria-label="Open main menu" aria-expanded="false">
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+                <div id="nav-links" class="hidden md:flex md:items-center md:gap-8">
+                    <a href="index.html" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Back to Home</a>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden pb-4 border-t border-dark-700/50 mt-4 pt-4">
+                <div class="flex flex-col gap-4">
+                    <a href="index.html" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium">Back to Home</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main class="pt-24 pb-20 relative z-10">
-      <!-- Robot Gallery -->
-      <section class="py-12">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <!-- Header -->
-          <div class="text-center mb-16 animate-fade-in">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold bg-gradient-to-r from-accent-400 via-gold-300 to-accent-500 bg-clip-text text-transparent mb-6">
-              Robot Gallery
-            </h1>
-            <p class="text-gray-400 text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
-              A visual journey through my robotics projects — from quadcopters to quadrupeds, capturing moments of innovation and discovery in autonomous systems, multi-robot coordination, and AI-driven robotics research.
-            </p>
-            <div class="w-32 h-1 bg-gradient-to-r from-accent-400 to-gold-400 mx-auto rounded-full mt-8"></div>
-          </div>
-
-          <!-- Filter Buttons -->
-          <div class="flex justify-center gap-4 mb-12 flex-wrap animate-slide-up">
-            <button onclick="filterGallery('all')" class="filter-btn active px-6 py-3 bg-gradient-to-r from-accent-600 to-accent-500 text-white rounded-xl font-semibold transition-all duration-300 hover:shadow-glow hover:scale-105 shadow-glow">
-              <span class="flex items-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-                </svg>
-                All Media
-              </span>
-            </button>
-            <button onclick="filterGallery('video')" class="filter-btn px-6 py-3 bg-dark-800/50 border border-dark-600/30 text-gray-300 rounded-xl font-semibold transition-all duration-300 hover:border-accent-400/50 hover:text-accent-400 hover:bg-dark-700/50 hover:scale-105">
-              <span class="flex items-center gap-2">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm12.553 1.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
-                </svg>
-                Videos
-              </span>
-            </button>
-            <button onclick="filterGallery('image')" class="filter-btn px-6 py-3 bg-dark-800/50 border border-dark-600/30 text-gray-300 rounded-xl font-semibold transition-all duration-300 hover:border-accent-400/50 hover:text-accent-400 hover:bg-dark-700/50 hover:scale-105">
-              <span class="flex items-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                </svg>
-                Photos
-              </span>
-            </button>
-          </div>
-
-          <!-- Masonry Gallery Grid -->
-          <div id="gallery-grid" class="masonry-container">
-            
-            <!-- Video Items -->
-            <!-- LONG VIDEO 1 -->
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.1s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/helix.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
+    <main class="pt-24 relative z-10">
+        <!-- Hero Section -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
+                    Robot Gallery
+                </h1>
+                <p class="text-xl text-gray-300 mb-12 animate-fade-in" style="animation-delay: 0.2s;">
+                    Explore my collection of robotic systems, research projects, and innovative engineering solutions
+                </p>
             </div>
+        </section>
 
-            <!-- LONG VIDEO 2 -->
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.15s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_3537.mov" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
+        <!-- Filter Buttons -->
+        <section class="container mx-auto px-6 mb-12">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="filterGallery('all')" class="filter-btn active px-6 py-3 bg-accent-600 text-white rounded-lg font-medium transition-all duration-300 hover:bg-accent-500 hover:scale-105">
+                    All Media
+                </button>
+                <button onclick="filterGallery('video')" class="filter-btn px-6 py-3 bg-dark-700 text-gray-300 rounded-lg font-medium transition-all duration-300 hover:bg-dark-600 hover:text-white">
+                    Videos
+                </button>
+                <button onclick="filterGallery('image')" class="filter-btn px-6 py-3 bg-dark-700 text-gray-300 rounded-lg font-medium transition-all duration-300 hover:bg-dark-600 hover:text-white">
+                    Photos
+                </button>
             </div>
+        </section>
 
-            <!-- LONG VIDEO 3 -->
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.2s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_5968.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
+        <!-- Gallery Grid -->
+        <section class="container mx-auto px-6 pb-20">
+            <div id="gallery-grid" class="masonry-container">
+                <!-- Video Items -->
+                <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.1s;">
+                    <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/20240208_172233.mov')">
+                        <video class="w-full h-auto object-cover" muted loop>
+                            <source src="assets/robots/20240208_172233.mov" type="video/quicktime">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            Video
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                                Click to Enlarge
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+                <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.2s;">
+                    <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_3676.MOV')">
+                        <video class="w-full h-auto object-cover" muted loop>
+                            <source src="assets/robots/IMG_3676.MOV" type="video/quicktime">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            Video
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                                Click to Enlarge
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.3s;">
+                    <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_3697.MOV')">
+                        <video class="w-full h-auto object-cover" muted loop>
+                            <source src="assets/robots/IMG_3697.MOV" type="video/quicktime">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            Video
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                                Click to Enlarge
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.4s;">
+                    <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_5968.MOV')">
+                        <video class="w-full h-auto object-cover" muted loop>
+                            <source src="assets/robots/IMG_5968.MOV" type="video/quicktime">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            Video
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                                Click to Enlarge
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.5s;">
+                    <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_6386.MOV')">
+                        <video class="w-full h-auto object-cover" muted loop>
+                            <source src="assets/robots/IMG_6386.MOV" type="video/quicktime">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            Video
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                                Click to Enlarge
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.6s;">
+                    <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/My Movie 1.mov')">
+                        <video class="w-full h-auto object-cover" muted loop>
+                            <source src="assets/robots/My Movie 1.mov" type="video/quicktime">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                            Video
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                                Click to Enlarge
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Items -->
+                <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.7s;">
+                    <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/butterfly.png')">
+                        <img src="assets/robots/butterfly.png" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            Photo
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                                Click to Enlarge
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.8s;">
+                    <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_1821.PNG')">
+                        <img src="assets/robots/IMG_1821.PNG" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            Photo
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                                Click to Enlarge
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.9s;">
+                    <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_1823.PNG')">
+                        <img src="assets/robots/IMG_1823.PNG" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            Photo
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                                Click to Enlarge
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 1.0s;">
+                    <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_6457.JPG')">
+                        <img src="assets/robots/IMG_6457.JPG" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                            Photo
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                                Click to Enlarge
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <!-- SHORT VIDEO (moved from position 2) -->
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.25s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/20240208_172233.mov" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.25s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_3647.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.3s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_3649.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.35s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_3676.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.4s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_3697.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.45s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_3788.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.5s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_6386.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.6s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_6425.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.65s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_6454.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.7s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_6982.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <!-- SHORT VIDEO swapped to position 15 -->
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.75s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_1674.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <!-- Video swapped to position 16 -->
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.8s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_7746.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.85s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_7955.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.9s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/butterfly.png')">
-                <img src="assets/robots/butterfly.png" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                  Photo
-                </div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
-                    </svg>
-                    Click to Enlarge
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.95s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/My Movie 1.mov" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 1s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/My Movie 2.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <!-- LONG VIDEO (moved from position 16) -->
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 1.05s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/IMG_7750.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 1.1s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/485041527352482064920250815_113958.mov" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 1.15s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer" controls preload="metadata" muted>
-                  <source src="assets/robots/-6274493972214009384img_3295.MOV" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <!-- Image Items -->
-            <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.1s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_1821.PNG')">
-                <img src="assets/robots/IMG_1821.PNG" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                  Photo
-                </div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
-                    </svg>
-                    Click to Enlarge
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.15s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_1823.PNG')">
-                <img src="assets/robots/IMG_1823.PNG" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                  Photo
-                </div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
-                    </svg>
-                    Click to Enlarge
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.2s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_6457.JPG')">
-                <img src="assets/robots/IMG_6457.JPG" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                  Photo
-                </div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
-                    </svg>
-                    Click to Enlarge
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
 
     <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-sm" onclick="closeImageModal()">
-      <div class="flex items-center justify-center min-h-screen p-4">
-        <button onclick="closeImageModal()" class="absolute top-6 right-6 p-3 bg-dark-800/80 hover:bg-dark-700 rounded-xl text-gray-400 hover:text-accent-400 transition-all duration-300 z-10 border border-dark-600/30 hover:border-accent-400/50 shadow-lg hover:shadow-glow">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
-        <img id="modalImage" src="" alt="Robot" class="max-w-[90vw] max-h-[90vh] object-contain rounded-2xl shadow-2xl border border-accent-400/30" onclick="event.stopPropagation()">
-      </div>
+    <div id="imageModal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <button onclick="closeImageModal()" class="absolute -top-12 right-0 text-white hover:text-accent-400 transition-colors duration-300">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="bg-dark-800 rounded-2xl overflow-hidden shadow-2xl">
+                <img id="modalImage" src="" alt="Enlarged view" class="max-w-full max-h-[80vh] object-contain">
+            </div>
+        </div>
     </div>
 
-    <footer class="relative border-t border-dark-700/50 py-8">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col items-center justify-center gap-4 text-center">
-          <p class="text-gray-400 font-mono text-sm">© <span id="year"></span> Narek Harutyunyan. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-dark-800/50 backdrop-blur-sm border-t border-dark-700/50 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2024 Narek Harutyunyan. All rights reserved.</p>
         </div>
-      </div>
     </footer>
 
-    <!-- Scripts -->
     <script>
-      // Set current year
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Gallery Filter Function
-      function filterGallery(type) {
-        const items = document.querySelectorAll('.gallery-item');
-        const buttons = document.querySelectorAll('.filter-btn');
+        // Mobile menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
         
-        // Update button styles
-        buttons.forEach(btn => {
-          btn.classList.remove('active', 'bg-gradient-to-r', 'from-accent-600', 'to-accent-500', 'text-white', 'shadow-glow');
-          btn.classList.add('bg-dark-800/50', 'border', 'border-dark-600/30', 'text-gray-300');
+        navToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
         });
-        
-        event.target.classList.remove('bg-dark-800/50', 'border', 'border-dark-600/30', 'text-gray-300');
-        event.target.classList.add('active', 'bg-gradient-to-r', 'from-accent-600', 'to-accent-500', 'text-white', 'shadow-glow');
-        
-        // Filter items with animation
-        items.forEach((item, index) => {
-          if (type === 'all' || item.dataset.type === type) {
-            item.style.display = 'block';
-            // Stagger animation
-            setTimeout(() => {
-              item.style.animation = 'slide-up 0.5s ease-out';
-            }, index * 30);
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      }
 
-      // Image Modal Functions
-      function openImageModal(imageSrc) {
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        
-        modalImage.src = imageSrc;
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        
-        // Close on escape key
-        document.addEventListener('keydown', handleImageEscapeKey);
-      }
-
-      function closeImageModal() {
-        const modal = document.getElementById('imageModal');
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-        
-        // Remove event listeners
-        document.removeEventListener('keydown', handleImageEscapeKey);
-      }
-
-      function handleImageEscapeKey(e) {
-        if (e.key === 'Escape') {
-          closeImageModal();
+        // Gallery filtering
+        function filterGallery(type) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update button states
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-accent-600', 'text-white');
+                btn.classList.add('bg-dark-700', 'text-gray-300');
+            });
+            
+            event.target.classList.add('active', 'bg-accent-600', 'text-white');
+            event.target.classList.remove('bg-dark-700', 'text-gray-300');
+            
+            // Filter items
+            items.forEach(item => {
+                if (type === 'all' || item.dataset.type === type) {
+                    item.style.display = 'inline-block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
         }
-      }
-    </script>
-  </body>
-</html>
 
+        // Image modal functions
+        function openImageModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = src;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+
+        // Close modal on background click
+        document.getElementById('imageModal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeImageModal();
+            }
+        });
+    </script>
+</body>
+</html>
