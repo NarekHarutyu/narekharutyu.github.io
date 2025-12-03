@@ -209,7 +209,11 @@
       .light-theme .bg-dark-800,
       .light-theme .from-dark-800\/50,
       .light-theme .to-dark-700\/30 {
-        background-color: var(--bg-tertiary) !important;
+        background-color: rgba(241, 245, 249, 0.8) !important;
+      }
+      
+      .light-theme .bg-gradient-to-br {
+        background: linear-gradient(135deg, rgba(241, 245, 249, 0.95), rgba(226, 232, 240, 0.9)) !important;
       }
       
       .light-theme .border-dark-600\/30,
@@ -358,7 +362,16 @@
           <a href="#home" class="text-accent-400 font-display font-bold text-xl tracking-tight hover:text-accent-300 transition-colors duration-300 glow-text">
             <span class="font-mono">NH</span>
           </a>
-          <div class="flex items-center gap-4">
+          <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-gray-300 hover:bg-dark-800 hover:text-accent-400 focus:outline-none transition-all duration-300" aria-label="Open main menu" aria-expanded="false">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+          <div id="nav-links" class="hidden md:flex md:items-center md:gap-6">
+            <a href="gallery.html" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Robot Gallery</a>
+            <a href="#home" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">About Me</a>
+            <a href="#research" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Research</a>
+            <a href="#publications" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Publications</a>
+            <a href="#teaching" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Teaching</a>
+            <a href="#contact" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Contact</a>
             <!-- Theme Toggle Button -->
             <button id="theme-toggle" class="p-2.5 rounded-xl bg-gradient-to-br from-dark-800/80 to-dark-700/60 border border-dark-600/40 hover:border-accent-400/50 transition-all duration-300 hover:shadow-glow group" aria-label="Toggle theme">
               <svg id="theme-icon-sun" class="h-5 w-5 text-accent-400 group-hover:text-accent-300 transition-colors hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -368,17 +381,6 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
               </svg>
             </button>
-            <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-gray-300 hover:bg-dark-800 hover:text-accent-400 focus:outline-none transition-all duration-300" aria-label="Open main menu" aria-expanded="false">
-              <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
-          </div>
-          <div id="nav-links" class="hidden md:flex md:items-center md:gap-8">
-            <a href="gallery.html" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Robot Gallery</a>
-            <a href="#home" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">About Me</a>
-            <a href="#research" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Research</a>
-            <a href="#publications" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Publications</a>
-            <a href="#teaching" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Teaching</a>
-            <a href="#contact" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Contact</a>
           </div>
         </div>
         <div id="mobile-menu" class="md:hidden hidden pb-4 border-t border-dark-700/50 mt-4 pt-4">
