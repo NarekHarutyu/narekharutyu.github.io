@@ -208,22 +208,24 @@
         --tw-gradient-to: var(--accent-light);
       }
       
-      /* Force ALL boxes to be white/light in light theme */
+      /* Force ALL cards/boxes to be white in light theme */
       .light-theme .bg-dark-800\/50,
       .light-theme .bg-dark-700\/30,
       .light-theme .bg-dark-800,
       .light-theme .from-dark-800\/50,
       .light-theme .to-dark-700\/30,
       .light-theme article,
-      .light-theme .bg-gradient-to-br {
-        background: white !important;
-        background-color: white !important;
-        border: 1px solid #e2e8f0 !important;
-      }
-      
-      /* Override ALL gradients in light theme */
+      .light-theme section .bg-gradient-to-br,
+      .light-theme .bg-gradient-to-br,
+      .light-theme .bg-gradient-to-r,
+      .light-theme .bg-gradient-to-l,
+      .light-theme .bg-gradient-to-b,
+      .light-theme .bg-gradient-to-t,
       .light-theme [class*="bg-gradient"] {
-        background: white !important;
+        background-color: rgba(255, 255, 255, 0.96) !important;
+        background-image: none !important;
+        border-color: rgba(226, 232, 240, 0.9) !important;
+        color: #0f172a !important;
       }
       
       .light-theme .border-dark-600\/30,
