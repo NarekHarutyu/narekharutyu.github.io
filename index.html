@@ -209,11 +209,17 @@
       .light-theme .bg-dark-800,
       .light-theme .from-dark-800\/50,
       .light-theme .to-dark-700\/30 {
-        background-color: rgba(241, 245, 249, 0.8) !important;
+        background-color: rgba(255, 255, 255, 0.95) !important;
       }
       
       .light-theme .bg-gradient-to-br {
-        background: linear-gradient(135deg, rgba(241, 245, 249, 0.95), rgba(226, 232, 240, 0.9)) !important;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(249, 250, 251, 0.95)) !important;
+      }
+      
+      /* Ensure text is dark in light theme */
+      .light-theme .text-gray-300,
+      .light-theme .text-gray-200 {
+        color: #1e293b !important;
       }
       
       .light-theme .border-dark-600\/30,
