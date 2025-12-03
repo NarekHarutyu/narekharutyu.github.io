@@ -228,32 +228,6 @@
         color: #0f172a !important;
       }
       
-      /* Bio card surface */
-      .light-theme .card-panel {
-        background-color: rgba(255, 255, 255, 0.97) !important;
-        border: 1px solid #dbeafe !important;
-        box-shadow: 0 15px 40px rgba(15, 23, 42, 0.08) !important;
-      }
-      
-      /* CV button */
-      .light-theme .cv-button {
-        background: linear-gradient(120deg, #60a5fa, #3b82f6) !important;
-        color: #0f172a !important;
-        border: 1px solid rgba(59, 130, 246, 0.3) !important;
-        box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25) !important;
-      }
-      .light-theme .cv-button svg {
-        stroke: #0f172a !important;
-        color: #0f172a !important;
-      }
-      
-      /* Theme toggle button */
-      .light-theme .theme-toggle-btn {
-        background: rgba(255, 255, 255, 0.95) !important;
-        border: 1px solid rgba(148, 163, 184, 0.4) !important;
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08) !important;
-      }
-      
       .light-theme .border-dark-600\/30,
       .light-theme .border-dark-700\/50 {
         border-color: var(--border-color) !important;
@@ -411,7 +385,7 @@
             <a href="#teaching" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Teaching</a>
             <a href="#contact" class="nav-link text-sm text-gray-300 hover:text-accent-400 transition-all duration-300 font-medium tracking-wide">Contact</a>
             <!-- Theme Toggle Button -->
-            <button id="theme-toggle" class="p-2.5 rounded-xl bg-gradient-to-br from-dark-800/80 to-dark-700/60 border border-dark-600/40 hover:border-accent-400/50 transition-all duration-300 hover:shadow-glow group theme-toggle-btn" aria-label="Toggle theme">
+            <button id="theme-toggle" class="p-2.5 rounded-xl bg-gradient-to-br from-dark-800/80 to-dark-700/60 border border-dark-600/40 hover:border-accent-400/50 transition-all duration-300 hover:shadow-glow group" aria-label="Toggle theme">
               <svg id="theme-icon-sun" class="h-5 w-5 text-accent-400 group-hover:text-accent-300 transition-colors hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
               </svg>
@@ -456,14 +430,14 @@
                 </div>
               </div>
               
-              <div class="bg-gradient-to-r from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark card-panel">
+              <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark">
                 <p class="text-gray-300 leading-relaxed text-lg">
                 I'm a senior at <span class="text-accent-400 font-semibold">Brown University</span> majoring in Computer Engineering. My research focuses on robotics and artificial intelligence, particularly reinforcement learning, stability in locomotion, and multi-robot systems. I've worked on advancing reliable and adaptive robotic systems—including autonomous drones, quadruped robots, and AI-driven exploration platforms—through research at <span class="text-accent-400 font-semibold">Caltech</span>'s ARCL Lab, <span class="text-accent-400 font-semibold">Carnegie Mellon</span>'s AirLab, and <span class="text-accent-400 font-semibold">Brown</span>'s ACT Lab.
               </p>
               </div>
               
               <div class="flex flex-wrap items-center gap-6">
-                <a href="assets/Harutyunyan_Narek_CV.pdf" target="_blank" class="group inline-flex items-center gap-2 bg-gradient-to-r from-accent-600 to-accent-500 hover:from-accent-500 hover:to-accent-400 px-4 py-2 rounded-lg text-white font-medium tracking-wide transition-all duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg cv-button">
+                <a href="assets/Harutyunyan_Narek_CV.pdf" target="_blank" class="group inline-flex items-center gap-2 bg-gradient-to-r from-accent-600 to-accent-500 hover:from-accent-500 hover:to-accent-400 px-4 py-2 rounded-lg text-white font-medium tracking-wide transition-all duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
                   <svg class="h-4 w-4 group-hover:animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                   <span>CV</span>
                 </a>
