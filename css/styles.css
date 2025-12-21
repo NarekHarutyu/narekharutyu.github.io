@@ -21,6 +21,24 @@ html {
   background: linear-gradient(180deg, #fbbf24, #f59e0b);
 }
 
+/* Light theme scrollbar overrides */
+.light-theme::-webkit-scrollbar {
+  width: 8px;
+}
+
+.light-theme::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+.light-theme::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #60a5fa, #3b82f6);
+  border-radius: 4px;
+}
+
+.light-theme::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #93c5fd, #60a5fa);
+}
+
 /* Active nav link with glow effect */
 .nav-link.active {
   color: #f59e0b !important;

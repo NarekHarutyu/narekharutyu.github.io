@@ -275,6 +275,18 @@
         -webkit-background-clip: text !important;
         background-clip: text !important;
       }
+
+      .light-theme .notification-toast {
+        background: linear-gradient(135deg, #60a5fa, #3b82f6) !important;
+        color: #f8fafc !important;
+        border-color: rgba(59, 130, 246, 0.35) !important;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15) !important;
+      }
+      
+      .light-theme .notification-toast span,
+      .light-theme .notification-toast svg {
+        color: #f8fafc !important;
+      }
     </style>
     
     <!-- Custom Styles -->
@@ -900,7 +912,7 @@
 
     <!-- Notification Toast -->
     <div id="notificationToast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[150] hidden">
-      <div class="bg-accent-600 text-white px-6 py-3 rounded-lg shadow-lg border border-accent-400/30 flex items-center gap-3">
+      <div class="notification-toast bg-accent-600 text-white px-6 py-3 rounded-lg shadow-lg border border-accent-400/30 flex items-center gap-3">
         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
         </svg>
