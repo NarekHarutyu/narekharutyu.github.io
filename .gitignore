@@ -49,3 +49,4 @@ logs/
 *.temp
 outbox/ assets/robots/*.MOV
 assets/robots/*.mov
+assets/robots_backup/

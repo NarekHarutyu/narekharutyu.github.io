@@ -302,6 +302,15 @@
         scrollbar-width: thin;
         scrollbar-color: #3b82f6 #ffffff;
       }
+      
+      /* Back to Home button in light mode */
+      .light-theme .inline-flex.items-center {
+        color: #0f172a !important;
+      }
+      
+      .light-theme .inline-flex.items-center:hover {
+        color: #1e293b !important;
+      }
     </style>
     
     <!-- Custom Styles -->
@@ -350,6 +359,23 @@
         width: 100%;
         height: auto;
       }
+      
+      /* Caption overlay styling */
+      .gallery-item .caption-overlay {
+        backdrop-filter: blur(4px);
+      }
+      
+      .gallery-item .caption-overlay > div {
+        background: rgba(255, 255, 255, 0.95) !important;
+      }
+      
+      .light-theme .gallery-item .caption-overlay > div {
+        background: rgba(255, 255, 255, 0.95) !important;
+      }
+      
+      .gallery-item .caption-overlay p {
+        color: #111827 !important;
+      }
     </style>
   </head>
   <body class="font-sans text-gray-100 bg-black min-h-screen relative overflow-x-hidden">
@@ -377,7 +403,7 @@
           <a href="index.html" class="text-accent-400 font-display font-bold text-xl tracking-tight hover:text-accent-300 transition-colors duration-300 glow-text">
             <span class="font-mono">NH</span>
           </a>
-          <a href="index.html" class="inline-flex items-center gap-2 px-6 py-2 bg-dark-800/50 border border-dark-600/30 rounded-xl text-gray-300 hover:text-accent-400 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 font-medium">
+          <a href="index.html" class="inline-flex items-center gap-2 px-6 py-2 bg-dark-800/50 border border-dark-600/30 rounded-xl text-accent-400 hover:text-accent-300 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 font-medium">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
             </svg>
@@ -444,6 +470,14 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
                 </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Conducting Particle Image Velocimetry (PIV) experiments on quadruped robots to study aerodynamic effects during close-proximity flight.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -456,6 +490,14 @@
                 <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
+                </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Conducting free-flight experiments to study aerodynamic interactions during close-proximity flight.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -470,6 +512,14 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
                 </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Testing obstacle avoidance algorithms for multi-drone teams.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -482,6 +532,14 @@
                 <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
+                </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Testing obstacle avoidance algorithms on a 10-drone system.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -496,6 +554,14 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
                 </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Creating various geometric formations with teams of eight drones.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -508,6 +574,14 @@
                 <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
+                </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Long-exposure video showing a drone following a flower-like trajectory generated from a mathematical equation.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -522,6 +596,14 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
                 </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      My sophomore deep learning class project, where an iRobot Create 3 follows a custom car—selected as the best project out of more than 120 submissions.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -534,6 +616,14 @@
                 <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
+                </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Developed multi-drone control software to fly forward in a helical formation.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -548,6 +638,14 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
                 </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Designed algorithms for multi-drone teams to follow trajectories defined by Newtonian pendulum dynamics.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -560,6 +658,14 @@
                 <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
+                </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Coordinated simultaneous flight of 30 drones using the Crazyswarm library.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -574,6 +680,14 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
                 </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Coordinated simultaneous flight of 35 drones using the Crazyswarm library.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -586,6 +700,14 @@
                 <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
+                </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Flying and tuning PID control for a custom-built quadcopter capable of painting on canvases.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -600,6 +722,14 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
                 </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Designed an algorithm for drones to follow a wand using PIV-based control.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -612,6 +742,14 @@
                 <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
+                </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Developed reinforcement learning algorithms for dynamic fault recovery on the Unitree Go1 quadruped.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -626,6 +764,14 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
                 </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Developed a reinforcement learning algorithm for humanoid locomotion.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -638,6 +784,14 @@
                 <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
+                </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      My custom-built quadcopter painting on a canvas.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -652,6 +806,14 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
                 </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Custom-built quadcopter with a magnetic arm for drawing artistic patterns on a sand-filled canvas.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -664,6 +826,14 @@
                 <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
+                </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Testing locomotion algorithms on Boston Dynamics Spot, designed and trained using IsaacLab.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -678,6 +848,14 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
                 </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Testing a multi-drone trajectory-following script.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -691,6 +869,14 @@
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
                 </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      A circus-style demonstration featuring a quadruped holding a hoop while a drone circles around it, created as a class project I am TAing.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -703,6 +889,14 @@
                 <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                   Video
+                </div>
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Long-exposure video showing a drone following a trajectory defined by the Lorenz attractor equation.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -762,17 +956,16 @@
             <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.2s;">
               <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_6457.JPG')">
                 <img src="assets/robots/IMG_6457.JPG" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                   Photo
                 </div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
-                    </svg>
-                    Click to Enlarge
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      One of the early experiments testing my drone's ability to paint on canvases.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -781,17 +974,16 @@
             <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.25s;">
               <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/butterfly.png')">
                 <img src="assets/robots/butterfly.png" alt="Butterfly Robot Image" class="w-full h-auto object-cover" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
                   <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
                   Photo
                 </div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
-                    </svg>
-                    Click to Enlarge
+                <!-- Caption overlay - appears on hover -->
+                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div class="bg-white/95 backdrop-blur-sm p-4">
+                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
+                      Designed a control program for drone trajectory following based on the Lorenz attractor.
+                    </p>
                   </div>
                 </div>
               </div>
