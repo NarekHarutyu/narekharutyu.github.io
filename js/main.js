@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Active nav link based on scroll
+  // Active nav link based on scroll - optimized
   const sectionIds = ['home', 'research', 'teaching', 'publications', 'contact'];
   const links = Array.from(document.querySelectorAll('.nav-link'));
   const linkById = Object.fromEntries(
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     },
-    { rootMargin: '-40% 0px -55% 0px', threshold: [0, 0.25, 0.5, 1] }
+    { rootMargin: '-40% 0px -55% 0px', threshold: 0.25 }
   );
 
   sectionIds
@@ -90,14 +90,7 @@ window.openPoster = function(pdfPath, caption) {
   const posterHash = '#poster-multi-robot-systems';
   history.pushState({ posterOpen: true }, '', posterHash);
   
-  // Close modal when clicking outside
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closePoster();
-    }
-  });
-  
-  // Close modal with Escape key
+  // Add event listeners
   document.addEventListener('keydown', handleEscapeKey);
 }
 
@@ -137,8 +130,18 @@ window.addEventListener('popstate', (e) => {
   }
 });
 
-// Check if page loads with poster hash
+// Check if page loads with poster hash and set up modal click handler
 document.addEventListener('DOMContentLoaded', () => {
+  // Set up click outside to close for poster modal
+  const posterModal = document.getElementById('posterModal');
+  if (posterModal) {
+    posterModal.addEventListener('click', (e) => {
+      if (e.target === posterModal) {
+        closePoster();
+      }
+    });
+  }
+  
   if (window.location.hash === '#poster-multi-robot-systems') {
     openPoster('assets/Advancements_in_Multi_Robot_Systems.pdf', 'Yale Northeast Robotics Colloquium (NERC) 2023');
   }

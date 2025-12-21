@@ -45,10 +45,14 @@
       href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111"/><text x="50" y="58" font-size="48" text-anchor="middle" fill="%23fff" font-family="Arial, Helvetica, sans-serif">NH</text></svg>'
     />
 
-    <!-- Fonts -->
+    <!-- Fonts - Optimized to load only essential weights -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Preconnect to CDN and Analytics for faster resource loading -->
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -149,6 +153,31 @@
         --accent-light: #fcd34d;
         --border-color: rgba(51, 65, 85, 0.3);
         --shadow-color: rgba(0, 0, 0, 0.5);
+      }
+      
+      /* Scrollbar Styles - Dark Mode (default) */
+      html:not(.light-theme) ::-webkit-scrollbar {
+        width: 12px;
+      }
+      
+      html:not(.light-theme) ::-webkit-scrollbar-track {
+        background: #000000;
+      }
+      
+      html:not(.light-theme) ::-webkit-scrollbar-thumb {
+        background: #f59e0b;
+        border-radius: 6px;
+        border: 2px solid #000000;
+      }
+      
+      html:not(.light-theme) ::-webkit-scrollbar-thumb:hover {
+        background: #fbbf24;
+      }
+      
+      /* Firefox scrollbar - Dark Mode */
+      html:not(.light-theme) {
+        scrollbar-width: thin;
+        scrollbar-color: #f59e0b #000000;
       }
       
       .light-theme {
@@ -287,6 +316,60 @@
       .light-theme .notification-toast svg {
         color: #f8fafc !important;
       }
+      
+      /* Scrollbar Styles - Light Mode */
+      html.light-theme ::-webkit-scrollbar {
+        width: 12px;
+      }
+      
+      html.light-theme ::-webkit-scrollbar-track {
+        background: #ffffff;
+      }
+      
+      html.light-theme ::-webkit-scrollbar-thumb {
+        background: #3b82f6;
+        border-radius: 6px;
+        border: 2px solid #ffffff;
+      }
+      
+      html.light-theme ::-webkit-scrollbar-thumb:hover {
+        background: #2563eb;
+      }
+      
+      /* Firefox scrollbar - Light Mode */
+      html.light-theme {
+        scrollbar-width: thin;
+        scrollbar-color: #3b82f6 #ffffff;
+      }
+      
+      /* Welcome Modal Styles */
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px) scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+      
+      .welcome-modal-content {
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      }
+      
+      /* Dark mode adjustments for welcome modal */
+      .light-theme .welcome-modal-content {
+        background-color: white !important;
+      }
+      
+      .light-theme #welcomeTitle {
+        color: #0f172a !important;
+      }
+      
+      .light-theme #welcomeModal p {
+        color: #64748b !important;
+      }
     </style>
     
     <!-- Custom Styles -->
@@ -366,7 +449,7 @@
     <!-- Theme initialization script - must run immediately to prevent flash -->
     <script>
       (function() {
-        const savedTheme = localStorage.getItem('theme') || 'dark';
+        const savedTheme = localStorage.getItem('theme') || 'light';
         if (savedTheme === 'light') {
           document.documentElement.classList.add('light-theme');
         }
@@ -910,6 +993,31 @@
       </div>
     </footer>
 
+    <!-- Welcome Modal -->
+    <div id="welcomeModal" class="fixed inset-0 z-[200] hidden" style="background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px);">
+      <div class="flex items-center justify-center min-h-screen p-4">
+        <div id="welcomeModalContent" class="welcome-modal-content bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 transform transition-all duration-300" style="animation: slideInUp 0.4s ease-out;" role="dialog" aria-labelledby="welcomeTitle" aria-modal="true">
+          <!-- Content -->
+          <h2 id="welcomeTitle" class="text-2xl font-display font-bold text-gray-900 text-center mb-3">
+            Welcome to Narek Harutyunyan's Personal Website
+          </h2>
+          <p class="text-gray-600 text-center mb-8 leading-relaxed">
+            Explore my robotics research, publications, and projects
+          </p>
+          
+          <!-- Buttons -->
+          <div class="space-y-3">
+            <button onclick="goToGallery()" class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+              Go to Robot Gallery
+            </button>
+            <button onclick="closeWelcomeModal()" class="w-full px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">
+              Continue to Homepage
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Notification Toast -->
     <div id="notificationToast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-[150] hidden">
       <div class="notification-toast bg-accent-600 text-white px-6 py-3 rounded-lg shadow-lg border border-accent-400/30 flex items-center gap-3">
@@ -1090,8 +1198,8 @@
         const moonIcon = document.getElementById('theme-icon-moon');
         const html = document.documentElement;
         
-        // Get saved theme or default to dark
-        const savedTheme = localStorage.getItem('theme') || 'dark';
+        // Get saved theme or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
         
         // Apply theme on load
         function applyTheme(theme) {
@@ -1118,6 +1226,56 @@
           localStorage.setItem('theme', newTheme);
         });
       })();
+      
+      // Welcome Modal Functionality
+      (function() {
+        const welcomeModal = document.getElementById('welcomeModal');
+        const hasSeenWelcome = localStorage.getItem('hasSeenWelcome');
+        
+        // Show welcome modal only on first visit, after a short delay
+        if (!hasSeenWelcome) {
+          setTimeout(() => {
+            welcomeModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            // Focus on the modal for accessibility
+            document.getElementById('welcomeModalContent').focus();
+          }, 800); // 800ms delay for a smooth entrance
+        }
+        
+        // Close modal when clicking outside
+        welcomeModal.addEventListener('click', (e) => {
+          if (e.target === welcomeModal) {
+            closeWelcomeModal();
+          }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !welcomeModal.classList.contains('hidden')) {
+            closeWelcomeModal();
+          }
+        });
+      })();
+      
+      // Function to close welcome modal
+      function closeWelcomeModal() {
+        const welcomeModal = document.getElementById('welcomeModal');
+        welcomeModal.classList.add('hidden');
+        document.body.style.overflow = '';
+        
+        // Remember that user has seen the welcome
+        localStorage.setItem('hasSeenWelcome', 'true');
+      }
+      
+      // Function to navigate to gallery
+      function goToGallery() {
+        // Remember that user has seen the welcome
+        localStorage.setItem('hasSeenWelcome', 'true');
+        
+        // Navigate to gallery page
+        window.location.href = 'gallery.html';
+      }
 
     </script>
   </body>
