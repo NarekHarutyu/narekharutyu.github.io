@@ -31,7 +31,7 @@ app.post('/contact', async (req, res) => {
 
     const info = await transporter.sendMail({
       from: SMTP_USER || 'no-reply@localhost',
-      to: TO_EMAIL || SMTP_USER || 'narek_harutyunyan@brown.edu',
+      to: TO_EMAIL || SMTP_USER || 'narek_harutyunyan@berkeley.edu',
       replyTo: email,
       subject: `Website contact from ${name}`,
       text: `From: ${name} <${email}>

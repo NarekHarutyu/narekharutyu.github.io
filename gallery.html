@@ -11,13 +11,13 @@
     <!-- Favicon -->
     <link
       rel="icon"
-      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111"/><text x="50" y="58" font-size="48" text-anchor="middle" fill="%23fff" font-family="Arial, Helvetica, sans-serif">NH</text></svg>'
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111"/><text x="50" y="62" font-size="52" text-anchor="middle" fill="%23fbbf24" font-family="Georgia, serif">N</text></svg>'
     />
 
     <!-- Fonts - Optimized to load only essential weights -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
 
     <!-- Preconnect to CDN for faster resource loading -->
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
@@ -29,9 +29,9 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-              display: ['Space Grotesk', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-              mono: ['Orbitron', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+              sans: ['"Source Sans 3"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['"Source Serif 4"', 'Georgia', 'ui-serif', 'serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
             },
             colors: {
               accent: {
@@ -138,19 +138,126 @@
       }
       
       html:not(.light-theme) ::-webkit-scrollbar-thumb {
-        background: #f59e0b;
+        background: #334155;
         border-radius: 6px;
         border: 2px solid #000000;
       }
       
       html:not(.light-theme) ::-webkit-scrollbar-thumb:hover {
-        background: #fbbf24;
+        background: #475569;
       }
       
       /* Firefox scrollbar - Dark Mode */
       html:not(.light-theme) {
         scrollbar-width: thin;
-        scrollbar-color: #f59e0b #000000;
+        scrollbar-color: #334155 #000000;
+      }
+      
+      /* Dark mode: restrained orange — default text is white/gray */
+      html:not(.light-theme) .text-accent-400,
+      html:not(.light-theme) .text-accent-300 {
+        color: #e2e8f0 !important;
+      }
+      
+      html:not(.light-theme) .text-gold-400,
+      html:not(.light-theme) strong.text-gold-400,
+      html:not(.light-theme) span.text-gold-400.font-semibold {
+        color: #fbbf24 !important;
+      }
+      
+      html:not(.light-theme) a.text-accent-400,
+      html:not(.light-theme) a.text-accent-300,
+      html:not(.light-theme) button.text-accent-400 {
+        color: #fbbf24 !important;
+      }
+      
+      html:not(.light-theme) a.text-gold-400 {
+        color: #fbbf24 !important;
+      }
+      
+      html:not(.light-theme) a.text-accent-400:hover,
+      html:not(.light-theme) a.text-accent-300:hover,
+      html:not(.light-theme) button.text-accent-400:hover,
+      html:not(.light-theme) a.text-gold-400:hover,
+      html:not(.light-theme) .hover\:text-accent-400:hover,
+      html:not(.light-theme) .hover\:text-accent-300:hover {
+        color: #fcd34d !important;
+      }
+      
+      html:not(.light-theme) .bg-clip-text,
+      html:not(.light-theme) h1 .bg-clip-text,
+      html:not(.light-theme) h2.bg-clip-text,
+      html:not(.light-theme) .bg-clip-text.text-transparent {
+        background: none !important;
+        background-image: none !important;
+        background-color: transparent !important;
+        -webkit-background-clip: border-box !important;
+        background-clip: border-box !important;
+        color: #f1f5f9 !important;
+        -webkit-text-fill-color: #f1f5f9 !important;
+      }
+      
+      html:not(.light-theme) .w-24.bg-gradient-to-r,
+      html:not(.light-theme) .w-32.bg-gradient-to-r,
+      html:not(.light-theme) div.h-1.bg-gradient-to-r {
+        background: #334155 !important;
+        background-image: none !important;
+      }
+      
+      html:not(.light-theme) .bg-accent-600\/20,
+      html:not(.light-theme) .bg-gold-600\/20 {
+        background-color: rgba(30, 41, 59, 0.8) !important;
+      }
+      
+      html:not(.light-theme) .border-accent-600\/30,
+      html:not(.light-theme) .hover\:bg-accent-600\/30:hover,
+      html:not(.light-theme) .border-gold-600\/30 {
+        border-color: rgba(51, 65, 85, 0.5) !important;
+      }
+      
+      html:not(.light-theme) .hover\:bg-accent-600\/30:hover,
+      html:not(.light-theme) .hover\:bg-gold-600\/30:hover {
+        background-color: rgba(51, 65, 85, 0.6) !important;
+      }
+      
+      html:not(.light-theme) .text-gold-300,
+      html:not(.light-theme) .border-gold-400\/30 {
+        color: #cbd5e1 !important;
+        border-color: rgba(51, 65, 85, 0.5) !important;
+      }
+      
+      html:not(.light-theme) .bg-professional-grid {
+        background-image: url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%23f1f5f9' fill-opacity='0.03'%3e%3cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e") !important;
+      }
+      
+      html:not(.light-theme) .hover\:shadow-glow:hover {
+        box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
+      }
+      
+      html:not(.light-theme) a.bg-gradient-to-r.from-accent-600,
+      html:not(.light-theme) button.bg-gradient-to-r.from-accent-600,
+      html:not(.light-theme) button.filter-btn.active.bg-gradient-to-r {
+        background: linear-gradient(to right, #d97706, #f59e0b) !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+      }
+      
+      html:not(.light-theme) header > nav a.font-display,
+      html:not(.light-theme) header > a.font-display {
+        color: #f1f5f9 !important;
+      }
+      
+      html:not(.light-theme) header > nav a.font-display:hover,
+      html:not(.light-theme) header > a.font-display:hover {
+        color: #e2e8f0 !important;
+      }
+      
+      html:not(.light-theme) .inline-flex.items-center.text-accent-400 {
+        color: #fbbf24 !important;
+      }
+      
+      html:not(.light-theme) .inline-flex.items-center.text-accent-400:hover {
+        color: #fcd34d !important;
       }
       
       .light-theme {
@@ -160,9 +267,9 @@
         --text-primary: #0f172a;
         --text-secondary: #334155;
         --text-muted: #64748b;
-        --accent-color: #3b82f6;
-        --accent-hover: #2563eb;
-        --accent-light: #60a5fa;
+        --accent-color: #fbbf24;
+        --accent-hover: #f59e0b;
+        --accent-light: #fcd34d;
         --border-color: rgba(203, 213, 225, 0.5);
         --shadow-color: rgba(0, 0, 0, 0.1);
       }
@@ -191,15 +298,28 @@
         color: #64748b !important;
       }
       
+      /* Default: accent utility classes render as black in light mode */
       .light-theme .text-accent-400,
-      .light-theme .text-accent-300,
-      .light-theme .text-gold-400 {
-        color: var(--accent-color) !important;
+      .light-theme .text-accent-300 {
+        color: #0f172a !important;
       }
       
+      /* Orange reserved for important highlights only */
+      .light-theme .text-gold-400,
+      .light-theme strong.text-gold-400 {
+        color: #b45309 !important;
+      }
+      
+      .light-theme a.text-accent-400,
+      .light-theme a.text-accent-300 {
+        color: #d97706 !important;
+      }
+      
+      .light-theme a.text-accent-400:hover,
+      .light-theme a.text-accent-300:hover,
       .light-theme .hover\:text-accent-400:hover,
       .light-theme .hover\:text-accent-300:hover {
-        color: var(--accent-hover) !important;
+        color: #b45309 !important;
       }
       
       .light-theme .from-accent-400,
@@ -241,17 +361,26 @@
       
       .light-theme .bg-accent-600\/20,
       .light-theme .bg-gold-600\/20 {
-        background-color: rgba(59, 130, 246, 0.1) !important;
+        background-color: rgba(241, 245, 249, 0.9) !important;
+      }
+      
+      .light-theme .border-accent-600\/30,
+      .light-theme .hover\:bg-accent-600\/30:hover {
+        border-color: rgba(203, 213, 225, 0.8) !important;
+      }
+      
+      .light-theme .hover\:bg-accent-600\/30:hover {
+        background-color: rgba(226, 232, 240, 0.9) !important;
       }
       
       .light-theme .text-gold-300,
       .light-theme .border-gold-400\/30 {
-        color: var(--accent-light) !important;
-        border-color: rgba(59, 130, 246, 0.3) !important;
+        color: #64748b !important;
+        border-color: rgba(203, 213, 225, 0.8) !important;
       }
       
       .light-theme .bg-gold-400\/20 {
-        background-color: rgba(59, 130, 246, 0.15) !important;
+        background-color: rgba(241, 245, 249, 0.9) !important;
       }
       
       .light-theme header {
@@ -260,22 +389,42 @@
       }
       
       .light-theme .bg-professional-grid {
-        background-image: url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%233b82f6' fill-opacity='0.03'%3e%3cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e") !important;
+        background-image: url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%230f172a' fill-opacity='0.03'%3e%3cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e") !important;
       }
       
       .light-theme .hover\:shadow-glow:hover {
-        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3) !important;
+        box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.05) !important;
       }
       
-      /* Fix specific gradients */
-      .light-theme .bg-gradient-to-r,
-      .light-theme .bg-gradient-to-br {
-        background: linear-gradient(to right, var(--accent-color), var(--accent-light)) !important;
+      /* Gradient text → plain black, no background highlight */
+      .light-theme .bg-clip-text,
+      .light-theme h1 .bg-clip-text,
+      .light-theme h2.bg-clip-text,
+      .light-theme .bg-clip-text.text-transparent {
+        background: none !important;
+        background-image: none !important;
+        background-color: transparent !important;
+        -webkit-background-clip: border-box !important;
+        background-clip: border-box !important;
+        color: #0f172a !important;
+        -webkit-text-fill-color: #0f172a !important;
       }
       
-      .light-theme .bg-clip-text {
-        -webkit-background-clip: text !important;
-        background-clip: text !important;
+      /* Section dividers → neutral gray */
+      .light-theme .w-24.bg-gradient-to-r,
+      .light-theme .w-32.bg-gradient-to-r,
+      .light-theme div.h-1.bg-gradient-to-r {
+        background: #cbd5e1 !important;
+        background-image: none !important;
+      }
+      
+      /* Primary buttons keep orange fill */
+      .light-theme a.bg-gradient-to-r.from-accent-600,
+      .light-theme button.bg-gradient-to-r.from-accent-600,
+      .light-theme button.filter-btn.active.bg-gradient-to-r {
+        background: linear-gradient(to right, #d97706, #f59e0b) !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
       }
       
       /* Scrollbar Styles - Light Mode */
@@ -288,28 +437,38 @@
       }
       
       html.light-theme ::-webkit-scrollbar-thumb {
-        background: #3b82f6;
+        background: #cbd5e1;
         border-radius: 6px;
         border: 2px solid #ffffff;
       }
       
       html.light-theme ::-webkit-scrollbar-thumb:hover {
-        background: #2563eb;
+        background: #94a3b8;
       }
       
       /* Firefox scrollbar - Light Mode */
       html.light-theme {
         scrollbar-width: thin;
-        scrollbar-color: #3b82f6 #ffffff;
+        scrollbar-color: #cbd5e1 #ffffff;
       }
       
-      /* Back to Home button in light mode */
-      .light-theme .inline-flex.items-center {
+      .light-theme header > nav a.font-display,
+      .light-theme header > a.font-display {
         color: #0f172a !important;
       }
       
-      .light-theme .inline-flex.items-center:hover {
-        color: #1e293b !important;
+      .light-theme header > nav a.font-display:hover,
+      .light-theme header > a.font-display:hover {
+        color: #334155 !important;
+      }
+      
+      /* Back to Home link — orange as a link highlight */
+      .light-theme .inline-flex.items-center.text-accent-400 {
+        color: #d97706 !important;
+      }
+      
+      .light-theme .inline-flex.items-center.text-accent-400:hover {
+        color: #b45309 !important;
       }
     </style>
     
@@ -400,8 +559,8 @@
     <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md supports-[backdrop-filter]:bg-black/90 border-b border-dark-700/50 transition-all duration-300">
       <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
-          <a href="index.html" class="text-accent-400 font-display font-bold text-xl tracking-tight hover:text-accent-300 transition-colors duration-300 glow-text">
-            <span class="font-mono">NH</span>
+          <a href="index.html" class="font-display font-semibold text-base sm:text-lg tracking-tight text-accent-400 hover:text-accent-300 transition-colors duration-300">
+            Narek Harutyunyan
           </a>
           <a href="index.html" class="inline-flex items-center gap-2 px-6 py-2 bg-dark-800/50 border border-dark-600/30 rounded-xl text-accent-400 hover:text-accent-300 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 font-medium">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1009,7 +1168,7 @@
     <footer class="relative border-t border-dark-700/50 py-8">
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col items-center justify-center gap-4 text-center">
-          <p class="text-gray-400 font-mono text-sm">© <span id="year"></span> Narek Harutyunyan. All rights reserved.</p>
+          <p class="text-gray-400 text-sm tracking-wide">© <span id="year"></span> Narek Harutyunyan. All rights reserved.</p>
         </div>
       </div>
     </footer>

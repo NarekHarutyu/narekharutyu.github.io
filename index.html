@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Updated website content -->
-    <title>Narek Harutyunyan - Robotics Researcher | Brown University | AI & Reinforcement Learning</title>
-    <meta name="description" content="Narek Harutyunyan (Narek H, Narek Harutyu) - Robotics Researcher at Brown University specializing in Reinforcement Learning, AI, Autonomous Systems, Multi-Robot Systems. Research at Caltech, CMU AirLab. Computer Engineering student." />
+    <title>Narek Harutyunyan - Incoming PhD Student | UC Berkeley EECS | Robotics & AI</title>
+    <meta name="description" content="Narek Harutyunyan (Narek H, Narek Harutyu) - Incoming PhD student at UC Berkeley EECS. Brown University Computer Engineering graduate specializing in reinforcement learning, locomotion stability, and multi-robot systems. Research at Caltech ARCL, CMU AirLab, and Brown ACT Lab." />
     <meta name="author" content="Narek Harutyunyan" />
     <meta name="keywords" content="Narek Harutyunyan, Narek H, Narek Harutyu, robotics researcher, Brown University, reinforcement learning, artificial intelligence, AI, autonomous systems, multi-robot systems, Caltech, CMU, computer engineering, robotics, machine learning, drones, quadruped robots" />
     
@@ -18,14 +18,14 @@
     <meta name="distribution" content="global" />
     <meta name="language" content="en" />
     <meta name="geo.region" content="US" />
-    <meta name="geo.placename" content="Providence, Rhode Island" />
+    <meta name="geo.placename" content="Berkeley, California" />
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://narekharutyu.github.io/" />
 
     <!-- Open Graph / SEO -->
-    <meta property="og:title" content="Narek Harutyunyan - Robotics Researcher | Brown University" />
-    <meta property="og:description" content="Robotics researcher specializing in reinforcement learning, AI, locomotion stability, and multi-robot systems at Brown University, Caltech, and CMU." />
+    <meta property="og:title" content="Narek Harutyunyan - Incoming PhD Student | UC Berkeley EECS" />
+    <meta property="og:description" content="Incoming PhD student at UC Berkeley EECS. Robotics and AI researcher specializing in reinforcement learning, locomotion stability, and multi-robot systems." />
     <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://narekharutyu.github.io/" />
     <meta property="og:image" content="https://narekharutyu.github.io/assets/2024-RISS-Headshot-HARUTYUNYAN, Narek.jpg" />
@@ -35,20 +35,20 @@
     <meta property="profile:last_name" content="Harutyunyan" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Narek Harutyunyan - Robotics Researcher | Brown University" />
-    <meta name="twitter:description" content="Robotics researcher specializing in reinforcement learning, AI, and autonomous systems. Research at Brown University, Caltech, and CMU." />
+    <meta name="twitter:title" content="Narek Harutyunyan - Incoming PhD Student | UC Berkeley EECS" />
+    <meta name="twitter:description" content="Incoming PhD student at UC Berkeley EECS. Robotics and AI researcher specializing in reinforcement learning and multi-robot systems." />
     <meta name="twitter:image" content="https://narekharutyu.github.io/assets/2024-RISS-Headshot-HARUTYUNYAN, Narek.jpg" />
 
     <!-- Favicon (simple SVG data URI) -->
     <link
       rel="icon"
-      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111"/><text x="50" y="58" font-size="48" text-anchor="middle" fill="%23fff" font-family="Arial, Helvetica, sans-serif">NH</text></svg>'
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111"/><text x="50" y="62" font-size="52" text-anchor="middle" fill="%23fbbf24" font-family="Georgia, serif">N</text></svg>'
     />
 
     <!-- Fonts - Optimized to load only essential weights -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Orbitron:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet" />
 
     <!-- Preconnect to CDN and Analytics for faster resource loading -->
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
@@ -61,9 +61,9 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-              display: ['Space Grotesk', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-              mono: ['Orbitron', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+              sans: ['"Source Sans 3"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['"Source Serif 4"', 'Georgia', 'ui-serif', 'serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
             },
             colors: {
               accent: {
@@ -165,19 +165,137 @@
       }
       
       html:not(.light-theme) ::-webkit-scrollbar-thumb {
-        background: #f59e0b;
+        background: #334155;
         border-radius: 6px;
         border: 2px solid #000000;
       }
       
       html:not(.light-theme) ::-webkit-scrollbar-thumb:hover {
-        background: #fbbf24;
+        background: #475569;
       }
       
       /* Firefox scrollbar - Dark Mode */
       html:not(.light-theme) {
         scrollbar-width: thin;
-        scrollbar-color: #f59e0b #000000;
+        scrollbar-color: #334155 #000000;
+      }
+      
+      /* Dark mode: restrained orange — default text is white/gray */
+      html:not(.light-theme) .text-accent-400,
+      html:not(.light-theme) .text-accent-300 {
+        color: #e2e8f0 !important;
+      }
+      
+      html:not(.light-theme) .text-gold-400,
+      html:not(.light-theme) strong.text-gold-400,
+      html:not(.light-theme) span.text-gold-400.font-semibold {
+        color: #fbbf24 !important;
+      }
+      
+      html:not(.light-theme) a.text-accent-400,
+      html:not(.light-theme) a.text-accent-300,
+      html:not(.light-theme) button.text-accent-400 {
+        color: #fbbf24 !important;
+      }
+      
+      html:not(.light-theme) a.text-gold-400 {
+        color: #fbbf24 !important;
+      }
+      
+      html:not(.light-theme) a.text-accent-400:hover,
+      html:not(.light-theme) a.text-accent-300:hover,
+      html:not(.light-theme) button.text-accent-400:hover,
+      html:not(.light-theme) a.text-gold-400:hover,
+      html:not(.light-theme) .hover\:text-accent-400:hover,
+      html:not(.light-theme) .hover\:text-accent-300:hover {
+        color: #fcd34d !important;
+      }
+      
+      html:not(.light-theme) .bg-clip-text,
+      html:not(.light-theme) h1 .bg-clip-text,
+      html:not(.light-theme) h2.bg-clip-text,
+      html:not(.light-theme) .bg-clip-text.text-transparent {
+        background: none !important;
+        background-image: none !important;
+        background-color: transparent !important;
+        -webkit-background-clip: border-box !important;
+        background-clip: border-box !important;
+        color: #f1f5f9 !important;
+        -webkit-text-fill-color: #f1f5f9 !important;
+      }
+      
+      html:not(.light-theme) .w-24.bg-gradient-to-r,
+      html:not(.light-theme) .w-32.bg-gradient-to-r,
+      html:not(.light-theme) div.h-1.bg-gradient-to-r {
+        background: #334155 !important;
+        background-image: none !important;
+      }
+      
+      html:not(.light-theme) .bg-accent-600\/20,
+      html:not(.light-theme) .bg-gold-600\/20 {
+        background-color: rgba(30, 41, 59, 0.8) !important;
+      }
+      
+      html:not(.light-theme) .border-accent-600\/30,
+      html:not(.light-theme) .hover\:bg-accent-600\/30:hover,
+      html:not(.light-theme) .border-gold-600\/30 {
+        border-color: rgba(51, 65, 85, 0.5) !important;
+      }
+      
+      html:not(.light-theme) .hover\:bg-accent-600\/30:hover,
+      html:not(.light-theme) .hover\:bg-gold-600\/30:hover {
+        background-color: rgba(51, 65, 85, 0.6) !important;
+      }
+      
+      html:not(.light-theme) .text-gold-300,
+      html:not(.light-theme) .border-gold-400\/30 {
+        color: #cbd5e1 !important;
+        border-color: rgba(51, 65, 85, 0.5) !important;
+      }
+      
+      html:not(.light-theme) .bg-professional-grid {
+        background-image: url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%23f1f5f9' fill-opacity='0.03'%3e%3cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e") !important;
+      }
+      
+      html:not(.light-theme) .hover\:shadow-glow:hover {
+        box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
+      }
+      
+      html:not(.light-theme) a.bg-gradient-to-r.from-accent-600,
+      html:not(.light-theme) button.bg-gradient-to-r.from-accent-600 {
+        background: linear-gradient(to right, #d97706, #f59e0b) !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
+      }
+      
+      html:not(.light-theme) .nav-link {
+        color: #cbd5e1 !important;
+      }
+      
+      html:not(.light-theme) .nav-link:hover {
+        color: #f1f5f9 !important;
+      }
+      
+      html:not(.light-theme) header > nav a.font-display {
+        color: #f1f5f9 !important;
+      }
+      
+      html:not(.light-theme) header > nav a.font-display:hover {
+        color: #e2e8f0 !important;
+      }
+      
+      html:not(.light-theme) #theme-icon-sun,
+      html:not(.light-theme) #theme-icon-moon {
+        color: #94a3b8 !important;
+      }
+      
+      html:not(.light-theme) #theme-icon-sun:hover,
+      html:not(.light-theme) #theme-icon-moon:hover {
+        color: #f1f5f9 !important;
+      }
+      
+      html:not(.light-theme) svg.text-accent-400 {
+        color: #94a3b8 !important;
       }
       
       .light-theme {
@@ -187,9 +305,9 @@
         --text-primary: #0f172a;
         --text-secondary: #334155;
         --text-muted: #64748b;
-        --accent-color: #3b82f6;
-        --accent-hover: #2563eb;
-        --accent-light: #60a5fa;
+        --accent-color: #fbbf24;
+        --accent-hover: #f59e0b;
+        --accent-light: #fcd34d;
         --border-color: rgba(203, 213, 225, 0.5);
         --shadow-color: rgba(0, 0, 0, 0.1);
       }
@@ -218,15 +336,28 @@
         color: #64748b !important;
       }
       
+      /* Default: accent utility classes render as black in light mode */
       .light-theme .text-accent-400,
-      .light-theme .text-accent-300,
-      .light-theme .text-gold-400 {
-        color: var(--accent-color) !important;
+      .light-theme .text-accent-300 {
+        color: #0f172a !important;
       }
       
+      /* Orange reserved for important highlights only */
+      .light-theme .text-gold-400,
+      .light-theme strong.text-gold-400 {
+        color: #b45309 !important;
+      }
+      
+      .light-theme a.text-accent-400,
+      .light-theme a.text-accent-300 {
+        color: #d97706 !important;
+      }
+      
+      .light-theme a.text-accent-400:hover,
+      .light-theme a.text-accent-300:hover,
       .light-theme .hover\:text-accent-400:hover,
       .light-theme .hover\:text-accent-300:hover {
-        color: var(--accent-hover) !important;
+        color: #b45309 !important;
       }
       
       .light-theme .from-accent-400,
@@ -268,17 +399,26 @@
       
       .light-theme .bg-accent-600\/20,
       .light-theme .bg-gold-600\/20 {
-        background-color: rgba(59, 130, 246, 0.1) !important;
+        background-color: rgba(241, 245, 249, 0.9) !important;
+      }
+      
+      .light-theme .border-accent-600\/30,
+      .light-theme .hover\:bg-accent-600\/30:hover {
+        border-color: rgba(203, 213, 225, 0.8) !important;
+      }
+      
+      .light-theme .hover\:bg-accent-600\/30:hover {
+        background-color: rgba(226, 232, 240, 0.9) !important;
       }
       
       .light-theme .text-gold-300,
       .light-theme .border-gold-400\/30 {
-        color: var(--accent-light) !important;
-        border-color: rgba(59, 130, 246, 0.3) !important;
+        color: #64748b !important;
+        border-color: rgba(203, 213, 225, 0.8) !important;
       }
       
       .light-theme .bg-gold-400\/20 {
-        background-color: rgba(59, 130, 246, 0.15) !important;
+        background-color: rgba(241, 245, 249, 0.9) !important;
       }
       
       .light-theme header {
@@ -287,34 +427,53 @@
       }
       
       .light-theme .bg-professional-grid {
-        background-image: url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%233b82f6' fill-opacity='0.03'%3e%3cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e") !important;
+        background-image: url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%230f172a' fill-opacity='0.03'%3e%3cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e") !important;
       }
       
       .light-theme .hover\:shadow-glow:hover {
-        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3) !important;
+        box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.05) !important;
       }
       
-      /* Fix specific gradients */
-      .light-theme .bg-gradient-to-r,
-      .light-theme .bg-gradient-to-br {
-        background: linear-gradient(to right, var(--accent-color), var(--accent-light)) !important;
+      /* Gradient text → plain black, no background highlight */
+      .light-theme .bg-clip-text,
+      .light-theme h1 .bg-clip-text,
+      .light-theme h2.bg-clip-text,
+      .light-theme .bg-clip-text.text-transparent {
+        background: none !important;
+        background-image: none !important;
+        background-color: transparent !important;
+        -webkit-background-clip: border-box !important;
+        background-clip: border-box !important;
+        color: #0f172a !important;
+        -webkit-text-fill-color: #0f172a !important;
       }
       
-      .light-theme .bg-clip-text {
-        -webkit-background-clip: text !important;
-        background-clip: text !important;
+      /* Section dividers → neutral gray */
+      .light-theme .w-24.bg-gradient-to-r,
+      .light-theme .w-32.bg-gradient-to-r,
+      .light-theme div.h-1.bg-gradient-to-r {
+        background: #cbd5e1 !important;
+        background-image: none !important;
+      }
+      
+      /* Primary buttons keep orange fill */
+      .light-theme a.bg-gradient-to-r.from-accent-600,
+      .light-theme button.bg-gradient-to-r.from-accent-600 {
+        background: linear-gradient(to right, #d97706, #f59e0b) !important;
+        color: #ffffff !important;
+        -webkit-text-fill-color: #ffffff !important;
       }
 
       .light-theme .notification-toast {
-        background: linear-gradient(135deg, #60a5fa, #3b82f6) !important;
-        color: #f8fafc !important;
-        border-color: rgba(59, 130, 246, 0.35) !important;
+        background: linear-gradient(135deg, #fcd34d, #f59e0b) !important;
+        color: #0f172a !important;
+        border-color: rgba(245, 158, 11, 0.35) !important;
         box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15) !important;
       }
       
       .light-theme .notification-toast span,
       .light-theme .notification-toast svg {
-        color: #f8fafc !important;
+        color: #0f172a !important;
       }
       
       /* Scrollbar Styles - Light Mode */
@@ -327,39 +486,47 @@
       }
       
       html.light-theme ::-webkit-scrollbar-thumb {
-        background: #3b82f6;
+        background: #cbd5e1;
         border-radius: 6px;
         border: 2px solid #ffffff;
       }
       
       html.light-theme ::-webkit-scrollbar-thumb:hover {
-        background: #2563eb;
+        background: #94a3b8;
       }
       
       /* Firefox scrollbar - Light Mode */
       html.light-theme {
         scrollbar-width: thin;
-        scrollbar-color: #3b82f6 #ffffff;
+        scrollbar-color: #cbd5e1 #ffffff;
       }
       
-      /* Navigation link colors in light mode */
+      /* Navigation: black text in light mode */
       .light-theme .nav-link {
         color: #0f172a !important;
       }
       
       .light-theme .nav-link:hover {
-        color: #1e293b !important;
+        color: #334155 !important;
       }
       
-      /* Theme toggle icon colors in light mode */
+      .light-theme header > nav a.font-display {
+        color: #0f172a !important;
+      }
+      
+      .light-theme header > nav a.font-display:hover {
+        color: #334155 !important;
+      }
+      
+      /* Theme toggle icon */
       .light-theme #theme-icon-sun,
       .light-theme #theme-icon-moon {
-        color: #3b82f6 !important;
+        color: #334155 !important;
       }
       
       .light-theme #theme-icon-sun:hover,
       .light-theme #theme-icon-moon:hover {
-        color: #2563eb !important;
+        color: #0f172a !important;
       }
       
       /* Welcome Modal Styles */
@@ -412,13 +579,13 @@
       "@type": "Person",
       "name": "Narek Harutyunyan",
       "alternateName": ["Narek H", "Narek Harutyu"],
-      "jobTitle": "Robotics Researcher",
-      "description": "Robotics researcher specializing in reinforcement learning, artificial intelligence, autonomous systems, and multi-robot systems",
+      "jobTitle": "Incoming PhD Student",
+      "description": "Incoming PhD student at UC Berkeley EECS specializing in reinforcement learning, artificial intelligence, locomotion stability, and multi-robot systems",
       "url": "https://narekharutyu.github.io/",
       "image": "https://narekharutyu.github.io/assets/2024-RISS-Headshot-HARUTYUNYAN, Narek.jpg",
       "sameAs": [
         "https://www.linkedin.com/in/narek-harutyunyan-428069233",
-        "https://scholar.google.com/citations?user=fIzSTy4AAAAJ&hl=en"
+        "https://scholar.google.com/citations?user=p_RX_zcAAAAJ&hl=en"
       ],
       "alumniOf": {
         "@type": "EducationalOrganization",
@@ -428,8 +595,8 @@
       "affiliation": [
         {
           "@type": "EducationalOrganization",
-          "name": "Brown University",
-          "sameAs": "https://www.brown.edu/"
+          "name": "University of California, Berkeley",
+          "sameAs": "https://www.berkeley.edu/"
         },
         {
           "@type": "EducationalOrganization", 
@@ -454,12 +621,12 @@
         "Quadruped Robots",
         "Drones"
       ],
-      "email": "narek_harutyunyan@brown.edu",
+      "email": "narek_harutyunyan@berkeley.edu",
       "telephone": "+1-857-404-2113",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Providence",
-        "addressRegion": "RI",
+        "addressLocality": "Berkeley",
+        "addressRegion": "CA",
         "addressCountry": "US"
       }
     }
@@ -486,8 +653,8 @@
     <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md supports-[backdrop-filter]:bg-black/90 border-b border-dark-700/50 transition-all duration-300">
       <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
-          <a href="#home" class="text-accent-400 font-display font-bold text-xl tracking-tight hover:text-accent-300 transition-colors duration-300 glow-text">
-            <span class="font-mono">NH</span>
+          <a href="#home" class="font-display font-semibold text-base sm:text-lg tracking-tight text-accent-400 hover:text-accent-300 transition-colors duration-300">
+            Narek Harutyunyan
           </a>
           <button id="nav-toggle" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-gray-300 hover:bg-dark-800 hover:text-accent-400 focus:outline-none transition-all duration-300" aria-label="Open main menu" aria-expanded="false">
             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -537,17 +704,16 @@
                 </h1>
                 <div class="space-y-2">
                   <p class="text-lg sm:text-xl text-accent-300 font-medium tracking-wide">
-                    <span class="text-gray-300">Robotics Researcher</span> | 
-                    <span class="text-gray-300">Reinforcement Learning</span> | 
-                    <span class="text-gray-300">Autonomous Systems</span> | 
-                    <span class="text-gray-300">Multi-Robot Systems</span>
+                    <span class="text-gray-300">Incoming PhD Student</span> | 
+                    <span class="text-gray-300">UC Berkeley EECS</span> | 
+                    <span class="text-gray-300">Robotics & AI</span>
                   </p>
                 </div>
               </div>
               
               <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark">
                 <p class="text-gray-300 leading-relaxed text-lg">
-                I'm a senior at <span class="text-accent-400 font-semibold">Brown University</span> majoring in Computer Engineering. My research focuses on robotics and artificial intelligence, particularly reinforcement learning, stability in locomotion, and multi-robot systems. I've worked on advancing reliable and adaptive robotic systems—including autonomous drones, quadruped robots, and AI-driven exploration platforms—through research at <span class="text-accent-400 font-semibold">Caltech</span>'s ARCL Lab, <span class="text-accent-400 font-semibold">Carnegie Mellon</span>'s AirLab, and <span class="text-accent-400 font-semibold">Brown</span>'s ACT Lab.
+                I am an incoming PhD student in the <span class="text-accent-400 font-semibold">UC Berkeley EECS</span> program. I graduated from <span class="text-accent-400 font-semibold">Brown University</span> with a B.S. in Computer Engineering. My research focuses on robotics and artificial intelligence—particularly reinforcement learning, stability in locomotion, and multi-robot systems—through work at <span class="text-accent-400 font-semibold">Caltech</span>'s ARCL Lab, <span class="text-accent-400 font-semibold">Carnegie Mellon</span>'s AirLab, and <span class="text-accent-400 font-semibold">Brown</span>'s ACT Lab.
               </p>
               </div>
               
@@ -560,7 +726,7 @@
                   <a href="https://www.linkedin.com/in/narek-harutyunyan-428069233" target="_blank" rel="noopener" class="p-3 bg-dark-800/50 border border-dark-600/30 rounded-xl text-gray-400 hover:text-accent-400 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 hover:shadow-glow" aria-label="LinkedIn">
                     <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8.34 19.34H5.67V9.33h2.67v10.01zM7 8.11c-.86 0-1.56-.7-1.56-1.56 0-.86.7-1.56 1.56-1.56.86 0 1.56.7 1.56 1.56 0 .86-.7 1.56-1.56 1.56zM19.33 19.34h-2.67v-5.39c0-1.28-.02-2.93-1.78-2.93-1.78 0-2.06 1.39-2.06 2.83v5.49H10.15V9.33h2.56v1.37h.04c.36-.68 1.24-1.4 2.56-1.4 2.74 0 3.25 1.81 3.25 4.16v5.88z"/></svg>
                   </a>
-                  <a href="https://scholar.google.com/citations?user=fIzSTy4AAAAJ&hl=en" target="_blank" rel="noopener" class="p-3 bg-dark-800/50 border border-dark-600/30 rounded-xl text-gray-400 hover:text-accent-400 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 hover:shadow-glow" aria-label="Google Scholar">
+                  <a href="https://scholar.google.com/citations?user=p_RX_zcAAAAJ&hl=en" target="_blank" rel="noopener" class="p-3 bg-dark-800/50 border border-dark-600/30 rounded-xl text-gray-400 hover:text-accent-400 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 hover:shadow-glow" aria-label="Google Scholar">
                     <img src="assets/googlescholar.svg" alt="Google Scholar" class="h-6 w-6 filter grayscale hover:grayscale-0 transition-all duration-300"/>
                   </a>
                 </div>
@@ -584,108 +750,76 @@
             <h2 class="text-3xl sm:text-4xl font-display font-bold bg-gradient-to-r from-accent-400 to-gold-400 bg-clip-text text-transparent mb-4">Research Experience</h2>
             <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-gold-400 mx-auto rounded-full"></div>
           </div>
-          <div class="space-y-12">
-            <!-- Brown -->
-            <article class="group bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30">
-              <div class="space-y-4">
-                  <div class="flex flex-wrap items-center justify-between gap-3">
-                    <h3 class="text-xl font-display font-bold text-accent-300">
-                      Brown University — <a href="http://act.cs.brown.edu/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-4 transition-colors duration-300">ACT Lab</a>
-                    </h3>
-                    <span class="px-3 py-1 text-sm font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30">May 2023 – Present</span>
-                  </div>
-                  <div class="space-y-2">
-                    <p class="text-gray-300">PI: <span class="font-medium"><a href="https://vivo.brown.edu/display/nayanian" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Nora Ayanian</a></span></p>
-                    <p class="text-gray-300">Mentors: <span class="font-medium">
-                      <a href="https://eric-ewing.github.io/ewinge1.github.io/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Eric Ewing</a>, Anoop Kiran
-                    </span></p>
-                  </div>
-                  <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Design RL policies in IsaacLab for cooperative object transport with Crazyflie drone swarms.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Characterize quadcopter downwash using PIV and MATLAB for improved formation safety.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Build aerial painting quadrotor with custom 3D-printed components and Python control wrappers.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Develop synchronized LED lighting and real-time audio processing for drone choreography.</span>
-                    </li>
-                  </ul>
+          <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-6 md:p-8 shadow-dark">
+            <div class="divide-y divide-dark-600/30">
+            <!-- CMU LeCAR -->
+            <article class="flex gap-6 py-6 first:pt-0 last:pb-0">
+              <div class="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden flex items-center justify-center border border-dark-600/20">
+                <img src="assets/logos/cmu.png" alt="CMU logo" class="w-full h-full object-cover" />
+              </div>
+              <div class="min-w-0 flex-1 space-y-1">
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 class="text-lg font-display font-bold text-accent-300">
+                    Carnegie Mellon University — <a href="https://lecar-lab.github.io/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-4 transition-colors duration-300">LeCAR Lab</a>
+                  </h3>
+                  <span class="text-sm text-gray-400">June – August 2026</span>
+                </div>
+                <p class="text-gray-400 italic">Research Assistant</p>
+                <p class="text-gray-300 text-sm">Advisor: <a href="https://www.gshi.me/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2">Guanya Shi</a></p>
               </div>
             </article>
+
             <!-- Caltech -->
-            <article class="group bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30">
-              <div class="space-y-4">
-                  <div class="flex flex-wrap items-center justify-between gap-3">
-                    <h3 class="text-xl font-display font-bold text-accent-300">
-                      Caltech — <a href="https://aerospacerobotics.caltech.edu/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-4 transition-colors duration-300">ARCL Lab</a>
-                    </h3>
-                    <span class="px-3 py-1 text-sm font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30">May – September 2025</span>
-                  </div>
-                  <div class="space-y-2">
-                    <p class="text-gray-300">PI: <span class="font-medium"><a href="https://www.eas.caltech.edu/people/sjchung" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Soon-Jo Chung</a></span></p>
-                    <p class="text-gray-300">Mentors: <span class="font-medium"><a href="https://vrushabh27.github.io/vrushabh_zinage/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Vrushabh Zinage</a></span></p>
-                  </div>
-                  <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Build IsaacLab simulation of Unitree Go1 on moving platform for ship-like dynamics training.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Develop certified RL algorithm with contraction theory achieving 100% deployment success.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Create custom SDK and validate policies on Unitree Go1 under wind and motion platform tests.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Deploy RL policies for locomotion and fault recovery on humanoid robot Booster T1.</span>
-                    </li>
-                  </ul>
+            <article class="flex gap-6 py-6 first:pt-0 last:pb-0">
+              <div class="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-white/95 p-2 flex items-center justify-center border border-dark-600/20">
+                <img src="assets/logos/caltech.png" alt="Caltech logo" class="max-w-full max-h-full object-contain" />
+              </div>
+              <div class="min-w-0 flex-1 space-y-1">
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 class="text-lg font-display font-bold text-accent-300">
+                    California Institute of Technology — <a href="https://aerospacerobotics.caltech.edu/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-4 transition-colors duration-300">ARCL Lab</a>
+                  </h3>
+                  <span class="text-sm text-gray-400">May – September 2025</span>
+                </div>
+                <p class="text-gray-400 italic">Research Intern</p>
+                <p class="text-gray-300 text-sm">Advisor: <a href="https://www.eas.caltech.edu/people/sjchung" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2">Soon-Jo Chung</a></p>
               </div>
             </article>
+
             <!-- CMU -->
-            <article class="group bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30">
-              <div class="space-y-4">
-                  <div class="flex flex-wrap items-center justify-between gap-3">
-                    <h3 class="text-xl font-display font-bold text-accent-300">
-                      Carnegie Mellon University — <a href="https://theairlab.org/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-4 transition-colors duration-300">AirLab</a>
-                    </h3>
-                    <span class="px-3 py-1 text-sm font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30">May 2024 – July 2025</span>
-                  </div>
-                  <div class="space-y-2">
-                    <p class="text-gray-300">PI: <span class="font-medium"><a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Sebastian Scherer</a></span></p>
-                    <p class="text-gray-300">Mentors: <span class="font-medium">
-                      <a href="https://bradymoon.com/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Brady Moon</a>, 
-                      <a href="https://seungchan-kim.github.io/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Seungchan Kim</a>, 
-                      <a href="https://cherieho.com/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Cherie Ho</a>
-                    </span></p>
-                  </div>
-                  <ul class="space-y-3 text-gray-300">
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Refactor MapEx framework into Gym, add IoU metric, and fix algorithmic issues.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Propose MapExRL: human-inspired RL exploration with frontier planning and uncertainty modeling.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                      <div class="w-2 h-2 bg-accent-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Achieve up to <span class="font-bold text-gold-400">18.8%</span> performance gains over state-of-the-art baselines on real-world indoor maps.</span>
-                    </li>
-                  </ul>
+            <article class="flex gap-6 py-6 first:pt-0 last:pb-0">
+              <div class="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden flex items-center justify-center border border-dark-600/20">
+                <img src="assets/logos/cmu.png" alt="CMU logo" class="w-full h-full object-cover" />
+              </div>
+              <div class="min-w-0 flex-1 space-y-1">
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 class="text-lg font-display font-bold text-accent-300">
+                    Carnegie Mellon University — <a href="https://theairlab.org/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-4 transition-colors duration-300">AirLab</a>
+                  </h3>
+                  <span class="text-sm text-gray-400">May 2024 – July 2025</span>
+                </div>
+                <p class="text-gray-400 italic">Research Assistant</p>
+                <p class="text-gray-300 text-sm">Advisor: <a href="https://www.ri.cmu.edu/ri-faculty/sebastian-scherer/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2">Sebastian Scherer</a></p>
               </div>
             </article>
+
+            <!-- Brown -->
+            <article class="flex gap-6 py-6 first:pt-0 last:pb-0">
+              <div class="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-white/95 p-2 flex items-center justify-center border border-dark-600/20">
+                <img src="assets/logos/brown.svg" alt="Brown University logo" class="max-w-full max-h-full object-contain" />
+              </div>
+              <div class="min-w-0 flex-1 space-y-1">
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 class="text-lg font-display font-bold text-accent-300">
+                    Brown University — <a href="http://act.cs.brown.edu/" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-4 transition-colors duration-300">ACT Lab</a>
+                  </h3>
+                  <span class="text-sm text-gray-400">May 2023 – May 2025</span>
+                </div>
+                <p class="text-gray-400 italic">Research Assistant</p>
+                <p class="text-gray-300 text-sm">Advisor: <a href="https://vivo.brown.edu/display/nayanian" target="_blank" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2">Nora Ayanian</a></p>
+              </div>
+            </article>
+            </div>
           </div>
         </div>
       </section>
@@ -697,13 +831,14 @@
             <h2 class="text-3xl sm:text-4xl font-display font-bold bg-gradient-to-r from-accent-400 to-gold-400 bg-clip-text text-transparent mb-4">Publications and Posters</h2>
             <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-gold-400 mx-auto rounded-full"></div>
           </div>
-          <div class="space-y-8">
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
+          <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-6 md:p-8 shadow-dark">
+            <div class="divide-y divide-dark-600/30">
+            <div class="py-6 first:pt-0 last:pb-0">
               <h3 class="font-display font-bold text-xl text-accent-300 mb-3">MapExRL: Human-Inspired Indoor Exploration with Predicted Environment Context and Reinforcement Learning</h3>
-              <p class="text-gray-300 mb-2">To appear at the IEEE International Conference on Advanced Robotics (ICAR), 2025</p>
+              <p class="text-gray-300 mb-2">IEEE International Conference on Advanced Robotics (ICAR), 2025</p>
               <p class="text-gray-300 mb-4">Presented at the <a href="https://sites.google.com/view/srl-icra-2025/accepted-papers?authuser=0" target="_blank" rel="noopener" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">ICRA 2025 Workshop on Structured Learning for Efficient, Reliable, and Transparent Robots</a></p>
               <p class="text-gray-300 mb-4"><strong class="text-gold-400">Narek Harutyunyan</strong>*, Brady Moon*, Seungchan Kim, Cherie Ho, Adam Hung, Sebastian Scherer</p>
-              <div class="flex items-center gap-4">
+              <div class="flex flex-wrap items-center gap-4">
                 <a href="https://arxiv.org/pdf/2503.01548" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-gold-600/20 text-gold-400 hover:text-gold-300 hover:bg-gold-600/30 border border-gold-600/30 rounded-lg transition-all duration-300 hover:shadow-glow">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                   Paper
@@ -718,13 +853,13 @@
                 </a>
               </div>
             </div>
-            
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
+
+            <div class="py-6 first:pt-0 last:pb-0">
               <h3 class="font-display font-bold text-xl text-accent-300 mb-3">ContractionPPO: Certified Reinforcement Learning via Differentiable Contraction Layers</h3>
-              <p class="text-gray-300 mb-3">IEEE Robotics and Automation Letters (RA-L), under review, 2025</p>
+              <p class="text-gray-300 mb-3">To appear in IEEE Robotics and Automation Letters (RA-L), 2026</p>
               <p class="text-gray-300 mb-2">V. Zinage*, <strong class="text-gold-400">N. Harutyunyan</strong>*, E. Verheyden*, F. Hadaegh, S.-J. Chung</p>
               <p class="text-gray-400 text-sm italic mb-4">(co-first-author)</p>
-              <div class="flex items-center gap-4">
+              <div class="flex flex-wrap items-center gap-4">
                 <a href="assets/arxiv_ral_ppo_contraction.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-gold-600/20 text-gold-400 hover:text-gold-300 hover:bg-gold-600/30 border border-gold-600/30 rounded-lg transition-all duration-300 hover:shadow-glow">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                   Paper
@@ -735,12 +870,12 @@
                 </a>
               </div>
             </div>
-            
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
+
+            <div class="py-6 first:pt-0 last:pb-0">
               <h3 class="font-display font-bold text-xl text-accent-300 mb-3">MapEx: Indoor Structure Exploration with Probabilistic Information Gain from Global Map Predictions</h3>
               <p class="text-gray-300 mb-3">IEEE International Conference on Robotics and Automation (ICRA), 2025</p>
               <p class="text-gray-300 mb-4">Cherie Ho*, Seungchan Kim*, Brady Moon, Aditya Parandekar, <strong class="text-gold-400">Narek Harutyunyan</strong>, Chen Wang, Katia Sycara, Graeme Best, Sebastian Scherer</p>
-              <div class="flex items-center gap-4">
+              <div class="flex flex-wrap items-center gap-4">
                 <a href="https://arxiv.org/pdf/2409.15590" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-gold-600/20 text-gold-400 hover:text-gold-300 hover:bg-gold-600/30 border border-gold-600/30 rounded-lg transition-all duration-300 hover:shadow-glow">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                   Paper
@@ -755,149 +890,113 @@
                 </a>
               </div>
             </div>
-            
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
+
+            <div class="py-6 first:pt-0 last:pb-0">
               <h3 class="font-display font-bold text-xl text-accent-300 mb-3">Downwash Dynamics: Impact of Quadrotor Separation on Forces, Moments, and Velocities for Dense Formation Flight</h3>
               <p class="text-gray-300 mb-3">AIAA AVIATION FORUM AND ASCEND 2024</p>
               <p class="text-gray-300 mb-4">Anoop Kiran, <strong class="text-gold-400">Narek Harutyunyan</strong>, Nora Ayanian, Kenneth Breuer</p>
-              <div class="flex items-center gap-4">
+              <div class="flex flex-wrap items-center gap-4">
                 <a href="https://www.researchgate.net/profile/Anoop-Kiran-2/publication/384204096_Downwash_Dynamics_Impact_of_Separation_on_Forces_Moments_and_Velocities_for_Dense_Quadrotor_Flight/links/67172a2d069cb92a812a7836/Downwash-Dynamics-Impact-of-Separation-on-Forces-Moments-and-Velocities-for-Dense-Quadrotor-Flight.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-gold-600/20 text-gold-400 hover:text-gold-300 hover:bg-gold-600/30 border border-gold-600/30 rounded-lg transition-all duration-300 hover:shadow-glow">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                   Paper
                 </a>
               </div>
             </div>
-            
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
+
+            <div class="py-6 first:pt-0 last:pb-0">
               <h3 class="font-display font-bold text-xl text-accent-300 mb-3">RoboChaser</h3>
               <p class="text-gray-300 mb-3">Brown University Deep Learning (DL) Day 2024 — <span class="text-gold-400 font-semibold">TAs' Choice Award</span></p>
               <p class="text-gray-300 mb-4">O. Heng, <strong class="text-gold-400">N. Harutyunyan</strong>, J. Dhanda</p>
-              <div class="flex items-center gap-4">
+              <div class="flex flex-wrap items-center gap-4">
                 <a href="https://devpost.com/software/robochaser" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-accent-600/20 text-accent-400 hover:text-accent-300 hover:bg-accent-600/30 border border-accent-600/30 rounded-lg transition-all duration-300 hover:shadow-glow">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                   Website
                 </a>
               </div>
             </div>
-            
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-8 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
+
+            <div class="py-6 first:pt-0 last:pb-0">
               <h3 class="font-display font-bold text-xl text-accent-300 mb-3">Advancements in Multi-Robot Systems</h3>
               <p class="text-gray-300 mb-3">Yale Northeast Robotics Colloquium (NERC) 2023</p>
               <p class="text-gray-300 mb-4">Alice Min*, Robayet Hossain*, Hammad Izhar*, <strong class="text-gold-400">Narek Harutyunyan</strong>*</p>
-              <div class="flex items-center gap-4">
+              <div class="flex flex-wrap items-center gap-4">
                 <button onclick="openPoster('assets/Advancements_in_Multi_Robot_Systems.pdf', 'Yale Northeast Robotics Colloquium (NERC) 2023')" class="inline-flex items-center gap-2 px-4 py-2 bg-accent-600/20 text-accent-400 hover:text-accent-300 hover:bg-accent-600/30 border border-accent-600/30 rounded-lg transition-all duration-300 hover:shadow-glow">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                   Poster
                 </button>
               </div>
             </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Teaching Experience -->
+      <!-- Teaching -->
       <section id="teaching" class="scroll-mt-24 py-20">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl font-display font-bold bg-gradient-to-r from-accent-400 to-gold-400 bg-clip-text text-transparent mb-4">Teaching Experience</h2>
+            <h2 class="text-3xl sm:text-4xl font-display font-bold bg-gradient-to-r from-accent-400 to-gold-400 bg-clip-text text-transparent mb-4">Teaching</h2>
             <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-gold-400 mx-auto rounded-full"></div>
           </div>
-          <div class="space-y-8">
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <h3 class="text-lg font-display font-bold text-accent-300">CSCI 1952z: Robots as a Medium: Making Art with Teams of Robots</h3>
-                <span class="px-3 py-1 text-sm font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30">Spring 2024, Fall 2024, Spring 2026</span>
-              </div>
-              <p class="mt-2 text-gray-300 font-medium">Brown University</p>
-              <p class="mt-1 text-gray-400">Head Teaching Assistant</p>
-              <a href="https://browncsci1952z.github.io/" target="_blank" rel="noopener" class="mt-3 inline-flex items-center gap-2 text-accent-400 hover:text-accent-300 transition-colors duration-300 text-sm font-medium">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                Course Website
-              </a>
-            </div>
-            
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <h3 class="text-lg font-display font-bold text-accent-300">CSCI 1470: Deep Learning</h3>
-                <span class="px-3 py-1 text-sm font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30">Fall 2025</span>
-              </div>
-              <p class="mt-2 text-gray-300 font-medium">Brown University</p>
-              <p class="mt-1 text-gray-400">Teaching Assistant</p>
-              <a href="https://dl-website-f25.vercel.app/" target="_blank" rel="noopener" class="mt-3 inline-flex items-center gap-2 text-accent-400 hover:text-accent-300 transition-colors duration-300 text-sm font-medium">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                Course Website
-              </a>
-            </div>
-            
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <h3 class="text-lg font-display font-bold text-accent-300">ENGN 0032: Introduction to Engineering: Design</h3>
-                <span class="px-3 py-1 text-sm font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30">Fall 2023</span>
-              </div>
-              <p class="mt-2 text-gray-300 font-medium">Brown University</p>
-              <p class="mt-1 text-gray-400">Teaching Assistant</p>
-            </div>
+          <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-6 md:p-8 shadow-dark">
+            <ul class="divide-y divide-dark-600/30 space-y-0">
+              <li class="leading-relaxed py-4 first:pt-0 last:pb-0 text-gray-300">
+                <span class="text-accent-400 font-medium">Spring 2024, Fall 2024, Spring 2026</span>
+                <span class="text-gray-400"> · </span>
+                <span class="font-display font-semibold text-accent-300">CSCI 1952z: Robots as a Medium</span>
+                <span class="text-gray-400 italic"> — Head TA, Brown University</span>
+                <span class="text-gray-400"> · </span>
+                <a href="https://browncsci1952z.github.io/" target="_blank" rel="noopener" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">website</a>
+              </li>
+              <li class="leading-relaxed py-4 first:pt-0 last:pb-0 text-gray-300">
+                <span class="text-accent-400 font-medium">Fall 2025</span>
+                <span class="text-gray-400"> · </span>
+                <span class="font-display font-semibold text-accent-300">CSCI 1470: Deep Learning</span>
+                <span class="text-gray-400 italic"> — Teaching Assistant, Brown University</span>
+                <span class="text-gray-400"> · </span>
+                <a href="https://dl-website-f25.vercel.app/" target="_blank" rel="noopener" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">website</a>
+              </li>
+              <li class="leading-relaxed py-4 first:pt-0 last:pb-0 text-gray-300">
+                <span class="text-accent-400 font-medium">Fall 2023</span>
+                <span class="text-gray-400"> · </span>
+                <span class="font-display font-semibold text-accent-300">ENGN 0032: Introduction to Engineering</span>
+                <span class="text-gray-400 italic"> — Teaching Assistant, Brown University</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
       <!-- Honors and Awards -->
-      <section id="honors" class="scroll-mt-24 py-20 bg-gradient-to-b from-transparent to-dark-900/20">
+      <section id="honors" class="scroll-mt-24 py-20">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-16">
             <h2 class="text-3xl sm:text-4xl font-display font-bold bg-gradient-to-r from-accent-400 to-gold-400 bg-clip-text text-transparent mb-4">Honors & Awards</h2>
             <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-gold-400 mx-auto rounded-full"></div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Tau Beta Pi -->
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
-              <div class="flex items-start justify-between gap-3 mb-2">
-                <h3 class="font-display font-bold text-lg text-accent-300">Tau Beta Pi Engineering Honor Society</h3>
-                <span class="px-3 py-1 text-xs font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30 flex-shrink-0">2025</span>
-              </div>
-              <p class="text-gray-400 text-sm">Inducted member recognizing academic excellence in engineering</p>
-              <p class="text-gray-500 text-sm mt-1">Providence, RI, USA</p>
-            </div>
-
-            <!-- SURF -->
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
-              <div class="flex items-start justify-between gap-3 mb-2">
-                <h3 class="font-display font-bold text-lg text-accent-300">Summer Undergraduate Research Fellowships (SURF)</h3>
-                <span class="px-3 py-1 text-xs font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30 flex-shrink-0">2025</span>
-              </div>
-              <p class="text-gray-400 text-sm">California Institute of Technology</p>
-              <p class="text-gray-500 text-sm mt-1">Pasadena, CA, USA</p>
-            </div>
-
-            <!-- RISS -->
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
-              <div class="flex items-start justify-between gap-3 mb-2">
-                <h3 class="font-display font-bold text-lg text-accent-300">Robotics Institute Summer Scholar (RISS)</h3>
-                <span class="px-3 py-1 text-xs font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30 flex-shrink-0">2024</span>
-              </div>
-              <p class="text-gray-400 text-sm">Carnegie Mellon University</p>
-              <p class="text-gray-500 text-sm mt-1">Pittsburgh, PA, USA</p>
-            </div>
-
-            <!-- UTRA -->
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30">
-              <div class="flex items-start justify-between gap-3 mb-2">
-                <h3 class="font-display font-bold text-lg text-accent-300">Undergraduate Teaching and Research Award (UTRA)</h3>
-                <span class="px-3 py-1 text-xs font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30 flex-shrink-0">2023, 2024</span>
-              </div>
-              <p class="text-gray-400 text-sm">Brown University</p>
-              <p class="text-gray-500 text-sm mt-1">Providence, RI, USA</p>
-            </div>
-
-            <!-- Huys Scholar -->
-            <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-xl p-6 shadow-dark hover:shadow-glow transition-all duration-300 hover:border-accent-400/30 md:col-span-2">
-              <div class="flex items-start justify-between gap-3 mb-2">
-                <h3 class="font-display font-bold text-lg text-accent-300">Huys Scholar</h3>
-                <span class="px-3 py-1 text-xs font-medium bg-gold-400/20 text-gold-300 rounded-full border border-gold-400/30 flex-shrink-0">2023, 2024</span>
-              </div>
-              <p class="text-gray-400 text-sm">Huys Foundation STEM Scholarship</p>
-              <p class="text-gray-500 text-sm mt-1">Yerevan, Armenia</p>
-            </div>
+          <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-6 md:p-8 shadow-dark">
+            <ul class="divide-y divide-dark-600/30 space-y-0">
+              <li class="leading-relaxed py-3 first:pt-0 last:pb-0 text-gray-300">
+                <span class="text-accent-400 font-medium">[2025]</span>
+                Tau Beta Pi Engineering Honor Society
+              </li>
+              <li class="leading-relaxed py-3 first:pt-0 last:pb-0 text-gray-300">
+                <span class="text-accent-400 font-medium">[2025]</span>
+                Summer Undergraduate Research Fellowships (SURF), Caltech
+              </li>
+              <li class="leading-relaxed py-3 first:pt-0 last:pb-0 text-gray-300">
+                <span class="text-accent-400 font-medium">[2024]</span>
+                Robotics Institute Summer Scholar (RISS), Carnegie Mellon University
+              </li>
+              <li class="leading-relaxed py-3 first:pt-0 last:pb-0 text-gray-300">
+                <span class="text-accent-400 font-medium">[2023, 2024]</span>
+                Undergraduate Teaching and Research Award (UTRA), Brown University
+              </li>
+              <li class="leading-relaxed py-3 first:pt-0 last:pb-0 text-gray-300">
+                <span class="text-accent-400 font-medium">[2023, 2024]</span>
+                Huys Scholar, Huys Foundation STEM Scholarship
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -923,7 +1022,7 @@
                 </div>
                 <div class="min-w-0 flex-1">
                   <p class="text-sm font-medium text-gray-400 mb-1">Email</p>
-                  <button onclick="copyEmailToClipboard()" class="text-accent-400 hover:text-accent-300 font-medium break-all transition-colors duration-300 cursor-pointer">narek_harutyunyan@brown.edu</button>
+                  <button onclick="copyEmailToClipboard()" class="text-accent-400 hover:text-accent-300 font-medium break-all transition-colors duration-300 cursor-pointer">narek_harutyunyan@berkeley.edu</button>
                 </div>
               </div>
 
@@ -947,7 +1046,7 @@
                 </div>
                 <div class="min-w-0 flex-1">
                   <p class="text-sm font-medium text-gray-400 mb-1">Google Scholar</p>
-                  <a href="https://scholar.google.com/citations?user=fIzSTy4AAAAJ&hl=en" target="_blank" rel="noopener" class="text-accent-400 hover:text-accent-300 font-medium transition-colors duration-300">View Profile</a>
+                  <a href="https://scholar.google.com/citations?user=p_RX_zcAAAAJ&hl=en" target="_blank" rel="noopener" class="text-accent-400 hover:text-accent-300 font-medium transition-colors duration-300">View Profile</a>
                 </div>
               </div>
 
@@ -1000,7 +1099,7 @@
             <a href="https://www.linkedin.com/in/narek-harutyunyan-428069233" target="_blank" rel="noopener" class="p-3 bg-dark-800/50 border border-dark-600/30 rounded-xl text-gray-400 hover:text-accent-400 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 hover:shadow-glow" aria-label="LinkedIn">
               <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8.34 19.34H5.67V9.33h2.67v10.01zM7 8.11c-.86 0-1.56-.7-1.56-1.56 0-.86.7-1.56 1.56-1.56.86 0 1.56.7 1.56 1.56 0 .86-.7 1.56-1.56 1.56zM19.33 19.34h-2.67v-5.39c0-1.28-.02-2.93-1.78-2.93-1.78 0-2.06 1.39-2.06 2.83v5.49H10.15V9.33h2.56v1.37h.04c.36-.68 1.24-1.4 2.56-1.4 2.74 0 3.25 1.81 3.25 4.16v5.88z"/></svg>
             </a>
-            <a href="https://scholar.google.com/citations?user=fIzSTy4AAAAJ&hl=en" target="_blank" rel="noopener" class="p-3 bg-dark-800/50 border border-dark-600/30 rounded-xl text-gray-400 hover:text-accent-400 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 hover:shadow-glow" aria-label="Google Scholar">
+            <a href="https://scholar.google.com/citations?user=p_RX_zcAAAAJ&hl=en" target="_blank" rel="noopener" class="p-3 bg-dark-800/50 border border-dark-600/30 rounded-xl text-gray-400 hover:text-accent-400 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 hover:shadow-glow" aria-label="Google Scholar">
               <img src="assets/googlescholar.svg" alt="Google Scholar" class="h-5 w-5 filter grayscale hover:grayscale-0 transition-all duration-300"/>
             </a>
             <button onclick="copyEmailToClipboard()" class="p-3 bg-dark-800/50 border border-dark-600/30 rounded-xl text-gray-400 hover:text-accent-400 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 hover:shadow-glow" aria-label="Copy Email">
@@ -1008,7 +1107,7 @@
             </button>
           </div>
           <div class="w-32 h-px bg-gradient-to-r from-transparent via-cyber-400/50 to-transparent"></div>
-          <p class="text-gray-400 font-mono text-sm">© <span id="year"></span> Narek Harutyunyan. All rights reserved.</p>
+          <p class="text-gray-400 text-sm tracking-wide">© <span id="year"></span> Narek Harutyunyan. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -1027,7 +1126,7 @@
           
           <!-- Buttons -->
           <div class="space-y-3">
-            <button onclick="goToGallery()" class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            <button onclick="goToGallery()" class="w-full px-6 py-3 bg-gradient-to-r from-accent-600 to-accent-500 hover:from-accent-500 hover:to-accent-400 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2">
               Go to Robot Gallery
             </button>
             <button onclick="closeWelcomeModal()" class="w-full px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">
@@ -1139,7 +1238,7 @@
       
       // Copy email to clipboard functionality
       function copyEmailToClipboard() {
-        const email = 'narek_harutyunyan@brown.edu';
+        const email = 'narek_harutyunyan@berkeley.edu';
         
         // Modern clipboard API
         if (navigator.clipboard && window.isSecureContext) {

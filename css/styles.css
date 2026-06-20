@@ -29,12 +29,12 @@ video:hover, img:hover, .hover-lift:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #f59e0b, #d97706);
+  background: #334155;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #fbbf24, #f59e0b);
+  background: #475569;
 }
 
 /* Light theme scrollbar overrides */
@@ -47,12 +47,12 @@ video:hover, img:hover, .hover-lift:hover {
 }
 
 .light-theme::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #60a5fa, #3b82f6) !important;
+  background: #cbd5e1 !important;
   border-radius: 4px !important;
 }
 
 .light-theme::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #93c5fd, #60a5fa) !important;
+  background: #94a3b8 !important;
 }
 
 /* Active nav link with glow effect */
