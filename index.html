@@ -41,10 +41,10 @@
     <meta name="twitter:description" content="Incoming PhD student at UC Berkeley EECS. Robotics and AI researcher specializing in reinforcement learning and multi-robot systems." />
     <meta name="twitter:image" content="https://narekharutyu.github.io/assets/2024-RISS-Headshot-HARUTYUNYAN, Narek.jpg" />
 
-    <!-- Favicon (simple SVG data URI) -->
+    <!-- Favicon (robot SVG) -->
     <link
       rel="icon"
-      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111"/><text x="50" y="62" font-size="52" text-anchor="middle" fill="%23fbbf24" font-family="Georgia, serif">N</text></svg>'
+      href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111"/><line x1="50" y1="18" x2="50" y2="28" stroke="%23fbbf24" stroke-width="3" stroke-linecap="round"/><circle cx="50" cy="14" r="5" fill="%23fbbf24"/><rect x="28" y="28" width="44" height="34" rx="8" fill="%23fbbf24"/><circle cx="40" cy="45" r="5" fill="%23111"/><circle cx="60" cy="45" r="5" fill="%23111"/><rect x="38" y="54" width="24" height="4" rx="2" fill="%23111"/><rect x="32" y="66" width="36" height="22" rx="4" fill="%23fbbf24"/><rect x="18" y="68" width="10" height="14" rx="3" fill="%23fbbf24"/><rect x="72" y="68" width="10" height="14" rx="3" fill="%23fbbf24"/></svg>'
     />
 
     <!-- Fonts - Optimized to load only essential weights -->
@@ -941,30 +941,43 @@
             <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-gold-400 mx-auto rounded-full"></div>
           </div>
           <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-6 md:p-8 shadow-dark">
-            <ul class="divide-y divide-dark-600/30 space-y-0">
-              <li class="leading-relaxed py-4 first:pt-0 last:pb-0 text-gray-300">
-                <span class="text-accent-400 font-medium">Spring 2024, Fall 2024, Spring 2026</span>
-                <span class="text-gray-400"> · </span>
-                <span class="font-display font-semibold text-accent-300">CSCI 1952z: Robots as a Medium</span>
-                <span class="text-gray-400 italic"> — Head TA, Brown University</span>
-                <span class="text-gray-400"> · </span>
-                <a href="https://browncsci1952z.github.io/" target="_blank" rel="noopener" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">website</a>
-              </li>
-              <li class="leading-relaxed py-4 first:pt-0 last:pb-0 text-gray-300">
-                <span class="text-accent-400 font-medium">Fall 2025</span>
-                <span class="text-gray-400"> · </span>
-                <span class="font-display font-semibold text-accent-300">CSCI 1470: Deep Learning</span>
-                <span class="text-gray-400 italic"> — Teaching Assistant, Brown University</span>
-                <span class="text-gray-400"> · </span>
-                <a href="https://dl-website-f25.vercel.app/" target="_blank" rel="noopener" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">website</a>
-              </li>
-              <li class="leading-relaxed py-4 first:pt-0 last:pb-0 text-gray-300">
-                <span class="text-accent-400 font-medium">Fall 2023</span>
-                <span class="text-gray-400"> · </span>
-                <span class="font-display font-semibold text-accent-300">ENGN 0032: Introduction to Engineering</span>
-                <span class="text-gray-400 italic"> — Teaching Assistant, Brown University</span>
-              </li>
-            </ul>
+            <div class="divide-y divide-dark-600/30">
+            <article class="py-6 first:pt-0 last:pb-0">
+              <div class="min-w-0 flex-1 space-y-1">
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 class="text-lg font-display font-bold text-accent-300">CSCI 1952z: Robots as a Medium</h3>
+                  <span class="text-sm text-gray-400">Spring 2024, Fall 2024, Spring 2026</span>
+                </div>
+                <p class="text-gray-400 italic">Head TA · Brown University</p>
+                <p class="text-gray-300 text-sm">
+                  <a href="https://browncsci1952z.github.io/" target="_blank" rel="noopener" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Course website</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="py-6 first:pt-0 last:pb-0">
+              <div class="min-w-0 flex-1 space-y-1">
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 class="text-lg font-display font-bold text-accent-300">CSCI 1470: Deep Learning</h3>
+                  <span class="text-sm text-gray-400">Fall 2025</span>
+                </div>
+                <p class="text-gray-400 italic">Teaching Assistant · Brown University</p>
+                <p class="text-gray-300 text-sm">
+                  <a href="https://dl-website-f25.vercel.app/" target="_blank" rel="noopener" class="text-accent-400 hover:text-accent-300 underline decoration-accent-400/50 underline-offset-2 transition-colors duration-300">Course website</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="py-6 first:pt-0 last:pb-0">
+              <div class="min-w-0 flex-1 space-y-1">
+                <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                  <h3 class="text-lg font-display font-bold text-accent-300">ENGN 0032: Introduction to Engineering</h3>
+                  <span class="text-sm text-gray-400">Fall 2023</span>
+                </div>
+                <p class="text-gray-400 italic">Teaching Assistant · Brown University</p>
+              </div>
+            </article>
+            </div>
           </div>
         </div>
       </section>
@@ -977,28 +990,45 @@
             <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-gold-400 mx-auto rounded-full"></div>
           </div>
           <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl p-6 md:p-8 shadow-dark">
-            <ul class="divide-y divide-dark-600/30 space-y-0">
-              <li class="leading-relaxed py-3 first:pt-0 last:pb-0 text-gray-300">
-                <span class="text-accent-400 font-medium">[2025]</span>
-                Tau Beta Pi Engineering Honor Society
-              </li>
-              <li class="leading-relaxed py-3 first:pt-0 last:pb-0 text-gray-300">
-                <span class="text-accent-400 font-medium">[2025]</span>
-                Summer Undergraduate Research Fellowships (SURF), Caltech
-              </li>
-              <li class="leading-relaxed py-3 first:pt-0 last:pb-0 text-gray-300">
-                <span class="text-accent-400 font-medium">[2024]</span>
-                Robotics Institute Summer Scholar (RISS), Carnegie Mellon University
-              </li>
-              <li class="leading-relaxed py-3 first:pt-0 last:pb-0 text-gray-300">
-                <span class="text-accent-400 font-medium">[2023, 2024]</span>
-                Undergraduate Teaching and Research Award (UTRA), Brown University
-              </li>
-              <li class="leading-relaxed py-3 first:pt-0 last:pb-0 text-gray-300">
-                <span class="text-accent-400 font-medium">[2023, 2024]</span>
-                Huys Scholar, Huys Foundation STEM Scholarship
-              </li>
-            </ul>
+            <div class="divide-y divide-dark-600/30">
+            <article class="py-6 first:pt-0 last:pb-0">
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h3 class="text-lg font-display font-bold text-accent-300">Tau Beta Pi Engineering Honor Society</h3>
+                <span class="text-sm text-gray-400">2025</span>
+              </div>
+            </article>
+
+            <article class="py-6 first:pt-0 last:pb-0">
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h3 class="text-lg font-display font-bold text-accent-300">Summer Undergraduate Research Fellowships (SURF)</h3>
+                <span class="text-sm text-gray-400">2025</span>
+              </div>
+              <p class="text-gray-400 italic">Caltech</p>
+            </article>
+
+            <article class="py-6 first:pt-0 last:pb-0">
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h3 class="text-lg font-display font-bold text-accent-300">Robotics Institute Summer Scholar (RISS)</h3>
+                <span class="text-sm text-gray-400">2024</span>
+              </div>
+              <p class="text-gray-400 italic">Carnegie Mellon University</p>
+            </article>
+
+            <article class="py-6 first:pt-0 last:pb-0">
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h3 class="text-lg font-display font-bold text-accent-300">Undergraduate Teaching and Research Award (UTRA)</h3>
+                <span class="text-sm text-gray-400">2023, 2024</span>
+              </div>
+              <p class="text-gray-400 italic">Brown University</p>
+            </article>
+
+            <article class="py-6 first:pt-0 last:pb-0">
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <h3 class="text-lg font-display font-bold text-accent-300">Huys Scholar, Huys Foundation STEM Scholarship</h3>
+                <span class="text-sm text-gray-400">2023, 2024</span>
+              </div>
+            </article>
+            </div>
           </div>
         </div>
       </section>
@@ -1007,14 +1037,12 @@
       <section id="contact" class="scroll-mt-24 py-20">
         <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div class="text-center mb-16">
-            <h2 class="text-3xl sm:text-4xl font-display font-bold bg-gradient-to-r from-accent-400 to-gold-400 bg-clip-text text-transparent mb-4">Contact</h2>
+            <h2 class="text-3xl sm:text-4xl font-display font-bold bg-gradient-to-r from-accent-400 to-gold-400 bg-clip-text text-transparent mb-4">Contact Information</h2>
             <div class="w-24 h-1 bg-gradient-to-r from-accent-400 to-gold-400 mx-auto rounded-full"></div>
           </div>
           
-          <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl shadow-dark p-8 md:p-12">
-            <h3 class="text-2xl font-display font-bold text-accent-300 mb-8 text-center">Contact Information</h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div class="bg-gradient-to-br from-dark-800/50 to-dark-700/30 backdrop-blur-sm border border-dark-600/30 rounded-2xl shadow-dark p-6 md:p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               <!-- Email -->
               <div class="flex items-start space-x-4 group hover:bg-dark-700/30 p-4 rounded-xl transition-all duration-300">
                 <div class="flex-shrink-0 w-12 h-12 bg-accent-600/20 border border-accent-600/30 rounded-xl flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
