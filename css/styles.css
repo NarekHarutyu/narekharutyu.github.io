@@ -3,6 +3,60 @@ html {
   scroll-behavior: smooth;
 }
 
+body,
+.font-sans,
+.font-display,
+h1,
+h2,
+h3,
+h4,
+button,
+a,
+p,
+span,
+li,
+strong,
+em,
+input,
+textarea {
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+}
+
+body {
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+h1,
+h1 span,
+h1 em {
+  font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.text-xs { font-size: 0.875rem !important; }
+.text-sm { font-size: 1rem !important; }
+.text-base { font-size: 1.125rem !important; }
+.text-lg { font-size: 1.25rem !important; }
+.text-xl { font-size: 1.5rem !important; }
+.text-2xl { font-size: 1.875rem !important; }
+.text-3xl { font-size: 2.25rem !important; }
+.text-4xl { font-size: 3rem !important; }
+.text-5xl { font-size: 3.75rem !important; }
+.text-6xl { font-size: 4.5rem !important; }
+
+@media (min-width: 640px) {
+  .sm\:text-lg { font-size: 1.25rem !important; }
+  .sm\:text-xl { font-size: 1.5rem !important; }
+  .sm\:text-4xl { font-size: 3rem !important; }
+  .sm\:text-5xl { font-size: 3.75rem !important; }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-6xl { font-size: 4.5rem !important; }
+}
+
 /* Reduce animations for better performance */
 * {
   backface-visibility: hidden;
@@ -317,9 +371,6 @@ a, button, .transition-element {
 .light-theme body {
   background-color: #f7f4ef !important;
   color: #241717 !important;
-  font-family: "EB Garamond", Georgia, "Times New Roman", serif !important;
-  font-weight: 500;
-  letter-spacing: 0.1px;
 }
 
 .light-theme body::before {
@@ -331,24 +382,6 @@ a, button, .transition-element {
   opacity: 0.035;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   mix-blend-mode: multiply;
-}
-
-.light-theme .font-sans,
-.light-theme .font-display,
-.light-theme h1,
-.light-theme h2,
-.light-theme h3,
-.light-theme h4,
-.light-theme button,
-.light-theme a,
-.light-theme p,
-.light-theme span,
-.light-theme li,
-.light-theme strong,
-.light-theme em,
-.light-theme input,
-.light-theme textarea {
-  font-family: "EB Garamond", Georgia, "Times New Roman", serif !important;
 }
 
 .light-theme .bg-black {
@@ -415,36 +448,6 @@ a, button, .transition-element {
   background-clip: border-box !important;
   color: #241717 !important;
   -webkit-text-fill-color: #241717 !important;
-}
-
-.light-theme h1,
-.light-theme h1 span,
-.light-theme h1 em {
-  font-family: "EB Garamond", Georgia, "Times New Roman", serif !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-}
-
-.light-theme .text-xs { font-size: 0.875rem !important; }
-.light-theme .text-sm { font-size: 1rem !important; }
-.light-theme .text-base { font-size: 1.125rem !important; }
-.light-theme .text-lg { font-size: 1.25rem !important; }
-.light-theme .text-xl { font-size: 1.5rem !important; }
-.light-theme .text-2xl { font-size: 1.875rem !important; }
-.light-theme .text-3xl { font-size: 2.25rem !important; }
-.light-theme .text-4xl { font-size: 3rem !important; }
-.light-theme .text-5xl { font-size: 3.75rem !important; }
-.light-theme .text-6xl { font-size: 4.5rem !important; }
-
-@media (min-width: 640px) {
-  .light-theme .sm\:text-lg { font-size: 1.25rem !important; }
-  .light-theme .sm\:text-xl { font-size: 1.5rem !important; }
-  .light-theme .sm\:text-4xl { font-size: 3rem !important; }
-  .light-theme .sm\:text-5xl { font-size: 3.75rem !important; }
-}
-
-@media (min-width: 1024px) {
-  .light-theme .lg\:text-6xl { font-size: 4.5rem !important; }
 }
 
 .light-theme .w-24.bg-gradient-to-r,
