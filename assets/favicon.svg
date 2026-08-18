@@ -1,15 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <style>
     .bg { fill: #f7f4ef; }
-    .head { fill: #6b0f1a; }
-    .visor { fill: #f7f4ef; }
+    .mark { fill: #6b0f1a; }
     @media (prefers-color-scheme: dark) {
       .bg { fill: #111111; }
-      .head { fill: #e8e0d6; }
-      .visor { fill: #111111; }
+      .mark { fill: #e8e0d6; }
     }
   </style>
   <rect class="bg" width="32" height="32" rx="7"/>
-  <rect class="head" x="8" y="8" width="16" height="16" rx="3.5"/>
-  <rect class="visor" x="11.25" y="14.6" width="9.5" height="2.3" rx="1.15"/>
+  <g class="mark">
+    <!-- sensor head -->
+    <rect x="14.8" y="7.4" width="7.3" height="5.4" rx="1.15"/>
+    <!-- chassis -->
+    <rect x="5" y="11.7" width="22" height="6.2" rx="1.4"/>
+    <!-- rear far / near legs -->
+    <polygon points="10.6,17.5 13.3,17.5 11.4,22.8 8.6,22.8"/>
+    <polygon points="6.6,17.6 9.6,17.6 8.2,25.6 5.1,25.6"/>
+    <!-- front far / near legs -->
+    <polygon points="19.2,17.5 21.9,17.5 20.1,22.8 17.3,22.8"/>
+    <polygon points="21.4,17.6 24.4,17.6 23,25.6 19.9,25.6"/>
+  </g>
 </svg>
