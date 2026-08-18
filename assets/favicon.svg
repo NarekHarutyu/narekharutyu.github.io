@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .bg { fill: #f7f4ef; }
+    .head { fill: #6b0f1a; }
+    .visor { fill: #f7f4ef; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #111111; }
+      .head { fill: #e8e0d6; }
+      .visor { fill: #111111; }
+    }
+  </style>
+  <rect class="bg" width="32" height="32" rx="7"/>
+  <rect class="head" x="8" y="8" width="16" height="16" rx="3.5"/>
+  <rect class="visor" x="11.25" y="14.6" width="9.5" height="2.3" rx="1.15"/>
+</svg>
