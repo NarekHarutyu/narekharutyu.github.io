@@ -50,3 +50,6 @@ logs/
 outbox/ assets/robots/*.MOV
 assets/robots/*.mov
 assets/robots_backup/
+
+# Local preview tooling (Claude Code)
+.claude/

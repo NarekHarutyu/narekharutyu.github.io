@@ -1,1279 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Robot Gallery - Narek Harutyunyan | Robotics Projects</title>
-    <meta name="description" content="Explore Narek Harutyunyan's robotics projects through videos and photos - featuring quadcopters, drones, quadruped robots, and cutting-edge autonomous systems." />
+    <title>Robots — Narek Harutyunyan</title>
+    <meta name="description" content="Robot footage from Narek Harutyunyan's research: drone swarms, quadrupeds, humanoids, long-exposure light painting, and drones that paint." />
     <meta name="author" content="Narek Harutyunyan" />
     <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
     <meta name="google-site-verification" content="zYVm00u0iov7wOVAqd_-Cef82008Vgd6sc-lKgIIEeY" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f4f3ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e0e0d" media="(prefers-color-scheme: dark)" />
+
     <link rel="canonical" href="https://narekharutyu.github.io/gallery.html" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="icon" href="assets/icons/eternity-32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="assets/icons/eternity.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
 
-    <!-- Favicon (minimal robot dog) -->
-    <link rel="icon" href="assets/favicon.png?v=3" type="image/png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Narek Harutyunyan" />
+    <meta property="og:url" content="https://narekharutyu.github.io/gallery.html" />
+    <meta property="og:title" content="Robots — Narek Harutyunyan" />
+    <meta property="og:description" content="Drone swarms, quadrupeds, humanoids, and a few drones that paint." />
+    <meta property="og:image" content="https://narekharutyu.github.io/assets/img/lorenz-long-exposure.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Fonts - Optimized to load only essential weights -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet" />
-
-    <!-- Preconnect to CDN for faster resource loading -->
-    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
-
-    <!-- Tailwind CSS (CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['"EB Garamond"', 'Georgia', 'ui-serif', 'serif'],
-              display: ['"EB Garamond"', 'Georgia', 'ui-serif', 'serif'],
-              mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
-            },
-            colors: {
-              accent: {
-                50: '#fffbeb',
-                100: '#fef3c7',
-                200: '#fde68a',
-                300: '#fcd34d',
-                400: '#fbbf24',
-                500: '#f59e0b',
-                600: '#d97706',
-                700: '#b45309',
-                800: '#92400e',
-                900: '#78350f',
-              },
-              gold: {
-                50: '#fffdf7',
-                100: '#fffaeb',
-                200: '#fef3c7',
-                300: '#fde68a',
-                400: '#fcd34d',
-                500: '#f59e0b',
-                600: '#d97706',
-                700: '#b45309',
-                800: '#92400e',
-                900: '#78350f',
-              },
-              dark: {
-                50: '#f8fafc',
-                100: '#f1f5f9',
-                200: '#e2e8f0',
-                300: '#cbd5e1',
-                400: '#64748b',
-                500: '#475569',
-                600: '#334155',
-                700: '#1e293b',
-                800: '#0f172a',
-                900: '#020617',
-                950: '#000000',
-              },
-            },
-            backgroundImage: {
-              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-              'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-              'professional-grid': "url(\"data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%23f59e0b' fill-opacity='0.05'%3e%3cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e\")",
-            },
-            boxShadow: {
-              'glow': '0 0 20px rgba(245, 158, 11, 0.3)',
-              'glow-lg': '0 0 40px rgba(245, 158, 11, 0.4)',
-              'gold': '0 0 5px rgba(245, 158, 11, 0.5), 0 0 20px rgba(245, 158, 11, 0.3), 0 0 35px rgba(245, 158, 11, 0.1)',
-              'dark': '0 10px 25px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3)',
-            },
-            animation: {
-              'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'float': 'float 6s ease-in-out infinite',
-              'slide-up': 'slide-up 0.5s ease-out',
-              'fade-in': 'fade-in 0.6s ease-out',
-            },
-            keyframes: {
-              'pulse-glow': {
-                '0%, 100%': { boxShadow: '0 0 20px rgba(245, 158, 11, 0.3)' },
-                '50%': { boxShadow: '0 0 40px rgba(245, 158, 11, 0.6)' },
-              },
-              'float': {
-                '0%, 100%': { transform: 'translateY(0px)' },
-                '50%': { transform: 'translateY(-10px)' },
-              },
-              'slide-up': {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              'fade-in': {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
-              },
-            },
-          },
-        },
-      };
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.dataset.theme = savedTheme;
+      } catch (e) {}
     </script>
 
-    <!-- Theme Styles -->
-    <style>
-      :root {
-        --bg-primary: #000000;
-        --bg-secondary: #020617;
-        --bg-tertiary: #0f172a;
-        --text-primary: #f1f5f9;
-        --text-secondary: #cbd5e1;
-        --text-muted: #94a3b8;
-        --accent-color: #fbbf24;
-        --accent-hover: #f59e0b;
-        --accent-light: #fcd34d;
-        --border-color: rgba(51, 65, 85, 0.3);
-        --shadow-color: rgba(0, 0, 0, 0.5);
-      }
-      
-      /* Scrollbar Styles - Dark Mode (default) */
-      html:not(.light-theme) ::-webkit-scrollbar {
-        width: 12px;
-      }
-      
-      html:not(.light-theme) ::-webkit-scrollbar-track {
-        background: #000000;
-      }
-      
-      html:not(.light-theme) ::-webkit-scrollbar-thumb {
-        background: #334155;
-        border-radius: 6px;
-        border: 2px solid #000000;
-      }
-      
-      html:not(.light-theme) ::-webkit-scrollbar-thumb:hover {
-        background: #475569;
-      }
-      
-      /* Firefox scrollbar - Dark Mode */
-      html:not(.light-theme) {
-        scrollbar-width: thin;
-        scrollbar-color: #334155 #000000;
-      }
-      
-      /* Dark mode: restrained orange — default text is white/gray */
-      html:not(.light-theme) .text-accent-400,
-      html:not(.light-theme) .text-accent-300 {
-        color: #e2e8f0 !important;
-      }
-      
-      html:not(.light-theme) .text-gold-400,
-      html:not(.light-theme) strong.text-gold-400,
-      html:not(.light-theme) span.text-gold-400.font-semibold {
-        color: #fbbf24 !important;
-      }
-      
-      html:not(.light-theme) a.text-accent-400,
-      html:not(.light-theme) a.text-accent-300,
-      html:not(.light-theme) button.text-accent-400 {
-        color: #fbbf24 !important;
-      }
-      
-      html:not(.light-theme) a.text-gold-400 {
-        color: #fbbf24 !important;
-      }
-      
-      html:not(.light-theme) a.text-accent-400:hover,
-      html:not(.light-theme) a.text-accent-300:hover,
-      html:not(.light-theme) button.text-accent-400:hover,
-      html:not(.light-theme) a.text-gold-400:hover,
-      html:not(.light-theme) .hover\:text-accent-400:hover,
-      html:not(.light-theme) .hover\:text-accent-300:hover {
-        color: #fcd34d !important;
-      }
-      
-      html:not(.light-theme) .bg-clip-text,
-      html:not(.light-theme) h1 .bg-clip-text,
-      html:not(.light-theme) h2.bg-clip-text,
-      html:not(.light-theme) .bg-clip-text.text-transparent {
-        background: none !important;
-        background-image: none !important;
-        background-color: transparent !important;
-        -webkit-background-clip: border-box !important;
-        background-clip: border-box !important;
-        color: #f1f5f9 !important;
-        -webkit-text-fill-color: #f1f5f9 !important;
-      }
-      
-      html:not(.light-theme) .w-24.bg-gradient-to-r,
-      html:not(.light-theme) .w-32.bg-gradient-to-r,
-      html:not(.light-theme) div.h-1.bg-gradient-to-r {
-        background: #334155 !important;
-        background-image: none !important;
-      }
-      
-      html:not(.light-theme) .bg-accent-600\/20,
-      html:not(.light-theme) .bg-gold-600\/20 {
-        background-color: rgba(30, 41, 59, 0.8) !important;
-      }
-      
-      html:not(.light-theme) .border-accent-600\/30,
-      html:not(.light-theme) .hover\:bg-accent-600\/30:hover,
-      html:not(.light-theme) .border-gold-600\/30 {
-        border-color: rgba(51, 65, 85, 0.5) !important;
-      }
-      
-      html:not(.light-theme) .hover\:bg-accent-600\/30:hover,
-      html:not(.light-theme) .hover\:bg-gold-600\/30:hover {
-        background-color: rgba(51, 65, 85, 0.6) !important;
-      }
-      
-      html:not(.light-theme) .text-gold-300,
-      html:not(.light-theme) .border-gold-400\/30 {
-        color: #cbd5e1 !important;
-        border-color: rgba(51, 65, 85, 0.5) !important;
-      }
-      
-      html:not(.light-theme) .bg-professional-grid {
-        background-image: url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%23f1f5f9' fill-opacity='0.03'%3e%3cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e") !important;
-      }
-      
-      html:not(.light-theme) .hover\:shadow-glow:hover {
-        box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3) !important;
-      }
-      
-      html:not(.light-theme) a.bg-gradient-to-r.from-accent-600,
-      html:not(.light-theme) button.bg-gradient-to-r.from-accent-600,
-      html:not(.light-theme) button.filter-btn.active.bg-gradient-to-r {
-        background: linear-gradient(to right, #d97706, #f59e0b) !important;
-        color: #ffffff !important;
-        -webkit-text-fill-color: #ffffff !important;
-      }
-      
-      html:not(.light-theme) header > nav a.font-display,
-      html:not(.light-theme) header > a.font-display {
-        color: #f1f5f9 !important;
-      }
-      
-      html:not(.light-theme) header > nav a.font-display:hover,
-      html:not(.light-theme) header > a.font-display:hover {
-        color: #e2e8f0 !important;
-      }
-      
-      html:not(.light-theme) .inline-flex.items-center.text-accent-400 {
-        color: #fbbf24 !important;
-      }
-      
-      html:not(.light-theme) .inline-flex.items-center.text-accent-400:hover {
-        color: #fcd34d !important;
-      }
-      
-      .light-theme {
-        --bg-primary: #ffffff;
-        --bg-secondary: #f8fafc;
-        --bg-tertiary: #f1f5f9;
-        --text-primary: #0f172a;
-        --text-secondary: #334155;
-        --text-muted: #64748b;
-        --accent-color: #fbbf24;
-        --accent-hover: #f59e0b;
-        --accent-light: #fcd34d;
-        --border-color: rgba(203, 213, 225, 0.5);
-        --shadow-color: rgba(0, 0, 0, 0.1);
-      }
-      
-      /* Apply theme colors */
-      .light-theme body {
-        background-color: #f8fafc !important;
-        color: #0f172a !important;
-      }
-      
-      .light-theme .bg-black {
-        background-color: #f8fafc !important;
-      }
-      
-      /* Force all text to be dark and visible */
-      .light-theme .text-gray-100,
-      .light-theme .text-gray-200,
-      .light-theme .text-gray-300,
-      .light-theme p,
-      .light-theme span,
-      .light-theme li {
-        color: #1e293b !important;
-      }
-      
-      .light-theme .text-gray-400 {
-        color: #64748b !important;
-      }
-      
-      /* Default: accent utility classes render as black in light mode */
-      .light-theme .text-accent-400,
-      .light-theme .text-accent-300 {
-        color: #0f172a !important;
-      }
-      
-      /* Orange reserved for important highlights only */
-      .light-theme .text-gold-400,
-      .light-theme strong.text-gold-400 {
-        color: #b45309 !important;
-      }
-      
-      .light-theme a.text-accent-400,
-      .light-theme a.text-accent-300 {
-        color: #d97706 !important;
-      }
-      
-      .light-theme a.text-accent-400:hover,
-      .light-theme a.text-accent-300:hover,
-      .light-theme .hover\:text-accent-400:hover,
-      .light-theme .hover\:text-accent-300:hover {
-        color: #b45309 !important;
-      }
-      
-      .light-theme .from-accent-400,
-      .light-theme .to-gold-400,
-      .light-theme .from-accent-600,
-      .light-theme .to-accent-500 {
-        --tw-gradient-from: var(--accent-color);
-        --tw-gradient-to: var(--accent-light);
-      }
-      
-      /* Force ALL cards/boxes to be white in light theme */
-      .light-theme .bg-dark-800\/50,
-      .light-theme .bg-dark-700\/30,
-      .light-theme .bg-dark-800,
-      .light-theme .from-dark-800\/50,
-      .light-theme .to-dark-700\/30,
-      .light-theme article,
-      .light-theme section .bg-gradient-to-br,
-      .light-theme .bg-gradient-to-br,
-      .light-theme .bg-gradient-to-r,
-      .light-theme .bg-gradient-to-l,
-      .light-theme .bg-gradient-to-b,
-      .light-theme .bg-gradient-to-t,
-      .light-theme [class*="bg-gradient"] {
-        background-color: rgba(255, 255, 255, 0.96) !important;
-        background-image: none !important;
-        border-color: rgba(226, 232, 240, 0.9) !important;
-        color: #0f172a !important;
-      }
-      
-      .light-theme .border-dark-600\/30,
-      .light-theme .border-dark-700\/50 {
-        border-color: var(--border-color) !important;
-      }
-      
-      .light-theme .shadow-dark {
-        box-shadow: 0 10px 25px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color) !important;
-      }
-      
-      .light-theme .bg-accent-600\/20,
-      .light-theme .bg-gold-600\/20 {
-        background-color: rgba(241, 245, 249, 0.9) !important;
-      }
-      
-      .light-theme .border-accent-600\/30,
-      .light-theme .hover\:bg-accent-600\/30:hover {
-        border-color: rgba(203, 213, 225, 0.8) !important;
-      }
-      
-      .light-theme .hover\:bg-accent-600\/30:hover {
-        background-color: rgba(226, 232, 240, 0.9) !important;
-      }
-      
-      .light-theme .text-gold-300,
-      .light-theme .border-gold-400\/30 {
-        color: #64748b !important;
-        border-color: rgba(203, 213, 225, 0.8) !important;
-      }
-      
-      .light-theme .bg-gold-400\/20 {
-        background-color: rgba(241, 245, 249, 0.9) !important;
-      }
-      
-      .light-theme header {
-        background-color: rgba(248, 250, 252, 0.95) !important;
-        backdrop-filter: blur(12px);
-      }
-      
-      .light-theme .bg-professional-grid {
-        background-image: url("data:image/svg+xml,%3csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' fill-rule='evenodd'%3e%3cg fill='%230f172a' fill-opacity='0.03'%3e%3cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e") !important;
-      }
-      
-      .light-theme .hover\:shadow-glow:hover {
-        box-shadow: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.05) !important;
-      }
-      
-      /* Gradient text → plain black, no background highlight */
-      .light-theme .bg-clip-text,
-      .light-theme h1 .bg-clip-text,
-      .light-theme h2.bg-clip-text,
-      .light-theme .bg-clip-text.text-transparent {
-        background: none !important;
-        background-image: none !important;
-        background-color: transparent !important;
-        -webkit-background-clip: border-box !important;
-        background-clip: border-box !important;
-        color: #0f172a !important;
-        -webkit-text-fill-color: #0f172a !important;
-      }
-      
-      /* Section dividers → neutral gray */
-      .light-theme .w-24.bg-gradient-to-r,
-      .light-theme .w-32.bg-gradient-to-r,
-      .light-theme div.h-1.bg-gradient-to-r {
-        background: #cbd5e1 !important;
-        background-image: none !important;
-      }
-      
-      /* Primary buttons keep orange fill */
-      .light-theme a.bg-gradient-to-r.from-accent-600,
-      .light-theme button.bg-gradient-to-r.from-accent-600,
-      .light-theme button.filter-btn.active.bg-gradient-to-r {
-        background: linear-gradient(to right, #d97706, #f59e0b) !important;
-        color: #ffffff !important;
-        -webkit-text-fill-color: #ffffff !important;
-      }
-      
-      /* Scrollbar Styles - Light Mode */
-      html.light-theme ::-webkit-scrollbar {
-        width: 12px;
-      }
-      
-      html.light-theme ::-webkit-scrollbar-track {
-        background: #ffffff;
-      }
-      
-      html.light-theme ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 6px;
-        border: 2px solid #ffffff;
-      }
-      
-      html.light-theme ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
-      }
-      
-      /* Firefox scrollbar - Light Mode */
-      html.light-theme {
-        scrollbar-width: thin;
-        scrollbar-color: #cbd5e1 #ffffff;
-      }
-      
-      .light-theme header > nav a.font-display,
-      .light-theme header > a.font-display {
-        color: #0f172a !important;
-      }
-      
-      .light-theme header > nav a.font-display:hover,
-      .light-theme header > a.font-display:hover {
-        color: #334155 !important;
-      }
-      
-      /* Back to Home link — orange as a link highlight */
-      .light-theme .inline-flex.items-center.text-accent-400 {
-        color: #d97706 !important;
-      }
-      
-      .light-theme .inline-flex.items-center.text-accent-400:hover {
-        color: #b45309 !important;
-      }
-    </style>
-    
-    <!-- Custom Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
-    
+
+    <script src="js/main.js" defer></script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEFY3QBFLL"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
-
       gtag('config', 'G-MEFY3QBFLL');
     </script>
-    
-    <style>
-      /* Masonry Layout using CSS Columns */
-      .masonry-container {
-        column-count: 1;
-        column-gap: 1.5rem;
-      }
-      
-      @media (min-width: 640px) {
-        .masonry-container {
-          column-count: 2;
-        }
-      }
-      
-      @media (min-width: 1024px) {
-        .masonry-container {
-          column-count: 3;
-        }
-      }
-      
-      .gallery-item {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        margin-bottom: 1.5rem;
-        display: inline-block;
-        width: 100%;
-      }
-      
-      .gallery-item video,
-      .gallery-item img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-      
-      /* Caption overlay styling */
-      .gallery-item .caption-overlay {
-        backdrop-filter: blur(4px);
-      }
-      
-      .gallery-item .caption-overlay > div {
-        background: rgba(255, 255, 255, 0.95) !important;
-      }
-      
-      .light-theme .gallery-item .caption-overlay > div {
-        background: rgba(255, 255, 255, 0.95) !important;
-      }
-      
-      .gallery-item .caption-overlay p {
-        color: #111827 !important;
-      }
-    </style>
   </head>
-  <body class="font-sans text-gray-100 bg-black min-h-screen relative overflow-x-hidden">
-    <!-- Theme initialization script - must run immediately to prevent flash -->
-    <script>
-      (function() {
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        if (savedTheme === 'light') {
-          document.documentElement.classList.add('light-theme');
-        }
-      })();
-    </script>
-    
-    <!-- Animated background particles -->
-    <div class="fixed inset-0 z-0 pointer-events-none">
-      <div class="absolute inset-0 bg-professional-grid opacity-20"></div>
-      <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-500/5 rounded-full filter blur-3xl animate-float"></div>
-      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gold-500/5 rounded-full filter blur-3xl animate-float" style="animation-delay: -3s;"></div>
-    </div>
 
-    <!-- Navigation -->
-    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md supports-[backdrop-filter]:bg-black/90 border-b border-dark-700/50 transition-all duration-300">
-      <nav class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="flex h-16 items-center justify-between">
-          <a href="index.html" class="font-display font-semibold text-base sm:text-lg tracking-tight text-accent-400 hover:text-accent-300 transition-colors duration-300">
-            Narek Harutyunyan
-          </a>
-          <a href="index.html" class="inline-flex items-center gap-2 px-6 py-2 bg-dark-800/50 border border-dark-600/30 rounded-xl text-accent-400 hover:text-accent-300 hover:border-accent-400/50 hover:bg-dark-700/50 transition-all duration-300 font-medium">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-            </svg>
-            Back to Home
-          </a>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><mask id="brand-mark-hole"><rect width="64" height="64" fill="#fff"/><circle cx="32" cy="32" r="4.64" fill="#000"/></mask><path d="M32 32A17.98 17.98 0 0 1 14.85 8.61A29 29 0 0 1 25.11 3.83A17.98 17.98 0 0 0 32 32ZM32 32A17.98 17.98 0 0 1 36.41 3.34A29 29 0 0 1 47.04 7.21A17.98 17.98 0 0 0 32 32ZM32 32A17.98 17.98 0 0 1 55.39 14.85A29 29 0 0 1 60.17 25.11A17.98 17.98 0 0 0 32 32ZM32 32A17.98 17.98 0 0 1 60.66 36.41A29 29 0 0 1 56.79 47.04A17.98 17.98 0 0 0 32 32ZM32 32A17.98 17.98 0 0 1 49.15 55.39A29 29 0 0 1 38.89 60.17A17.98 17.98 0 0 0 32 32ZM32 32A17.98 17.98 0 0 1 27.59 60.66A29 29 0 0 1 16.96 56.79A17.98 17.98 0 0 0 32 32ZM32 32A17.98 17.98 0 0 1 8.61 49.15A29 29 0 0 1 3.83 38.89A17.98 17.98 0 0 0 32 32ZM32 32A17.98 17.98 0 0 1 3.34 27.59A29 29 0 0 1 7.21 16.96A17.98 17.98 0 0 0 32 32Z" fill="currentColor" mask="url(#brand-mark-hole)"/></svg><span>Narek Harutyunyan</span></a>
+        <nav class="nav" aria-label="Site">
+          <a href="index.html#about">About</a>
+          <a href="index.html#research">Research</a>
+          <a href="index.html#publications">Publications</a>
+          <a href="gallery.html" aria-current="page">Robots</a>
+          <a href="index.html#teaching">Teaching</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a class="chip cv-chip" href="assets/Harutyunyan_Narek_CV.pdf" target="_blank" rel="noopener">CV <span class="arrow" aria-hidden="true">↗</span></a>
+          <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.9" fill="none" stroke="currentColor" stroke-width="1.2" /><path d="M8 1.1a6.9 6.9 0 0 1 0 13.8z" fill="currentColor" /></svg>
+          </button>
+          <button class="chip menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-nav">Menu</button>
         </div>
-      </nav>
+      </div>
     </header>
 
-    <main class="pt-24 pb-20 relative z-10">
-      <!-- Robot Gallery -->
-      <section class="py-12">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <!-- Header -->
-          <div class="text-center mb-16 animate-fade-in">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold bg-gradient-to-r from-accent-400 via-gold-300 to-accent-500 bg-clip-text text-transparent mb-6">
-              Robot Gallery
-            </h1>
-            <p class="text-gray-400 text-lg mt-4 max-w-3xl mx-auto leading-relaxed">
-              Some highlights from my robotics research work.
-            </p>
-            <div class="w-32 h-1 bg-gradient-to-r from-accent-400 to-gold-400 mx-auto rounded-full mt-8"></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Site">
+      <a href="index.html">Home <span>00</span></a>
+      <a href="index.html#about">About <span>01</span></a>
+      <a href="index.html#research">Research <span>02</span></a>
+      <a href="index.html#publications">Publications <span>03</span></a>
+      <a href="gallery.html" aria-current="page">Robots <span>04</span></a>
+      <a href="index.html#teaching">Teaching <span>05</span></a>
+      <a href="index.html#contact">Contact <span>07</span></a>
+      <a href="assets/Harutyunyan_Narek_CV.pdf" target="_blank" rel="noopener">CV <span>PDF ↗</span></a>
+    </nav>
+
+    <main id="main">
+      <section class="wrap page-head">
+        <p class="eyebrow">Gallery · 22 videos, 4 photos</p>
+        <h1 class="page-title">Robots</h1>
+        <p class="page-lede">Footage from the labs I've worked in: swarms, quadrupeds, humanoids, and a few drones that paint.</p>
+        <div class="page-bar">
+          <div class="filters" role="group" aria-label="Filter by robot type">
+            <button class="chip" type="button" data-filter="all" aria-pressed="true">All <span class="count">26</span></button>
+            <button class="chip" type="button" data-filter="aerial" aria-pressed="false">Aerial <span class="count">19</span></button>
+            <button class="chip" type="button" data-filter="legged" aria-pressed="false">Legged <span class="count">6</span></button>
+            <button class="chip" type="button" data-filter="art" aria-pressed="false">Art <span class="count">8</span></button>
           </div>
+          <p class="eyebrow">Click to enlarge · ← → to browse</p>
+        </div>
+      </section>
 
-          <!-- Filter Buttons -->
-          <div class="flex justify-center gap-4 mb-12 flex-wrap animate-slide-up">
-            <button onclick="filterGallery('all')" class="filter-btn active px-6 py-3 bg-gradient-to-r from-accent-600 to-accent-500 text-white rounded-xl font-semibold transition-all duration-300 hover:shadow-glow hover:scale-105 shadow-glow">
-              <span class="flex items-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-                </svg>
-                All Media
-              </span>
-            </button>
-            <button onclick="filterGallery('video')" class="filter-btn px-6 py-3 bg-dark-800/50 border border-dark-600/30 text-gray-300 rounded-xl font-semibold transition-all duration-300 hover:border-accent-400/50 hover:text-accent-400 hover:bg-dark-700/50 hover:scale-105">
-              <span class="flex items-center gap-2">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm12.553 1.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
-                </svg>
-                Videos
-              </span>
-            </button>
-            <button onclick="filterGallery('image')" class="filter-btn px-6 py-3 bg-dark-800/50 border border-dark-600/30 text-gray-300 rounded-xl font-semibold transition-all duration-300 hover:border-accent-400/50 hover:text-accent-400 hover:bg-dark-700/50 hover:scale-105">
-              <span class="flex items-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                </svg>
-                Photos
-              </span>
-            </button>
-          </div>
-
-          <!-- Masonry Gallery Grid -->
-          <div id="gallery-grid" class="masonry-container">
-            
-            <!-- Video Items -->
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.1s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_5968.mp4">
-                  <source data-src="assets/robots/IMG_5968.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Conducting Particle Image Velocimetry (PIV) experiments on quadruped robots to study aerodynamic effects during close-proximity flight.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.15s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/20240208_172233.mp4">
-                  <source data-src="assets/robots/20240208_172233.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Conducting free-flight experiments to study aerodynamic interactions during close-proximity flight.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.2s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_3676.mp4">
-                  <source data-src="assets/robots/IMG_3676.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Testing obstacle avoidance algorithms for multi-drone teams.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.25s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_3697.mp4">
-                  <source data-src="assets/robots/IMG_3697.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Testing obstacle avoidance algorithms on a 10-drone system.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.3s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_6386.mp4">
-                  <source data-src="assets/robots/IMG_6386.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Creating various geometric formations with teams of eight drones.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.35s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/My Movie 1.mp4">
-                  <source data-src="assets/robots/My Movie 1.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Long-exposure video showing a drone following a flower-like trajectory generated from a mathematical equation.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.4s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/My Movie 2.mp4">
-                  <source data-src="assets/robots/My Movie 2.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      My sophomore deep learning class project, where an iRobot Create 3 follows a custom car—selected as the best project out of more than 120 submissions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.45s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/helix.mp4">
-                  <source data-src="assets/robots/helix.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Developed multi-drone control software to fly forward in a helical formation.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.5s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_3537.mp4">
-                  <source data-src="assets/robots/IMG_3537.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Designed algorithms for multi-drone teams to follow trajectories defined by Newtonian pendulum dynamics.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.55s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_3647.mp4">
-                  <source data-src="assets/robots/IMG_3647.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Coordinated simultaneous flight of 30 drones using the Crazyswarm library.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.6s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_3649.mp4">
-                  <source data-src="assets/robots/IMG_3649.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Coordinated simultaneous flight of 35 drones using the Crazyswarm library.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.65s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_3788.mp4">
-                  <source data-src="assets/robots/IMG_3788.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Flying and tuning PID control for a custom-built quadcopter capable of painting on canvases.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.7s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_6425.mp4">
-                  <source data-src="assets/robots/IMG_6425.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Designed an algorithm for drones to follow a wand using PIV-based control.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.72s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_1674.mp4">
-                  <source data-src="assets/robots/IMG_1674.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Developed reinforcement learning algorithms for dynamic fault recovery on the Unitree Go1 quadruped.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.73s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/humanoid.mp4">
-                  <source data-src="assets/robots/humanoid.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Developed a reinforcement learning algorithm for humanoid locomotion.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.75s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_6454.mp4">
-                  <source data-src="assets/robots/IMG_6454.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      My custom-built quadcopter painting on a canvas.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.8s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_6982.mp4">
-                  <source data-src="assets/robots/IMG_6982.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Custom-built quadcopter with a magnetic arm for drawing artistic patterns on a sand-filled canvas.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.85s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_7746.mp4">
-                  <source data-src="assets/robots/IMG_7746.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Testing locomotion algorithms on Boston Dynamics Spot, designed and trained using IsaacLab.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.9s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_7750.mp4">
-                  <source data-src="assets/robots/IMG_7750.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Testing a multi-drone trajectory-following script.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 0.95s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/IMG_7955.mp4">
-                  <source data-src="assets/robots/IMG_7955.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      A circus-style demonstration featuring a quadruped holding a hoop while a drone circles around it, created as a class project I am TAing.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 1s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/MOV_8087.mp4">
-                  <source data-src="assets/robots/MOV_8087.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Long-exposure video showing a drone following a trajectory defined by the Lorenz attractor equation.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item video group animate-slide-up" data-type="video" style="animation-delay: 1.05s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02]">
-                <video class="w-full h-auto cursor-pointer lazy-video" preload="none" muted playsinline loop onclick="this.paused ? this.play() : this.pause()" data-src="assets/robots/485041527352482064920250815_113958.mp4">
-                  <source data-src="assets/robots/485041527352482064920250815_113958.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <div class="absolute top-3 right-3 bg-accent-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                  Video
-                </div>
-              </div>
-            </div>
-
-            <!-- Image Items -->
-            <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.1s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_1821.PNG')">
-                <img src="assets/robots/IMG_1821.PNG" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                  Photo
-                </div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
-                    </svg>
-                    Click to Enlarge
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.15s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_1823.PNG')">
-                <img src="assets/robots/IMG_1823.PNG" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                  Photo
-                </div>
-                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div class="bg-accent-600/80 backdrop-blur-sm px-4 py-2 rounded-lg text-white font-semibold flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
-                    </svg>
-                    Click to Enlarge
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.2s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/IMG_6457.JPG')">
-                <img src="assets/robots/IMG_6457.JPG" alt="Robot Image" class="w-full h-auto object-cover" loading="lazy">
-                <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                  Photo
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      One of the early experiments testing my drone's ability to paint on canvases.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-item image group animate-slide-up" data-type="image" style="animation-delay: 0.25s;">
-              <div class="relative overflow-hidden rounded-2xl border border-dark-600/30 bg-dark-800/50 backdrop-blur-sm shadow-dark hover:shadow-glow transition-all duration-500 hover:border-accent-400/30 hover:scale-[1.02] cursor-pointer" onclick="openImageModal('assets/robots/butterfly.png')">
-                <img src="assets/robots/butterfly.png" alt="Butterfly Robot Image" class="w-full h-auto object-cover" loading="lazy">
-                <div class="absolute top-3 right-3 bg-gold-600/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-white flex items-center gap-1 shadow-lg">
-                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                  Photo
-                </div>
-                <!-- Caption overlay - appears on hover -->
-                <div class="caption-overlay absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div class="bg-white/95 backdrop-blur-sm p-4">
-                    <p class="text-gray-900 text-sm font-semibold leading-relaxed">
-                      Designed a control program for drone trajectory following based on the Lorenz attractor.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
+      <section class="wrap" aria-label="Clips and photos">
+        <div class="masonry" data-masonry>
+              <figure class="tile" id="go1-handstand" data-tags="legged" data-ar="1.7778">
+                <button class="tile-media" type="button" style="aspect-ratio: 16 / 9" data-lightbox="video" data-src="assets/robots/485041527352482064920250815_113958.mp4" data-poster="assets/posters/485041527352482064920250815_113958.jpg" data-caption="A Unitree Go1 holding a handstand on a moving platform, stabilized by ContractionPPO." aria-label="Play video 01">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/485041527352482064920250815_113958.mp4" data-poster="assets/posters/485041527352482064920250815_113958.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">01</span><span>A Unitree Go1 holding a handstand on a moving platform, stabilized by ContractionPPO.</span></figcaption>
+              </figure>
+              <figure class="tile" id="humanoid" data-tags="legged" data-ar="0.5639">
+                <button class="tile-media" type="button" style="aspect-ratio: 406 / 720" data-lightbox="video" data-src="assets/robots/humanoid.mp4" data-poster="assets/posters/humanoid.jpg" data-caption="A reinforcement-learning policy for humanoid locomotion." aria-label="Play video 02">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/humanoid.mp4" data-poster="assets/posters/humanoid.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">02</span><span>A reinforcement-learning policy for humanoid locomotion.</span></figcaption>
+              </figure>
+              <figure class="tile" id="lorenz" data-tags="aerial art" data-ar="1.2567">
+                <button class="tile-media" type="button" style="aspect-ratio: 1400 / 1114" data-lightbox="image" data-src="assets/img/lorenz-long-exposure.jpg" data-caption="Long exposure of a drone flying the Lorenz attractor, using a trajectory-following controller I wrote." aria-label="Enlarge photo 03">
+                  <img src="assets/img/lorenz-long-exposure-720.jpg" alt="Long exposure of a drone flying the Lorenz attractor, using a trajectory-following controller I wrote." loading="lazy" decoding="async" />
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">03</span><span>Long exposure of a drone flying the Lorenz attractor, using a trajectory-following controller I wrote.</span></figcaption>
+              </figure>
+              <figure class="tile" id="spot" data-tags="legged" data-ar="0.5639">
+                <button class="tile-media" type="button" style="aspect-ratio: 406 / 720" data-lightbox="video" data-src="assets/robots/IMG_7746.mp4" data-poster="assets/posters/img_7746.jpg" data-caption="Locomotion policies on Boston Dynamics Spot, designed and trained in Isaac Lab." aria-label="Play video 04">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_7746.mp4" data-poster="assets/posters/img_7746.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">04</span><span>Locomotion policies on Boston Dynamics Spot, designed and trained in Isaac Lab.</span></figcaption>
+              </figure>
+              <figure class="tile" id="swarm-35" data-tags="aerial" data-ar="1.7778">
+                <button class="tile-media" type="button" style="aspect-ratio: 16 / 9" data-lightbox="video" data-src="assets/robots/IMG_3649.mp4" data-poster="assets/posters/img_3649.jpg" data-caption="35 drones in simultaneous flight, coordinated with Crazyswarm." aria-label="Play video 05">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_3649.mp4" data-poster="assets/posters/img_3649.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">05</span><span>35 drones in simultaneous flight, coordinated with Crazyswarm.</span></figcaption>
+              </figure>
+              <figure class="tile" id="go1-recovery" data-tags="legged" data-ar="1.7778">
+                <button class="tile-media" type="button" style="aspect-ratio: 16 / 9" data-lightbox="video" data-src="assets/robots/IMG_1674.mp4" data-poster="assets/posters/img_1674.jpg" data-caption="Reinforcement learning for dynamic fault recovery on the Unitree Go1." aria-label="Play video 06">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_1674.mp4" data-poster="assets/posters/img_1674.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">06</span><span>Reinforcement learning for dynamic fault recovery on the Unitree Go1.</span></figcaption>
+              </figure>
+              <figure class="tile" id="circus" data-tags="legged aerial art" data-ar="0.5639">
+                <button class="tile-media" type="button" style="aspect-ratio: 406 / 720" data-lightbox="video" data-src="assets/robots/IMG_7955.mp4" data-poster="assets/posters/img_7955.jpg" data-caption="A circus-style act: a quadruped holds a hoop while a drone circles around it. A student project from a course I TA&#x27;d." aria-label="Play video 07">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_7955.mp4" data-poster="assets/posters/img_7955.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">07</span><span>A circus-style act: a quadruped holds a hoop while a drone circles around it. A student project from a course I TA&#x27;d.</span></figcaption>
+              </figure>
+              <figure class="tile" id="helix" data-tags="aerial" data-ar="0.5639">
+                <button class="tile-media" type="button" style="aspect-ratio: 406 / 720" data-lightbox="video" data-src="assets/robots/helix.mp4" data-poster="assets/posters/helix.jpg" data-caption="Multi-drone control software that flies a team forward in a helical formation." aria-label="Play video 08">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/helix.mp4" data-poster="assets/posters/helix.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">08</span><span>Multi-drone control software that flies a team forward in a helical formation.</span></figcaption>
+              </figure>
+              <figure class="tile" id="flower" data-tags="aerial art" data-ar="1.3855">
+                <button class="tile-media" type="button" style="aspect-ratio: 920 / 664" data-lightbox="video" data-src="assets/robots/My%20Movie%201.mp4" data-poster="assets/posters/my-movie-1.jpg" data-caption="Long exposure: a drone tracing a flower-like curve generated from a mathematical equation." aria-label="Play video 09">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/My%20Movie%201.mp4" data-poster="assets/posters/my-movie-1.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">09</span><span>Long exposure: a drone tracing a flower-like curve generated from a mathematical equation.</span></figcaption>
+              </figure>
+              <figure class="tile" id="booster-t1" data-tags="legged" data-ar="0.7500">
+                <button class="tile-media" type="button" style="aspect-ratio: 3 / 4" data-lightbox="image" data-src="assets/img/booster-t1.jpg" data-caption="With the Booster T1 humanoid." aria-label="Enlarge photo 10">
+                  <img src="assets/img/booster-t1-720.jpg" alt="With the Booster T1 humanoid." loading="lazy" decoding="async" />
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">10</span><span>With the Booster T1 humanoid.</span></figcaption>
+              </figure>
+              <figure class="tile" id="sand-drawing" data-tags="aerial art" data-ar="0.5639">
+                <button class="tile-media" type="button" style="aspect-ratio: 406 / 720" data-lightbox="video" data-src="assets/robots/IMG_6982.mp4" data-poster="assets/posters/img_6982.jpg" data-caption="A custom quadcopter with a magnetic arm, drawing patterns in a sand-filled canvas." aria-label="Play video 11">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_6982.mp4" data-poster="assets/posters/img_6982.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">11</span><span>A custom quadcopter with a magnetic arm, drawing patterns in a sand-filled canvas.</span></figcaption>
+              </figure>
+              <figure class="tile" id="piv" data-tags="aerial" data-ar="0.5639">
+                <button class="tile-media" type="button" style="aspect-ratio: 406 / 720" data-lightbox="video" data-src="assets/robots/IMG_5968.mp4" data-poster="assets/posters/img_5968.jpg" data-caption="Particle image velocimetry experiments on quadrotors, studying the aerodynamics of close-proximity flight." aria-label="Play video 12">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_5968.mp4" data-poster="assets/posters/img_5968.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">12</span><span>Particle image velocimetry experiments on quadrotors, studying the aerodynamics of close-proximity flight.</span></figcaption>
+              </figure>
+              <figure class="tile" id="painting" data-tags="aerial art" data-ar="0.5639">
+                <button class="tile-media" type="button" style="aspect-ratio: 406 / 720" data-lightbox="video" data-src="assets/robots/IMG_6454.mp4" data-poster="assets/posters/img_6454.jpg" data-caption="My custom-built quadcopter painting on a canvas." aria-label="Play video 13">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_6454.mp4" data-poster="assets/posters/img_6454.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">13</span><span>My custom-built quadcopter painting on a canvas.</span></figcaption>
+              </figure>
+              <figure class="tile" id="swarm-30" data-tags="aerial" data-ar="1.7778">
+                <button class="tile-media" type="button" style="aspect-ratio: 16 / 9" data-lightbox="video" data-src="assets/robots/IMG_3647.mp4" data-poster="assets/posters/img_3647.jpg" data-caption="30 drones in simultaneous flight, coordinated with Crazyswarm." aria-label="Play video 14">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_3647.mp4" data-poster="assets/posters/img_3647.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">14</span><span>30 drones in simultaneous flight, coordinated with Crazyswarm.</span></figcaption>
+              </figure>
+              <figure class="tile" id="robochaser" data-tags="" data-ar="1.3333">
+                <button class="tile-media" type="button" style="aspect-ratio: 4 / 3" data-lightbox="video" data-src="assets/robots/My%20Movie%202.mp4" data-poster="assets/posters/my-movie-2.jpg" data-caption="RoboChaser: an iRobot Create 3 that follows a custom car. My sophomore deep-learning project, selected as the best of more than 120 submissions." aria-label="Play video 15">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/My%20Movie%202.mp4" data-poster="assets/posters/my-movie-2.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">15</span><span>RoboChaser: an iRobot Create 3 that follows a custom car. My sophomore deep-learning project, selected as the best of more than 120 submissions.</span></figcaption>
+              </figure>
+              <figure class="tile" id="pendulum" data-tags="aerial" data-ar="0.5639">
+                <button class="tile-media" type="button" style="aspect-ratio: 406 / 720" data-lightbox="video" data-src="assets/robots/IMG_3537.mp4" data-poster="assets/posters/img_3537.jpg" data-caption="Drone teams following trajectories defined by Newtonian pendulum dynamics." aria-label="Play video 16">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_3537.mp4" data-poster="assets/posters/img_3537.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">16</span><span>Drone teams following trajectories defined by Newtonian pendulum dynamics.</span></figcaption>
+              </figure>
+              <figure class="tile" id="lorenz-video" data-tags="aerial art" data-ar="1.7778">
+                <button class="tile-media" type="button" style="aspect-ratio: 16 / 9" data-lightbox="video" data-src="assets/robots/MOV_8087.mp4" data-poster="assets/posters/mov_8087.jpg" data-caption="The Lorenz attractor again, this time as a long-exposure video." aria-label="Play video 17">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/MOV_8087.mp4" data-poster="assets/posters/mov_8087.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">17</span><span>The Lorenz attractor again, this time as a long-exposure video.</span></figcaption>
+              </figure>
+              <figure class="tile" id="formations" data-tags="aerial" data-ar="0.5639">
+                <button class="tile-media" type="button" style="aspect-ratio: 406 / 720" data-lightbox="video" data-src="assets/robots/IMG_6386.mp4" data-poster="assets/posters/img_6386.jpg" data-caption="Geometric formations with teams of eight drones." aria-label="Play video 18">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_6386.mp4" data-poster="assets/posters/img_6386.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">18</span><span>Geometric formations with teams of eight drones.</span></figcaption>
+              </figure>
+              <figure class="tile" id="wand" data-tags="aerial" data-ar="0.5639">
+                <button class="tile-media" type="button" style="aspect-ratio: 406 / 720" data-lightbox="video" data-src="assets/robots/IMG_6425.mp4" data-poster="assets/posters/img_6425.jpg" data-caption="Drones following a hand-held wand." aria-label="Play video 19">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_6425.mp4" data-poster="assets/posters/img_6425.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">19</span><span>Drones following a hand-held wand.</span></figcaption>
+              </figure>
+              <figure class="tile" id="obstacles-10" data-tags="aerial" data-ar="1.7778">
+                <button class="tile-media" type="button" style="aspect-ratio: 16 / 9" data-lightbox="video" data-src="assets/robots/IMG_3697.mp4" data-poster="assets/posters/img_3697.jpg" data-caption="Obstacle avoidance on a 10-drone system." aria-label="Play video 20">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_3697.mp4" data-poster="assets/posters/img_3697.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">20</span><span>Obstacle avoidance on a 10-drone system.</span></figcaption>
+              </figure>
+              <figure class="tile" id="painting-pid" data-tags="aerial art" data-ar="1.7778">
+                <button class="tile-media" type="button" style="aspect-ratio: 16 / 9" data-lightbox="video" data-src="assets/robots/IMG_3788.mp4" data-poster="assets/posters/img_3788.jpg" data-caption="Flying and PID-tuning the custom painting quadcopter." aria-label="Play video 21">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_3788.mp4" data-poster="assets/posters/img_3788.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">21</span><span>Flying and PID-tuning the custom painting quadcopter.</span></figcaption>
+              </figure>
+              <figure class="tile" id="lab" data-tags="" data-ar="0.7500">
+                <button class="tile-media" type="button" style="aspect-ratio: 3 / 4" data-lightbox="image" data-src="assets/img/lab-portrait.jpg" data-caption="In the lab." aria-label="Enlarge photo 22">
+                  <img src="assets/img/lab-portrait-720.jpg" alt="In the lab." loading="lazy" decoding="async" />
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">22</span><span>In the lab.</span></figcaption>
+              </figure>
+              <figure class="tile" id="painting-early" data-tags="aerial art" data-ar="0.7500">
+                <button class="tile-media" type="button" style="aspect-ratio: 3 / 4" data-lightbox="image" data-src="assets/img/painting-drone.jpg" data-caption="One of the first tests of my drone&#x27;s ability to paint on canvas." aria-label="Enlarge photo 23">
+                  <img src="assets/img/painting-drone-720.jpg" alt="One of the first tests of my drone&#x27;s ability to paint on canvas." loading="lazy" decoding="async" />
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">23</span><span>One of the first tests of my drone&#x27;s ability to paint on canvas.</span></figcaption>
+              </figure>
+              <figure class="tile" id="free-flight" data-tags="aerial" data-ar="1.7778">
+                <button class="tile-media" type="button" style="aspect-ratio: 16 / 9" data-lightbox="video" data-src="assets/robots/20240208_172233.mp4" data-poster="assets/posters/20240208_172233.jpg" data-caption="Free-flight experiments on aerodynamic interactions in close-proximity flight." aria-label="Play video 24">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/20240208_172233.mp4" data-poster="assets/posters/20240208_172233.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">24</span><span>Free-flight experiments on aerodynamic interactions in close-proximity flight.</span></figcaption>
+              </figure>
+              <figure class="tile" id="obstacles-team" data-tags="aerial" data-ar="1.7778">
+                <button class="tile-media" type="button" style="aspect-ratio: 16 / 9" data-lightbox="video" data-src="assets/robots/IMG_3676.mp4" data-poster="assets/posters/img_3676.jpg" data-caption="Testing obstacle-avoidance algorithms for multi-drone teams." aria-label="Play video 25">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_3676.mp4" data-poster="assets/posters/img_3676.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">25</span><span>Testing obstacle-avoidance algorithms for multi-drone teams.</span></figcaption>
+              </figure>
+              <figure class="tile" id="trajectory" data-tags="aerial" data-ar="0.5639">
+                <button class="tile-media" type="button" style="aspect-ratio: 406 / 720" data-lightbox="video" data-src="assets/robots/IMG_7750.mp4" data-poster="assets/posters/img_7750.jpg" data-caption="Testing a multi-drone trajectory-following script." aria-label="Play video 26">
+                  <video muted loop playsinline preload="none" aria-hidden="true" data-src="assets/robots/IMG_7750.mp4" data-poster="assets/posters/img_7750.jpg"></video>
+                </button>
+                <figcaption class="tile-cap"><span class="tile-no">26</span><span>Testing a multi-drone trajectory-following script.</span></figcaption>
+              </figure>
         </div>
       </section>
     </main>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/95 backdrop-blur-sm" onclick="closeImageModal()">
-      <div class="flex items-center justify-center min-h-screen p-4">
-        <button onclick="closeImageModal()" class="absolute top-6 right-6 p-3 bg-dark-800/80 hover:bg-dark-700 rounded-xl text-gray-400 hover:text-accent-400 transition-all duration-300 z-10 border border-dark-600/30 hover:border-accent-400/50 shadow-lg hover:shadow-glow">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
-        <img id="modalImage" src="" alt="Robot" class="max-w-[90vw] max-h-[90vh] object-contain rounded-2xl shadow-2xl border border-accent-400/30" onclick="event.stopPropagation()">
-      </div>
-    </div>
-
-    <footer class="relative border-t border-dark-700/50 py-8">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col items-center justify-center gap-4 text-center">
-          <p class="text-gray-400 text-sm tracking-wide">© <span id="year"></span> Narek Harutyunyan. All rights reserved.</p>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-inner">
+          <span>© <span data-year>2026</span> Narek Harutyunyan</span>
+          <a href="index.html">Home</a>
+          <a href="#main">Back to top ↑</a>
         </div>
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-      // Set current year
-      document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Lazy load videos with Intersection Observer
-      const lazyVideos = document.querySelectorAll('video.lazy-video');
-      
-      if ('IntersectionObserver' in window) {
-        const videoObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const video = entry.target;
-              const source = video.querySelector('source');
-              
-              // Load the video source
-              if (source && source.dataset.src) {
-                source.src = source.dataset.src;
-                video.load();
-                video.classList.remove('lazy-video');
-                videoObserver.unobserve(video);
-              }
-            }
-          });
-        }, {
-          rootMargin: '50px 0px', // Start loading 50px before video enters viewport
-          threshold: 0.01
-        });
-
-        lazyVideos.forEach(video => {
-          videoObserver.observe(video);
-        });
-      } else {
-        // Fallback for browsers that don't support IntersectionObserver
-        lazyVideos.forEach(video => {
-          const source = video.querySelector('source');
-          if (source && source.dataset.src) {
-            source.src = source.dataset.src;
-            video.load();
-          }
-        });
-      }
-
-      // Gallery Filter Function
-      function filterGallery(type) {
-        const items = document.querySelectorAll('.gallery-item');
-        const buttons = document.querySelectorAll('.filter-btn');
-        
-        // Update button styles
-        buttons.forEach(btn => {
-          btn.classList.remove('active', 'bg-gradient-to-r', 'from-accent-600', 'to-accent-500', 'text-white', 'shadow-glow');
-          btn.classList.add('bg-dark-800/50', 'border', 'border-dark-600/30', 'text-gray-300');
-        });
-        
-        event.target.classList.remove('bg-dark-800/50', 'border', 'border-dark-600/30', 'text-gray-300');
-        event.target.classList.add('active', 'bg-gradient-to-r', 'from-accent-600', 'to-accent-500', 'text-white', 'shadow-glow');
-        
-        // Filter items with animation
-        items.forEach((item, index) => {
-          if (type === 'all' || item.dataset.type === type) {
-            item.style.display = 'block';
-            // Stagger animation
-            setTimeout(() => {
-              item.style.animation = 'slide-up 0.5s ease-out';
-            }, index * 30);
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      }
-
-      // Image Modal Functions
-      function openImageModal(imageSrc) {
-        const modal = document.getElementById('imageModal');
-        const modalImage = document.getElementById('modalImage');
-        
-        modalImage.src = imageSrc;
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-        
-        // Close on escape key
-        document.addEventListener('keydown', handleImageEscapeKey);
-      }
-
-      function closeImageModal() {
-        const modal = document.getElementById('imageModal');
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-        
-        // Remove event listeners
-        document.removeEventListener('keydown', handleImageEscapeKey);
-      }
-
-      function handleImageEscapeKey(e) {
-        if (e.key === 'Escape') {
-          closeImageModal();
-        }
-      }
-    </script>
+    <dialog class="lightbox" data-lightbox-dialog aria-label="Media viewer">
+      <div class="lightbox-bar">
+        <span data-lightbox-count></span>
+        <div class="lightbox-nav">
+          <button class="lb-btn" type="button" data-lightbox-prev aria-label="Previous">←</button>
+          <button class="lb-btn" type="button" data-lightbox-next aria-label="Next">→</button>
+          <button class="lb-btn" type="button" data-lightbox-close>Close</button>
+        </div>
+      </div>
+      <div class="lightbox-stage" data-lightbox-stage></div>
+      <p class="lightbox-caption" data-lightbox-caption></p>
+    </dialog>
   </body>
 </html>
-
