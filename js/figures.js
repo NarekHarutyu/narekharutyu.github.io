@@ -1,9 +1,9 @@
 /*
  * Generative figures drawn on <canvas>.
  *
- *   canvas[data-figure="lorenz"]   The hero. The Lorenz system integrated live with RK4 and
- *                                  drawn as a fading light trail, like the long-exposure
- *                                  drone flight in the gallery.
+ *   canvas[data-figure="lorenz"]   The About figure. The Lorenz system integrated live with
+ *                                  RK4 and drawn as a fading light trail, like the
+ *                                  long-exposure drone flight in the gallery.
  *
  * The figure pauses while off-screen or while the tab is hidden, and draws a single
  * still frame for visitors who prefer reduced motion.
@@ -82,8 +82,7 @@
 
   function lorenz(canvas) {
     const ctx = canvas.getContext('2d');
-    const readout = canvas.closest('figure')?.querySelector('[data-telemetry]');
-    const hero = canvas.closest('.hero') || canvas;
+    const host = canvas.closest('section') || canvas;
 
     const SIGMA = 10;
     const RHO = 28;
@@ -101,7 +100,6 @@
     const k4 = new Float64Array(3);
     let head = 0;
     let count = 0;
-    let t = 0;
 
     const f = (x, y, z, out) => {
       out[0] = SIGMA * (y - x);
@@ -117,7 +115,6 @@
       f(x + (k2[0] * h) / 2, y + (k2[1] * h) / 2, z + (k2[2] * h) / 2, k3);
       f(x + k3[0] * h, y + k3[1] * h, z + k3[2] * h, k4);
       for (let i = 0; i < 3; i++) p[i] += (h / 6) * (k1[i] + 2 * k2[i] + 2 * k3[i] + k4[i]);
-      t += h;
       trail[head * 3] = p[0];
       trail[head * 3 + 1] = p[1];
       trail[head * 3 + 2] = p[2];
@@ -129,7 +126,6 @@
     head = 0;
     count = 0;
     for (let i = 0; i < N; i++) step(); // pre-fill so both wings are visible on load
-    const t0 = t;
 
     // View: a slow sway about the vertical axis, nudged by the pointer.
     let clock = 0;
@@ -140,12 +136,12 @@
     let offYaw = 0;
     let offPitch = 0;
 
-    hero.addEventListener('pointermove', (event) => {
+    host.addEventListener('pointermove', (event) => {
       if (event.pointerType !== 'mouse') return;
       aimYaw = (event.clientX / window.innerWidth - 0.5) * 0.5;
       aimPitch = (event.clientY / window.innerHeight - 0.5) * 0.3;
     });
-    hero.addEventListener('pointerleave', () => {
+    host.addEventListener('pointerleave', () => {
       aimYaw = 0;
       aimPitch = 0;
     });
@@ -202,25 +198,18 @@
       // The head of the trail: a small lamp, like the drone's LED in the photo.
       ctx.globalCompositeOperation = 'source-over';
       ctx.globalAlpha = 1;
-      const glow = ctx.createRadialGradient(px, py, 0, px, py, 18);
+      const glowR = Math.min(18, w * 0.05);
+      const glow = ctx.createRadialGradient(px, py, 0, px, py, glowR);
       glow.addColorStop(0, rgba(colors.accent, 0.4));
       glow.addColorStop(1, rgba(colors.accent, 0));
       ctx.fillStyle = glow;
       ctx.beginPath();
-      ctx.arc(px, py, 18, 0, Math.PI * 2);
+      ctx.arc(px, py, glowR, 0, Math.PI * 2);
       ctx.fill();
       ctx.fillStyle = colors.accent;
       ctx.beginPath();
       ctx.arc(px, py, 2.6, 0, Math.PI * 2);
       ctx.fill();
-    };
-
-    const signed = (v) => `${v < 0 ? '−' : '+'}${Math.abs(v).toFixed(2).padStart(5, '0')}`;
-    const writeReadout = () => {
-      if (!readout) return;
-      readout.textContent =
-        `t ${(t - t0).toFixed(2).padStart(6, ' ')}   ` +
-        `x ${signed(p[0])}   y ${signed(p[1])}   z ${signed(p[2])}`;
     };
 
     const size = trackSize(canvas, draw);
@@ -230,7 +219,6 @@
     });
 
     let carry = 0;
-    let sinceReadout = 1;
     runWhileVisible(canvas, (dt) => {
       clock += dt;
       carry += dt * RATE;
@@ -244,13 +232,7 @@
       offYaw += (aimYaw - offYaw) * ease;
       offPitch += (aimPitch - offPitch) * ease;
       draw();
-      sinceReadout += dt;
-      if (sinceReadout > 0.1) {
-        writeReadout();
-        sinceReadout = 0;
-      }
     });
-    writeReadout();
   }
 
   document.querySelectorAll('canvas[data-figure="lorenz"]').forEach(lorenz);

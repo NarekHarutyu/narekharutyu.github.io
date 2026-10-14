@@ -77,19 +77,33 @@
     .filter(Boolean);
 
   if (navLinks.length && spied.length) {
-    const spy = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          navLinks.forEach((link) => {
-            if (link.hash === `#${entry.target.id}`) link.setAttribute('aria-current', 'true');
-            else link.removeAttribute('aria-current');
-          });
-        });
-      },
-      { rootMargin: '-45% 0px -50% 0px' }
-    );
-    spied.forEach((section) => spy.observe(section));
+    // The current section is the last one whose top has passed a line a third of the
+    // way down the viewport; short sections at the very end can never reach that line,
+    // so the bottom of the page always selects the last one.
+    let queued = false;
+    const spy = () => {
+      queued = false;
+      const line = window.innerHeight / 3;
+      const atEnd =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      let current = spied[0];
+      spied.forEach((section) => {
+        if (section.getBoundingClientRect().top <= line) current = section;
+      });
+      if (atEnd) current = spied[spied.length - 1];
+      navLinks.forEach((link) => {
+        if (link.hash === `#${current.id}`) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const queue = () => {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(spy);
+    };
+    window.addEventListener('scroll', queue, { passive: true });
+    window.addEventListener('resize', queue);
+    spy();
   }
 
   /* Lazy video: load near the viewport, play only while visible ------------- */

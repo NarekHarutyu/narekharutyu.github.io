@@ -123,6 +123,7 @@
           <a href="#publications">Publications</a>
           <a href="#robots">Robots</a>
           <a href="#teaching">Teaching</a>
+          <a href="#honors">Honors</a>
           <a href="#contact">Contact</a>
         </nav>
         <div class="header-actions">
@@ -141,6 +142,7 @@
       <a href="#publications">Publications <span>03</span></a>
       <a href="#robots">Robots <span>04</span></a>
       <a href="#teaching">Teaching <span>05</span></a>
+      <a href="#honors">Honors <span>06</span></a>
       <a href="#contact">Contact <span>07</span></a>
       <a href="assets/Harutyunyan_Narek_CV.pdf" target="_blank" rel="noopener">CV <span>PDF ↗</span></a>
     </nav>
@@ -149,6 +151,10 @@
       <!-- Hero -->
       <section class="hero" id="top" aria-label="Introduction">
         <div class="wrap hero-grid">
+          <figure class="hero-portrait">
+            <img src="assets/img/portrait-560.jpg" srcset="assets/img/portrait-560.jpg 560w, assets/img/portrait-1000.jpg 1000w" sizes="(max-width: 759px) 152px, 252px" width="560" height="642" alt="Portrait of Narek Harutyunyan" fetchpriority="high" decoding="async" />
+          </figure>
+
           <div class="hero-text">
             <p class="hero-kicker eyebrow">PhD student · EECS · UC Berkeley</p>
 
@@ -163,16 +169,6 @@
               <a class="link" href="mailto:narek_harutyunyan@berkeley.edu">Email</a>
             </div>
           </div>
-
-          <figure class="hero-figure">
-            <div class="fig-stage">
-              <canvas data-figure="lorenz" role="img" aria-label="An animated trace of the Lorenz attractor"></canvas>
-              <p class="fig-telemetry" aria-hidden="true"><span>Lorenz system · RK4 · Δt 0.005</span><span data-telemetry> </span></p>
-            </div>
-            <figcaption class="fig-caption">
-              <b>Fig. 0</b> — The Lorenz attractor (σ = 10, ρ = 28, β = 8/3), integrated live in your browser. See it <a class="link" href="gallery.html#lorenz">flown by a drone in a long-exposure photo</a>.
-            </figcaption>
-          </figure>
         </div>
 
         <div class="wrap">
@@ -196,8 +192,13 @@
               <p>I'm a PhD student in Electrical Engineering and Computer Sciences at <strong>UC Berkeley</strong>, supported by the <strong>Berkeley Fellowship</strong>. I work where robot learning meets control: cross-embodiment visuomotor policies, reinforcement learning with certified stability, and sim-to-real transfer for legged, aerial, and mobile manipulators.</p>
               <p>I earned my B.S. in Computer Engineering at <strong>Brown University</strong>, where I spent three years in Nora Ayanian's ACT Lab working on multi-robot systems and quadrotor swarms. I've twice been a Robotics Institute Summer Scholar at <strong>Carnegie Mellon</strong>, in Sebastian Scherer's AirLab and Guanya Shi's LeCAR Lab, and a SURF fellow at <strong>Caltech</strong> in Soon-Jo Chung's Aerospace Robotics and Control Lab.</p>
             </div>
-            <figure class="portrait">
-              <img src="assets/img/portrait-560.jpg" srcset="assets/img/portrait-560.jpg 560w, assets/img/portrait-1000.jpg 1000w" sizes="(max-width: 760px) 260px, 300px" width="560" height="642" alt="Portrait of Narek Harutyunyan" loading="lazy" decoding="async" />
+            <figure class="about-figure">
+              <div class="fig-stage">
+                <canvas data-figure="lorenz" role="img" aria-label="An animated trace of the Lorenz attractor"></canvas>
+              </div>
+              <figcaption class="fig-caption">
+                <b>Fig. 0</b> — The Lorenz attractor (σ = 10, ρ = 28, β = 8/3), integrated live in your browser. See it <a class="link" href="gallery.html#lorenz">flown by a drone in a long-exposure photo</a>.
+              </figcaption>
             </figure>
             <dl class="facts">
               <div>
@@ -446,27 +447,24 @@
           <div class="section-body">
             <ol class="rows">
               <li>
-                <p class="row-when">Spring 2024<br />Fall 2024<br />Spring 2026</p>
+                <p class="row-when">Spring, Fall 2024<br />Spring 2026</p>
                 <div>
                   <h3 class="row-title">CSCI 1952Z: Robots as a Medium <span class="sub">· Head TA</span></h3>
-                  <p class="row-meta">Brown University · <a class="link" href="https://browncsci1952z.github.io/" target="_blank" rel="noopener">Course site</a></p>
-                  <p class="row-desc">Creating art with teams of robots; weekly labs for <span class="num">75+</span> students.</p>
+                  <p class="row-desc">Brown University · Creating art with teams of robots; weekly labs for <span class="num">75+</span> students · <a class="link" href="https://browncsci1952z.github.io/" target="_blank" rel="noopener">Course site</a></p>
                 </div>
               </li>
               <li>
                 <p class="row-when">Fall 2025</p>
                 <div>
                   <h3 class="row-title">CSCI 1470: Deep Learning <span class="sub">· Teaching Assistant</span></h3>
-                  <p class="row-meta">Brown University</p>
-                  <p class="row-desc">Labs, workshops, and final-project mentoring for <span class="num">120+</span> students.</p>
+                  <p class="row-desc">Brown University · Labs, workshops, and final-project mentoring for <span class="num">120+</span> students</p>
                 </div>
               </li>
               <li>
                 <p class="row-when">Fall 2023</p>
                 <div>
                   <h3 class="row-title">ENGN 0032: Introduction to Engineering <span class="sub">· Teaching Assistant</span></h3>
-                  <p class="row-meta">Brown University</p>
-                  <p class="row-desc">Prototyping, CAD, and electronics workshops for <span class="num">100+</span> students.</p>
+                  <p class="row-desc">Brown University · Prototyping, CAD, and electronics workshops for <span class="num">100+</span> students</p>
                 </div>
               </li>
             </ol>
@@ -539,22 +537,18 @@
             <ul class="rows compact">
               <li>
                 <p class="row-when">Email</p>
-                <p class="row-title">
+                <p class="row-title row-email">
                   <a class="link" href="mailto:narek_harutyunyan@berkeley.edu">narek_harutyunyan@berkeley.edu</a>
                   <button class="copy" type="button" data-copy="narek_harutyunyan@berkeley.edu"><span data-copy-label>Copy</span></button>
                 </p>
               </li>
               <li>
-                <p class="row-when">Scholar</p>
-                <p class="row-title"><a class="link" href="https://scholar.google.com/citations?user=p_RX_zcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></p>
-              </li>
-              <li>
-                <p class="row-when">LinkedIn</p>
-                <p class="row-title"><a class="link" href="https://www.linkedin.com/in/narek-harutyunyan-428069233" target="_blank" rel="noopener">narek-harutyunyan</a></p>
-              </li>
-              <li>
-                <p class="row-when">CV</p>
-                <p class="row-title"><a class="link" href="assets/Harutyunyan_Narek_CV.pdf" target="_blank" rel="noopener">Curriculum vitae (PDF)</a></p>
+                <p class="row-when">Links</p>
+                <p class="row-title row-links">
+                  <a class="link" href="https://scholar.google.com/citations?user=p_RX_zcAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                  <a class="link" href="https://www.linkedin.com/in/narek-harutyunyan-428069233" target="_blank" rel="noopener">LinkedIn</a>
+                  <a class="link" href="assets/Harutyunyan_Narek_CV.pdf" target="_blank" rel="noopener">Curriculum vitae (PDF)</a>
+                </p>
               </li>
               <li>
                 <p class="row-when">Based in</p>
@@ -570,7 +564,7 @@
       <div class="wrap">
         <div class="footer-inner">
           <span>© <span data-year>2026</span> Narek Harutyunyan</span>
-          <span>Last updated September 2026</span>
+          <span>Last updated October 2026</span>
           <a href="#top">Back to top ↑</a>
         </div>
       </div>

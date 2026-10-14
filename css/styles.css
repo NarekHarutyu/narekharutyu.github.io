@@ -290,7 +290,7 @@ a:hover > .arrow-down {
 
 .nav {
   display: flex;
-  gap: 26px;
+  gap: clamp(16px, 1.9vw, 26px);
   margin-left: auto;
 }
 
@@ -439,23 +439,20 @@ a:hover > .arrow-down {
 /* Hero -------------------------------------------------------------------- */
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100svh - var(--header-h));
-  padding-top: clamp(24px, 6vh, 72px);
+  padding-top: clamp(40px, 9vh, 112px);
 }
 
+/* the same 12 columns as .section-grid: the portrait sits over the section heads,
+   the text over the section bodies */
 .hero-grid {
-  flex: 1;
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
-  gap: 24px clamp(32px, 5vw, 80px);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
   align-items: center;
 }
 
 .hero-text {
-  position: relative;
-  z-index: 2;
+  grid-column: 4 / -1;
 }
 
 .hero-name {
@@ -527,19 +524,24 @@ a:hover > .arrow-down {
   opacity: 0.7;
 }
 
-.hero-figure {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  height: clamp(420px, 66vh, 700px);
+.hero-portrait {
+  grid-column: 1 / span 3;
+  padding: 12px;
 }
 
+.hero-portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 2px;
+  background: var(--media-bg);
+}
+
+/* corner ticks, like the registration marks on a figure plate */
+.hero-portrait,
 .fig-stage {
   --tick: var(--rule-strong);
-  position: relative;
-  flex: 1;
-  min-height: 0;
   background:
     linear-gradient(var(--tick), var(--tick)) top left / 14px 1px no-repeat,
     linear-gradient(var(--tick), var(--tick)) top left / 1px 14px no-repeat,
@@ -551,57 +553,11 @@ a:hover > .arrow-down {
     linear-gradient(var(--tick), var(--tick)) bottom right / 1px 14px no-repeat;
 }
 
-.fig-stage canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.fig-telemetry {
-  position: absolute;
-  top: 16px;
-  right: 18px;
-  display: grid;
-  gap: 2px;
-  justify-items: end;
-  font: 400 11px/1.5 var(--mono);
-  letter-spacing: 0.02em;
-  color: var(--muted);
-  white-space: pre;
-  font-variant-numeric: tabular-nums;
-  pointer-events: none;
-}
-
-.fig-telemetry span:first-child {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.fig-caption {
-  align-self: flex-end;
-  max-width: 44ch;
-  margin-top: 14px;
-  font: 400 11.5px/1.6 var(--mono);
-  letter-spacing: 0.01em;
-  color: var(--muted);
-  text-align: right;
-}
-
-.fig-caption b {
-  font-weight: 500;
-  color: var(--ink);
-}
-
-.fig-caption a {
-  color: var(--ink);
-}
-
 .hero-meta {
   display: flex;
   justify-content: space-between;
   gap: 8px 24px;
-  margin-top: clamp(28px, 5vh, 56px);
+  margin-top: clamp(40px, 8vh, 96px);
   padding: 16px 0 20px;
   border-top: 1px solid var(--rule);
   font: 400 11.5px/1.5 var(--mono);
@@ -616,42 +572,33 @@ a:hover > .arrow-down {
 }
 
 @media (max-width: 999px) {
+  .hero-grid {
+    grid-template-columns: clamp(168px, 26vw, 232px) minmax(0, 1fr);
+  }
+
+  .hero-portrait,
+  .hero-text {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 759px) {
   .hero {
-    min-height: 0;
+    padding-top: 28px;
   }
 
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
+    row-gap: 22px;
   }
 
-  .hero-figure {
-    height: auto;
-    margin-top: 16px;
-  }
-
-  .fig-stage {
-    flex: none;
-    height: clamp(280px, 76vw, 520px);
-  }
-
-  .fig-caption {
-    align-self: stretch;
-    max-width: none;
-    text-align: left;
-  }
-
-  .hero-lede {
-    max-width: 36ch;
+  .hero-portrait {
+    width: min(168px, 46vw);
+    padding: 8px;
   }
 }
 
 @media (max-width: 640px) {
-  .fig-telemetry {
-    top: 12px;
-    right: 12px;
-    font-size: 10px;
-  }
-
   .hero-meta {
     flex-wrap: wrap;
   }
@@ -689,8 +636,8 @@ a:hover > .arrow-down {
     animation-delay: 0.5s;
   }
 
-  .hero-figure {
-    animation: fade 1.8s var(--ease) 0.2s both;
+  .hero-portrait {
+    animation: fade 1.4s var(--ease) 0.15s both;
   }
 }
 
@@ -726,7 +673,11 @@ a:hover > .arrow-down {
 /* Sections ---------------------------------------------------------------- */
 
 .section {
-  padding-top: clamp(80px, 9vw, 132px);
+  padding-top: clamp(72px, 7.5vw, 108px);
+}
+
+.hero + .section {
+  padding-top: clamp(48px, 5vw, 72px);
 }
 
 .section-grid {
@@ -835,11 +786,33 @@ a:hover > .arrow-down {
   color: var(--ink);
 }
 
-.portrait img {
+.fig-stage {
+  position: relative;
+  aspect-ratio: 1;
+}
+
+.fig-stage canvas {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  border-radius: 2px;
-  background: var(--media-bg);
+  height: 100%;
+}
+
+.fig-caption {
+  margin-top: 12px;
+  font: 400 11px/1.6 var(--mono);
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+.fig-caption b {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.fig-caption a {
+  color: var(--ink);
 }
 
 .facts {
@@ -867,9 +840,8 @@ a:hover > .arrow-down {
     grid-template-columns: 1fr;
   }
 
-  .portrait {
-    order: -1;
-    max-width: 260px;
+  .about-figure {
+    max-width: 320px;
   }
 
   .facts {
@@ -989,8 +961,8 @@ a:hover > .arrow-down {
 .rows > li {
   display: grid;
   grid-template-columns: 10.5rem minmax(0, 1fr);
-  gap: 6px var(--gap);
-  padding: 26px 0;
+  gap: 4px var(--gap);
+  padding: 16px 0;
   border-top: 1px solid var(--rule);
 }
 
@@ -1000,7 +972,7 @@ a:hover > .arrow-down {
 }
 
 .row-when {
-  padding-top: 4px;
+  padding-top: 3px;
   font: 400 12px/1.6 var(--mono);
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1013,9 +985,9 @@ a:hover > .arrow-down {
 }
 
 .row-title {
-  font-size: 19px;
+  font-size: 17.5px;
   font-weight: 500;
-  line-height: 1.35;
+  line-height: 1.4;
   letter-spacing: -0.005em;
 }
 
@@ -1024,21 +996,15 @@ a:hover > .arrow-down {
   color: var(--muted);
 }
 
-.row-meta {
-  margin-top: 3px;
+.row-desc {
+  max-width: 72ch;
+  margin-top: 2px;
   font-size: 15px;
+  line-height: 1.55;
   color: var(--muted);
 }
 
-.row-meta a {
-  color: var(--ink-2);
-}
-
-.row-desc {
-  max-width: 66ch;
-  margin-top: 12px;
-  font-size: 16px;
-  line-height: 1.62;
+.row-desc a {
   color: var(--ink-2);
 }
 
@@ -1046,11 +1012,11 @@ a:hover > .arrow-down {
   font-family: var(--mono);
   font-size: 0.9em;
   letter-spacing: -0.01em;
-  color: var(--ink);
+  color: var(--ink-2);
 }
 
 .rows.compact > li {
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 .rows.compact > li:first-child {
@@ -1058,11 +1024,11 @@ a:hover > .arrow-down {
 }
 
 .rows.compact .row-when {
-  padding-top: 3px;
+  padding-top: 2px;
 }
 
 .rows.compact .row-title {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -1070,9 +1036,29 @@ a:hover > .arrow-down {
   color: var(--muted);
 }
 
+.row-links,
+.row-email {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 22px;
+}
+
+.row-email {
+  gap: 6px 12px;
+}
+
+.rows + .subhead {
+  margin-top: 32px;
+}
+
 @media (max-width: 640px) {
   .rows > li {
     grid-template-columns: 1fr;
+  }
+
+  .rows.compact > li {
+    grid-template-columns: 5.5rem minmax(0, 1fr);
   }
 }
 
@@ -1289,7 +1275,6 @@ a:hover > .arrow-down {
 /* Contact ----------------------------------------------------------------- */
 
 .copy {
-  margin-left: 10px;
   padding: 3px 9px;
   border: 1px solid var(--rule-strong);
   border-radius: 999px;
@@ -1297,7 +1282,6 @@ a:hover > .arrow-down {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
-  vertical-align: 2px;
   transition: color 0.2s, border-color 0.2s;
 }
 
@@ -1310,7 +1294,7 @@ a:hover > .arrow-down {
 /* Footer ------------------------------------------------------------------ */
 
 .site-footer {
-  margin-top: clamp(96px, 12vw, 160px);
+  margin-top: clamp(72px, 9vw, 120px);
 }
 
 .footer-inner {
@@ -1511,7 +1495,7 @@ a:hover > .arrow-down {
   .site-header,
   .mobile-nav,
   .skip,
-  .hero-figure,
+  .about-figure,
   .hero-meta,
   #robots,
   .pub-media,
@@ -1524,8 +1508,13 @@ a:hover > .arrow-down {
     color: #000;
   }
 
-  .hero {
-    min-height: 0;
+  .hero-grid {
+    grid-template-columns: 140px minmax(0, 1fr);
+  }
+
+  .hero-portrait,
+  .hero-text {
+    grid-column: auto;
   }
 
   .section {
